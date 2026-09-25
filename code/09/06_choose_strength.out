@@ -1,0 +1,32 @@
+tuning cohorts: contracts ending 2023-07-01 to 2024-04-30
+  10 cohorts, 2,909 contracts, 195 leavers
+
+                 ridge (L2)                 lasso (L1)
+ strength  log loss     AUC   top 40  log loss     AUC   top 40
+        0    0.2329  0.7657       92    0.2329  0.7657       92
+   0.0001    0.2163  0.7652       91    0.2168  0.7659       92
+   0.0002    0.2161  0.7643       89    0.2164  0.7658       92
+   0.0005    0.2162  0.7622       86    0.2158  0.7652       90
+    0.001    0.2165  0.7593       86    0.2157  0.7641       91
+    0.002    0.2171  0.7556       86    0.2153  0.7643       90
+    0.005    0.2183  0.7511       87    0.2162  0.7653       92
+     0.01    0.2197  0.7485       88    0.2207  0.7636       90
+     0.02    0.2219  0.7472       87    0.2287  0.7522       93
+lowest log loss: l1, strength 0.002
+
+log loss by cohort, unpenalised against the choice
+  2023-05-02  fitted on   839  0.3677  0.2021
+  2023-06-02  fitted on 1,143  0.2088  0.2089
+  2023-07-02  fitted on 1,446  0.2196  0.2121
+  2023-08-02  fitted on 1,766  0.2480  0.2516
+  2023-09-01  fitted on 2,097  0.1806  0.1817
+  2023-10-02  fitted on 2,391  0.3161  0.3138
+  2023-11-02  fitted on 2,710  0.1763  0.1823
+  2023-12-01  fitted on 3,040  0.1862  0.1865
+  2024-01-01  fitted on 3,398  0.1930  0.1912
+  2024-01-31  fitted on 3,398  0.1753  0.1831
+
+its 839 rows: 95 public-sector contracts, 0 left
+                 weight   chances given to the two who left
+  unpenalised     -9.20   7.7e-15   8.8e-15
+  chosen          -0.81   3.5e-03   3.3e-03

@@ -1,0 +1,40 @@
+Foresight leaderboard: renewal risk
+
+Split      validation: contracts ending 2024-07-01 to 2024-12-31
+           6 monthly cohorts, 2,083 contracts, 122 leavers
+           240 calls: the top 40 of each cohort
+Method     every model by foresight.evaluate's backtest,
+           fitted on the outcomes known at each cohort's mark
+Intervals  95%, 2,000 bootstrap resamples, the same for every list
+
+           leavers  precision at 40   AUC
+logistic        57  23.8 (18.3-29.6)  0.801 (0.761-0.840)
+lasso           60  25.0 (19.2-30.4)  0.815 (0.776-0.854)
+forest          58  24.2 (18.8-29.6)  0.792 (0.748-0.833)
+boosting        56  23.3 (17.9-29.2)  0.812 (0.773-0.849)
+rule            53  22.1 (16.7-28.3)  0.762 (0.714-0.808)
+random          14  5.9               0.500
+perfect        122  50.8              1.000
+
+Paired differences (95%)
+                    precision, points     AUC
+logistic - rule     +1.7 (-1.7 to +5.0)   +0.039 (+0.004 to +0.076)
+lasso - rule        +2.9 (-0.8 to +5.8)   +0.053 (+0.022 to +0.087)
+forest - rule       +2.1 (-1.3 to +4.2)   +0.029 (+0.003 to +0.057)
+boosting - rule     +1.3 (-1.7 to +4.2)   +0.050 (+0.022 to +0.079)
+lasso - logistic    +1.3 (-1.7 to +3.3)   +0.014 (+0.003 to +0.025)
+forest - logistic   +0.4 (-2.9 to +2.9)   -0.009 (-0.035 to +0.016)
+boosting - logistic -0.4 (-3.3 to +2.5)   +0.011 (-0.009 to +0.030)
+
+A difference whose interval includes zero is not a
+difference these cohorts can see.
+
+                    precision, points     AUC
+boosting - lasso    -1.7 (-4.2 to +1.7)   -0.003 (-0.023 to +0.017)
+boosting - forest   -0.8 (-2.5 to +1.7)   +0.020 (+0.007 to +0.034)
+
+Ceiling: 64 leavers in 240 calls, AUC 0.819
+  logistic    7 leavers short of it
+  lasso       4 leavers short of it
+  forest      6 leavers short of it
+  boosting    8 leavers short of it

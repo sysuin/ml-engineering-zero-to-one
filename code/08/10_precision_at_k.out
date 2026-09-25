@@ -1,0 +1,14 @@
+Validation cohorts: leavers reached and precision, by calls
+calls a cohort         model        rule      random     perfect
+10                 29 48.3%    26 43.3%     4  5.9%    60 100.0%
+20                 42 35.0%    42 35.0%     7  5.9%   112 93.3%
+40                 57 23.8%    53 22.1%    14  5.9%   122 50.8%
+80                 80 16.7%    70 14.6%    28  5.9%   122 25.4%
+120                92 12.8%    84 11.7%    42  5.9%   122 16.9%
+
+The probabilities themselves
+                           log loss   Brier
+  model                      0.1861  0.0492
+  base rate for everyone     0.2233  0.0552
+  mean predicted 5.9%, share that left 5.9%
+  Brier skill against the base rate: 10.8%

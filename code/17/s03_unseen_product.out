@@ -1,0 +1,4 @@
+MRD-SAF-015, five regions, 2025, h=1
+  trained with it   WAPE 11.7%
+  never seen        WAPE 11.0%
+  seasonal naive    WAPE 16.5%

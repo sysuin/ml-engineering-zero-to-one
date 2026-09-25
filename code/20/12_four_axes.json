@@ -1,0 +1,46 @@
+{
+ "TF-IDF": {
+  "priority": [
+   0.804,
+   0.777975,
+   0.8280249999999998
+  ],
+  "category": [
+   0.962,
+   0.95,
+   0.973
+  ],
+  "both": [
+   0.775,
+   0.748,
+   0.801
+  ],
+  "urgent_recall": 0.6323529411764706,
+  "urgent_precision": 0.9148936170212766,
+  "new wording": 3,
+  "known language": 1,
+  "new language": 4
+ },
+ "transformer": {
+  "priority": [
+   0.805,
+   0.779,
+   0.83
+  ],
+  "category": [
+   0.962,
+   0.95,
+   0.973
+  ],
+  "both": [
+   0.777,
+   0.75,
+   0.802
+  ],
+  "urgent_recall": 0.6911764705882353,
+  "urgent_precision": 0.8867924528301887,
+  "new wording": 2,
+  "known language": 1,
+  "new language": 0
+ }
+}

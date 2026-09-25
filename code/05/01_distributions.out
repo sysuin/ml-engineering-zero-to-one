@@ -1,0 +1,21 @@
+11,200 rows in the table; 5,041 in the training split
+
+Days since the last order
+  5,027 values, median 13, mean 27, max 411
+  histogram: 42 bins of 10; the first holds 40.9%
+  box: middle half 5 to 32, whisker 72; 441 beyond it
+  ECDF:  74.0% of rows at or below 30
+  ECDF:  94.2% of rows at or below 90
+  ECDF:  98.8% of rows at or below 180
+
+Spend in the year before the mark ($)
+  5,041 values, median 13,160, mean 22,226, max 3,848,735
+  histogram: 77 bins of 50,000; the first holds 94.6%
+  box: middle half 7,406 to 23,268, whisker 47,062; 315 beyond it
+  ECDF:  37.6% of rows at or below 10,000
+  ECDF:  94.6% of rows at or below 50,000
+  ECDF:  99.1% of rows at or below 200,000
+
+Beyond the recency whisker: 441 rows, 27.2% not renewed
+Inside it: 4,600 rows, 4.5% not renewed
+Median days since the last order: renewed 12, not renewed 51

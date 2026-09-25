@@ -1,0 +1,9 @@
+changed                    rounds  watched loss    change
+none (the choice)           1,360       0.18680  +0.00000
+80% of rows a tree            502       0.18663  -0.00018
+80% of columns a tree       1,353       0.18683  +0.00003
+L2 penalty 1 on leaves      1,450       0.18679  -0.00002
+L2 penalty 10 on leaves     1,035       0.18707  +0.00027
+63 bins, not 255              967       0.18702  +0.00022
+1,023 bins                  1,399       0.18672  -0.00008
+minimum gain 0.01           1,360       0.18680  +0.00000

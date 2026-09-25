@@ -1,0 +1,27 @@
+1,867 columns: words and pairs seen twice or more
+
+priority: accuracy 80.9% (always the commonest class: 35.6%)
+           n  precision  recall
+class                          
+Urgent   277      0.925   0.354
+High    1784      0.816   0.895
+Normal  1453      0.786   0.807
+Low      573      0.827   0.768
+
+category: accuracy 93.2% (always the commonest class: 21.1%)
+             n  precision  recall
+class                            
+Account    313      0.950   0.904
+Billing    473      0.960   0.924
+Delivery   864      0.878   0.962
+Quality   1776      0.950   0.938
+Returns    303      0.951   0.894
+Stock      358      0.923   0.902
+
+Urgent found in the first 3 read each day
+  arrival       13.4%
+  urgent words  26.0%
+  TF-IDF model  56.3%
+
+largest weights towards Urgent: 'line', 'down', 'and'
+  'this week', 'inspection', 'site'

@@ -1,0 +1,16 @@
+k nearest matches vote: the score is the share who left
+     k  train AUC  valid AUC  valid top-40
+     1      1.000      0.560            22
+     3      0.952      0.633            34
+    10      0.887      0.669            42
+    30      0.819      0.745            44
+   100      0.781      0.756            53
+   300      0.761      0.786            52
+ 1,000      0.763      0.801            59
+ 3,000      0.766      0.793            53
+ 4,355      0.500      0.500             7
+
+Logistic regression, unpenalised
+ columns            train AUC  valid AUC  valid top-40
+      16 Chapter 7      0.790      0.805            59
+     152   + pairs      0.839      0.762            49

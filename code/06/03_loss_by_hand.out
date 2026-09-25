@@ -1,0 +1,17 @@
+contract      x      y   pred   error  |error|  error^2
+    7332   1.50   0.84   1.50    0.66     0.66     0.44
+    7335   4.32   3.70   4.32    0.62     0.62     0.38
+    7326   5.62   8.61   5.62   -2.99     2.99     8.94
+MAE  1.423   MSE 3.253   RMSE 1.804   ($ thousands)
+gradient at w = 1, b = 0:   dw -8.757   db -1.140
+
+best constant for absolute error    3,185   median    3,185
+best constant for squared error     6,509   mean      6,509
+
+On validation                              MAE      RMSE
+  the median                             5,666    19,561
+  the mean                               6,632    19,196
+
+37 key-account rows of 2,083 (1.8%) carry, of the last-value rule's
+  absolute error  13.5%
+  squared error   49.9%

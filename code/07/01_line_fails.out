@@ -1,0 +1,17 @@
+Training rows 5,041, not renewed 328 (6.5%)
+
+The line: 0.0228 + 0.00153 x days since the last order
+  days        rows    left  the line says
+  1-7         1742    2.5%           2.8%
+  8-14         919    2.9%           3.9%
+  15-30       1058    4.9%           5.6%
+  31-60        742    8.8%           8.8%
+  61-90        276   14.9%          13.6%
+  91-180       231   34.2%          21.5%
+  181-411       73   28.8%          41.8%
+The line passes 100% at 639 days
+
+The line through all 16 columns
+  training    below 0:  502   above 1:  0   lowest -0.201
+  validation  below 0:  231   above 1:  0   lowest -0.092
+  lowest: contract 4558, Public sector, 85 orders in 90 days

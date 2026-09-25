@@ -1,0 +1,14 @@
+Validation, 2,083 contracts ending 2024-07-01 to 2024-12-31
+                                           MAE      RMSE
+  mean of the training rows              6,632    19,196
+  last value: the 90 days before         3,159     5,682
+  run rate: last year x 90/365           3,090     5,561
+
+Training rows, 5,041
+                                           MAE      RMSE
+  mean of the training rows              6,126    23,921
+  last value: the 90 days before         3,305     6,562
+  run rate: last year x 90/365           3,511     9,626
+
+lowest validation MAE: run rate: last year x 90/365
+lowest validation RMSE: run rate: last year x 90/365

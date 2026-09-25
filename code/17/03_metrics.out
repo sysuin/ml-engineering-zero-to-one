@@ -1,0 +1,13 @@
+20 series, forecast at the end of June 2025 for July to September
+                       MAE    MAPE    WAPE
+  naive                988   18.3%   19.1%
+  seasonal naive       549   10.0%   10.6%
+  seasonal naive MAE by series: 91 to 1,220 units
+
+805 Midwest long-tail accounts, 2025 by month
+  35.5% of account-months bought nothing
+                     MAPE*    WAPE
+  seasonal naive    155.1%  103.0%
+  2024's average    128.7%   85.7%
+  zero, always      100.0%  100.0%
+  * MAPE on the months with a sale; the rest divide by zero

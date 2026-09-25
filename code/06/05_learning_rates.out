@@ -1,0 +1,9 @@
+loss at step               0       1      10     100    1000    5000
+too small 2e-05        614.6   589.7   409.6    49.6    42.8    42.8
+          ends at w 1.0205, b 0.0310
+right     0.0015       614.6   281.4    42.9    42.8    42.8    42.8
+          ends at w 1.0194, b 0.1257
+too large 0.002        614.6   858.9 20104.6   2e+18  2e+157     nan
+          ends at w nan, b nan
+
+descent diverges for learning rates above 0.001823

@@ -10,6 +10,10 @@ WORKDIR /app
 #    rarely and the source changes constantly; this ordering is the difference
 #    between a four-second rebuild and a four-minute one. PyTorch comes from its CPU
 #    index first, so the image does not carry gigabytes of GPU libraries it never uses.
+# LightGBM needs the GNU OpenMP runtime, which the slim image leaves out.
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
+ && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
  && pip install --no-cache-dir -r requirements.txt
@@ -29,4 +33,4 @@ ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/code PYTHONHASHSEED=0 \
 # Until Chapter 22 gives Foresight an API, the container checks its own environment and
 # generates the dataset. Chapter 22 replaces this line with the service, adds a health
 # check, and exposes port 8000.
-CMD ["sh", "-c", "python code/meridian/generate.py && python code/_preflight.py"]
+CMD ["sh", "-c", "python code/meridian/generate.py && python code/meridian/generate_ml.py && python code/_preflight.py"]

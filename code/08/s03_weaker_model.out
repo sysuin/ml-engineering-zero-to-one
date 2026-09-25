@@ -1,0 +1,27 @@
+Foresight evaluation: without recency
+
+Split      validation: contracts ending 2024-07-01 to 2024-12-31
+           6 monthly cohorts, 2,083 contracts, 122 leavers
+Method     rolling-origin backtest: each cohort scored by a
+           model fitted on the 4,355 to 6,065 outcomes
+           known at its mark; rule and random on the same rows
+Intervals  95%, 2,000 bootstrap resamples of contracts
+           within each cohort
+
+Verdict    Model and rule cannot be told apart at capacity.
+
+                model                rule                   baseline
+precision at 40 18.8 (14.2-25.0)     22.1 (16.7-28.3)            5.9
+recall at 40    36.9 (29.9-46.9)     43.4 (35.5-52.3)           11.5
+AUC             0.774 (0.733-0.814)  0.762 (0.714-0.808)       0.500
+log loss        0.195 (0.170-0.220)  -                         0.223
+Brier score     0.051 (0.043-0.059)  -                         0.055
+
+Precision and recall in per cent. Baseline: a random
+list; for log loss and Brier, the training base rate for
+every contract (the rule gives no probability to score).
+
+Model minus rule, paired
+  precision at 40   -3.3 points (-7.9 to +2.1)
+  recall at 40      -6.6 points (-15.7 to +3.8)
+  AUC               +0.012 (-0.033 to +0.057)

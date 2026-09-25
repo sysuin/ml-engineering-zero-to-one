@@ -1,0 +1,23 @@
+5,874 of 6,324 North tickets have a South ticket with nearly
+the same words (cosine 0.9 or more)
+
+North's category (rows) against South's (columns)
+south     Accou  Billi  Deliv  Quali  Retur  Stock
+north                                             
+Account     510     12      9     22      4     15
+Billing       7    812     31     14     22      8
+Delivery      8     22   1354     24     27     17
+Quality      10     30    427   1148     11     15
+Returns      11     14     11      6    478     23
+Stock        13     18     14     21     10    696
+
+category: same label 85.1%, kappa 0.815
+priority: same label 69.8%, kappa 0.545
+
+North said Quality and South Delivery: 427 pairs
+  N: Hello, MRD-PAC-027 arrived crushed, outer box soaked through c
+  S: Hello, MRD-SAF-011 arrived crushed, outer box soaked through c
+  N: driver dropped the delivery, mrd-pac-027 split open pls advise
+  S: driver dropped the delivery, MRD-FAC-036 split open pls advise
+  N: Hi, MRD-SAF-019 came in a torn pack, half of it spilled cheers
+  S: hi, mrd-fac-031 came in a torn pack, half of it spilled cheers

@@ -1,0 +1,20 @@
+weight                    descent   scikit-learn        algebra
+intercept               -337.9397      -337.9397      -337.9397
+spend_90d                  0.8261         0.8261         0.8261
+spend_365                  0.0690         0.0690         0.0690
+orders_90d                26.3097        26.3097        26.3097
+orders_prev_90d          -45.0484       -45.0484       -45.0484
+days_since_order          38.5269        38.5269        38.5269
+tickets_90d             -531.2419      -531.2419      -531.2419
+tenure_days                0.0358         0.0358         0.0358
+term_months              -43.4008       -43.4008       -43.4008
+legacy_terms            -586.4062      -586.4062      -586.4062
+largest difference, descent vs scikit-learn: 3.2e-11
+
+Validation, 2,083 rows
+                                           MAE      RMSE
+  mean of the training rows              6,632    19,196
+  last value: the 90 days before         3,159     5,682
+  run rate: last year x 90/365           3,090     5,561
+  a line on spend_90d                    3,189     5,701
+  nine features                          3,256     5,530

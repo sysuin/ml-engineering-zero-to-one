@@ -1,0 +1,18 @@
+240 product x region series; 190 on sale since 2023 are scored
+learning rows: 22,230 from 2023 on, 29,070 more from the long tail
+
+WAPE, 2024-2025
+                      h=1    h=2    h=3
+naive               18.1%  21.5%  25.1%
+seasonal naive      19.1%  19.1%  19.1%
+seasonal smoothing  16.3%  16.7%  17.2%
+model, 2023 on      15.4%  17.6%  19.7%
+model + long tail   14.7%  16.1%  17.1%
+
+h=1 by year      seasonal naive   smoothing   model
+  2024                   20.0%       17.9%   16.6%
+  2025                   18.3%       14.7%   12.9%
+model beats seasonal naive on 179 of 190 series (h=1)
+model beats seasonal smoothing on 142 of 190 series (h=1)
+model's total forecast against what sold, h=1:
+  April 2024 +33.0%, April 2025 -18.5%

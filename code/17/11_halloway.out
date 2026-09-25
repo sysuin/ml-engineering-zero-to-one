@@ -1,0 +1,16 @@
+Key accounts, units a month, 2024   Jan-Jun   Jul-Dec
+  Midwest                            9,058     4,213
+  Midwest: Halloway alone            4,151         0
+  Northeast                          6,289     7,870
+  Southeast                          5,560     6,350
+  Southwest                          8,517    10,610
+  West                               4,457     5,470
+
+Midwest, four categories, July 2024 to June 2025
+                                    h=1    h=2    h=3    bias
+seasonal naive, as recorded       43.3%  43.3%  43.3%  +43.2%
+smoothing, as recorded            13.5%  15.8%  18.8%  +10.7%
+model, as recorded                11.9%  16.4%  20.7%   +6.5%
+seasonal naive, without Halloway  19.8%  19.8%  19.8%  +14.8%
+smoothing, without Halloway        8.2%   9.0%  10.1%   +0.9%
+model, without Halloway            8.0%  10.7%  13.2%   -1.3%

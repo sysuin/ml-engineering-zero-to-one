@@ -1,0 +1,13 @@
+Validation backtest: 6 cohorts, 122 leavers, 240 calls
+                 leavers   precision % (95%)           AUC (95%)
+the rule              53   22.1 (16.7-28.3)    0.762 (0.714-0.808)
+logistic (Ch. 7)      57   23.8 (18.3-29.6)    0.801 (0.761-0.840)
+LightGBM              56   23.3 (17.9-28.7)    0.799 (0.758-0.837)
+network               58   24.2 (18.8-29.6)    0.794 (0.754-0.835)
+For scale: a random list 5.9%, a perfect one 50.8%
+
+Paired differences in precision, points (95%)
+  network - LightGBM              +0.8 (-2.1 to +4.2)
+  network - logistic (Ch. 7)      +0.4 (-3.3 to +3.3)
+  LightGBM - logistic (Ch. 7)     -0.4 (-3.8 to +2.1)
+  network - the rule              +2.1 (-1.3 to +5.0)

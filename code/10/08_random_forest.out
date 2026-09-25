@@ -1,0 +1,8 @@
+                 columns gap first tree r one tree    AUC top-40
+bagging               16      100%   0.16    0.561  0.711     44
+forest                 4       26%   0.14    0.561  0.746     52
+forest, leaf 50        4       26%   0.64    0.730  0.789     54
+columns: offered at each split; gap first: trees whose first
+question is days since the last order; tree r: the average
+correlation of two trees' validation predictions; one tree:
+the average tree's validation AUC

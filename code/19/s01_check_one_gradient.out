@@ -1,0 +1,6 @@
+w11: nudging gives +0.6634
+w12: nudging gives +0.0000
+
+With b2 = +0.5, unit 2's sum is +0.23
+  v2 gradient -0.1977
+  w12 gradient -0.3437, w22 -0.1203, b2 +0.8594

@@ -1,0 +1,4 @@
+                  days_since_order  tenure_days  sum |w|  sum w^2
+unpenalised                  0.521        0.043    0.565    0.274
+ridge 0.01                   0.457        0.033    0.490    0.210
+lasso 0.01                   0.451        0.000    0.451    0.203

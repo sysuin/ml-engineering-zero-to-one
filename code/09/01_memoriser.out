@@ -1,0 +1,9 @@
+learns from 4,355 contracts known by 02 May 2024; scored on 2,083
+training rows whose nearest match is themselves: 100.0%
+validation rows matched to their own account: 6.1%
+median distance to the match: training 0.00, validation 0.64
+
+              accuracy     AUC  top-40 leavers
+training        100.0%   1.000             287
+validation       90.2%   0.560              22
+call nobody      94.1%

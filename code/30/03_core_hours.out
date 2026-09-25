@@ -1,0 +1,11 @@
+One batch run, 11,200 contracts: 4.2 seconds on one core
+
+job                      core-hours  source
+nightly batch, 30 runs         0.04  measured above
+daily drift check              0.04  assumed: like batch
+monthly retrain                1.00  assumed: one core-hour
+API, 1 core, always on       730.00  24 x 365 / 12
+a month                      731.07  the API is 99.9%
+
+Monthly compute cost = core-hours x your provider's rate
+per core-hour, plus storage, network and the registry.

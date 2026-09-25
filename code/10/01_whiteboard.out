@@ -1,0 +1,8 @@
+Validation: 2,083 contracts, 6 cohorts, 122 leavers
+The whiteboard says call 727 of them, 121 a cohort;
+  9.1% of those left, against 5.9% of all contracts
+
+                   AUC  top-40 leavers  precision
+whiteboard       0.648              48      20.0%
+tree, depth 3    0.744              54      22.5%
+the rule         0.762              53      22.1%

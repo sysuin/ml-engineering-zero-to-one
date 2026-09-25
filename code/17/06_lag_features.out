@@ -1,0 +1,20 @@
+One row: Safety, Southwest, made at 2025-06 for 2025-09 (h=3)
+  h               3
+  month           9
+  lag0            1.018
+  lag1            1.006
+  lag2            0.976
+  mean6           0.970
+  mean12          1.032
+  last_year       1.276
+  last_year_step  1.539
+  smoothed        1.485
+  category        Safety
+  region          Southwest
+  scale           5,817   target 8,520  (ratio 1.465)
+
+WAPE, 2024-2025, 20 category x region series
+                        h=1    h=2    h=3
+lags from the target   7.8%   8.0%   8.7%
+from the origin, by h  7.8%  10.1%  12.2%
+from the origin, one   8.4%  10.1%  11.7%

@@ -1,0 +1,8 @@
+Training rows: largest gap from the library 2.6e-15
+Trees with the same questions and cuts: 76 of 100
+Validation contracts scored differently: 8 of 2,083, by up to 0.339
+
+validation                AUC  log loss  top-40 leavers  below 0
+version 1, residuals   0.7998         -              49       97
+version 2, log loss    0.7933    0.1884              50        0
+scikit-learn           0.7929    0.1885              50        0

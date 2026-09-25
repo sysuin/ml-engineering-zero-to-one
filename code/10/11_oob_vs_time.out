@@ -1,0 +1,4 @@
+The same 5,027 contracts, 16 cohorts, 316 leavers
+  scored by                    AUC  top-40 leavers
+  out-of-bag                 0.780             155
+  backtest, known by mark    0.778             151

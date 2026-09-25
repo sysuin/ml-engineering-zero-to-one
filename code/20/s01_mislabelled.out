@@ -1,0 +1,19 @@
+433 pairs still disagree; the first ten
+  N Quality  S Billing  invoice INV-57405 charged twice asap!!
+  N Delivery S Billing  Morning, where is the credit for the return 
+  N Account  S Billing  Hi, can we get statements monthly instead of
+  N Delivery S Returns  hi team where is order 1004465 cheers
+  N Billing  S Returns  morning, inv-28692 should have the discount 
+  N Returns  S Stock    morning, return label for 999075 doesnt scan
+  N Quality  S Billing  Hello, we have been billed twice for order 1
+  N Delivery S Billing  Hello, order 1005382 was due last week, any 
+  N Quality  S Stock    MRD-CLE-008 doesnt work, tried 3 of them che
+  N Delivery S Billing  we are tax exempt, please remove sales tax f
+
+loose words, missed by the pattern: 51
+  glove split, chemical on a hand (a safety ticket): 49
+  other: driver drpped the delivery, MRD-CLE-009 pslit open
+  other: hi team gloev mrd-cle-007 split and chemical got on a cl
+
+adding 'driver d... the delivery' catches 1 more
+'split' alone would also catch 49 safety tickets

@@ -1,0 +1,16 @@
+Legacy 0.0806 against current 0.0601: z = 2.52, p-value 0.0117
+Shuffled 2,000 times: 0.0125 of shuffles differ by as much
+
+Orders, last 90 days minus the 90 before: mean +0.111
+  standard error paired 0.084, as if unpaired 0.319
+  correlation of the two quarters 0.930
+
+Held out 0.219 would leave; called 0.165
+80% power at 5%: 805 contracts per group
+  at 20 per group a cohort: 41 monthly cohorts
+  at 40 per group a cohort: 21 monthly cohorts
+ per group   power
+       250     34%
+       500     60%
+     1,000     88%
+     2,000     99%

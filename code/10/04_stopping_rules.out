@@ -1,0 +1,17 @@
+stopping rule  leaves  train AUC  valid AUC  top-40 leavers
+none              471      1.000      0.547              21
+depth 2             4      0.707      0.694              52
+depth 4            16      0.759      0.746              51
+depth 6            45      0.812      0.693              45
+depth 8           104      0.874      0.579              39
+leaf 5            262      0.970      0.619              36
+leaf 25           102      0.894      0.692              42
+leaf 100           33      0.834      0.725              53
+leaf 200           19      0.808      0.750              54
+drop 0.0001       205      0.876      0.520              29
+drop 0.0003        24      0.762      0.729              49
+drop 0.001          3      0.705      0.693              52
+
+Gini or entropy, with the same limits
+  max_depth 4           valid AUC: gini 0.746, entropy 0.723
+  min_samples_leaf 100  valid AUC: gini 0.725, entropy 0.753

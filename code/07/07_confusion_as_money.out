@@ -1,0 +1,19 @@
+Validation, top 40 of each cohort called: 240 calls
+                            left             renewed
+  called          TP     52   +624    FP    188    -90
+  not called      FN     70      0    TN  1,773      0
+Net: 52 x $623.50 - 188 x $90 = $15,502 in six months
+Missed leavers forgo 70 x $623.50 = $43,645
+
+Accuracy  (TP + TN) / all   87.6%
+  calling nobody             94.1%
+Precision TP / (TP + FP)    21.7%
+Recall    TP / (TP + FN)    42.6%
+
+September's cohort: the highest score among the calls, the lowest
+among the rest
+      contract  segment         days since order       p
+  TP      9863  Small business               132  33.63%
+  FP     10000  Small business               352  68.43%
+  FN      9887  Small business                 8   5.73%
+  TN      9831  Enterprise                     1   0.01%

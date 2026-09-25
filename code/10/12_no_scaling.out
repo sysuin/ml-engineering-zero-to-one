@@ -1,0 +1,11 @@
+as they are        first cut      92.5000   same predictions 100%
+standardised       first cut       1.5556   same predictions 100%
+cubed, plus 1,000  first cut 792,522.5000   same predictions 100%
+
+Share leaving, and each model's estimate, by cell
+                        contracts  left logistic  tree
+gap > 92 discount <= 4                                
+no       no                  2355  3.6%     3.4%  3.6%
+         yes                 2387  6.0%     6.2%  6.0%
+yes      no                   157 24.8%    27.1% 24.8%
+         yes                  142 43.0%    40.5% 43.0%

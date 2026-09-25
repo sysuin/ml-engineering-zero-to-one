@@ -1,0 +1,11 @@
+Depth 3, leaf 1, least drop 0: nodes 15 and 15, identical 15
+  validation predictions equal: 2,083 of 2,083; largest gap 0.0e+00
+Depth 6, leaf 20, least drop 0: nodes 75 and 75, identical 75
+  validation predictions equal: 2,083 of 2,083; largest gap 0.0e+00
+Depth 8, leaf 20, least drop 0.0001: nodes 77 and 77, identical 77
+  validation predictions equal: 2,083 of 2,083; largest gap 0.0e+00
+Depth 8, leaf 5, least drop 0: nodes 215 and 215, identical 209
+  validation predictions equal: 2,062 of 2,083; largest gap 3.3e-01
+First difference: node 16, 14 rows, 3 leavers
+  ours    days_since_order <= 5: Gini falls 0.02126
+  sklearn orders_prev_90d <= 3.5: Gini falls 0.02126

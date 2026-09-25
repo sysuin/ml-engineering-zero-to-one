@@ -1,0 +1,14 @@
+Chapter 7, training split
+  model   52 leavers, 21.7%   interval 16.7% to 27.5%
+  rule    53 leavers, 22.1%   interval 16.7% to 28.3%
+  model - rule -0.4 points, paired interval -3.8 to +3.3
+  spread of the difference: paired 1.8 points, as if unpaired 4.0
+  resamples where the model is ahead 43%, level 9%, behind 49%
+  AUC, model - rule +0.042, paired interval +0.007 to +0.080
+v0.3 backtest
+  model   57 leavers, 23.8%   interval 18.3% to 29.6%
+  rule    53 leavers, 22.1%   interval 16.7% to 28.3%
+  model - rule +1.7 points, paired interval -1.7 to +5.0
+  spread of the difference: paired 1.7 points, as if unpaired 4.1
+  resamples where the model is ahead 80%, level 6%, behind 13%
+  AUC, model - rule +0.039, paired interval +0.004 to +0.076

@@ -1,0 +1,8 @@
+                   AUC gap: SD   power  precision gap: SD   power
+months  contracts              at 0.02           (points)    at 3
+     6      2,147       0.0219     15%               1.85     37%
+    12      4,127       0.0154     26%               1.34     61%
+    24      8,278       0.0110     44%               0.94     89%
+    48     16,790       0.0079     71%               0.65    100%
+80% power, 0.02 of AUC: about 57 months, 20,280 contracts
+80% power, 3 points of precision: about 18 months, 6,410 contracts

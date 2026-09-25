@@ -1,0 +1,18 @@
+output blame  p - y = 0.1708 - 1 = -0.8292
+unit 1 (fired): blame arriving -1.6584, passed on -1.6584
+unit 2 (silent): blame arriving +0.8292, passed on +0.0000
+
+parameter       value  gradient   after
+v1              +2.00   -0.3814  +2.191
+v2              -1.00   +0.0000  -1.000
+c               -2.50   -0.8292  -2.085
+w11 (x1)        -1.00   +0.6634  -1.332
+w21 (x2)        +1.00   +0.2322  +0.884
+b1              +0.20   -1.6584  +1.029
+w12 (x1)        +0.50   +0.0000  +0.500
+w22 (x2)        +0.50   +0.0000  +0.500
+b2              -0.10   +0.0000  -0.100
+
+One step at learning rate 0.5
+  chance of not renewing 0.1708 -> 0.7437
+  log loss 1.7673 -> 0.2962

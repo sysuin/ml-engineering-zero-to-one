@@ -1,0 +1,12 @@
+Small-basket segment: 259 accounts, median basket $388, 0 key
+CRM: Small business 66%, Mid-market 21%, Public sector 11%
+Where they sit among the four segments:
+  Drifting              171
+  Newcomers              62
+  Long-standing core     14
+  Established core       12
+Basket under $450: 76% of them, 6% of all accounts
+
+                  small-basket     everyone else
+train            310     14.5%   4,715      6.0%
+validation       116     12.9%   1,966      5.4%

@@ -1,0 +1,15 @@
+smallest leaf  OOB AUC  OOB top-40  valid AUC  valid top-40
+            1    0.739         139      0.746            52
+            5    0.764         154      0.760            51
+           10    0.765         159      0.780            53
+           25    0.773         161      0.779            53
+           50    0.776         162      0.789            54
+          100    0.772         163      0.788            57
+          200    0.770         160      0.783            56
+Training: 5,041 contracts in 18 cohorts; validation: 2,083 in 6
+
+With leaves of 50, more trees:
+     50 trees, OOB AUC 0.7731
+    100 trees, OOB AUC 0.7746
+    300 trees, OOB AUC 0.7757
+   1000 trees, OOB AUC 0.7758

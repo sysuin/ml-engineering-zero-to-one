@@ -1,0 +1,7 @@
+Random 80/20 split: 62.7% of held-out contracts
+  share an account with a training contract
+  held-out leavers     26; account left in a training row: 0.0%
+  held-out renewers   868; account left in a training row: 4.0%
+
+The same 5,027 contracts, in grouped folds: AUC 0.782
+  with six seeds: 0.782 to 0.790

@@ -1,0 +1,10 @@
+split               contracts ending   rows  leavers  cohorts
+training      2023-01-01 to 2024-06-30  5,041      328       18
+validation    2024-07-01 to 2024-12-31  2,083      122        6
+test          2025-01-01 to 2025-12-31  4,076        -       12
+
+A random list, expected: 5.9% of 240 calls
+  best of     1 random lists:  11 leavers, 4.6%
+  best of    10 random lists:  17 leavers, 7.1%
+  best of   100 random lists:  22 leavers, 9.2%
+  best of 1,000 random lists:  25 leavers, 10.4%

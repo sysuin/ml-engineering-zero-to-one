@@ -1,0 +1,15 @@
+Validation, 2,083 rows; both fitted on 4,396 full-year rows
+                                           MAE      RMSE
+  mean of the training rows              6,632    19,196
+  last value: the 90 days before         3,159     5,682
+  run rate: last year x 90/365           3,090     5,561
+  squared error                          2,927     4,983
+  absolute error                         3,056     6,659
+  absolute, solved exactly               3,057
+
+training rows predicted above what they spent:
+  absolute 50.0%   squared 55.6%
+weight per std dev   squared  absolute
+spend_90d              4,334     2,941
+spend_365             13,067     9,105
+intercept              5,024     4,416

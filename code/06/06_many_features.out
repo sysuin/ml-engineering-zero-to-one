@@ -1,0 +1,15 @@
+column                    mean         std         max
+spend_90d              6,261.5    22,569.8     965,944
+spend_365             22,226.2    74,853.5   3,848,735
+orders_90d                 7.4        16.0         633
+orders_prev_90d            7.3        16.0         678
+days_since_order          27.6        41.7         411
+tickets_90d                0.3         0.6          11
+tenure_days            1,946.3     1,263.4       4,292
+term_months               13.0         3.3          24
+legacy_terms               0.2         0.4           1
+
+after 5,000 steps       lr    RMSE        b  w spend_90d  w tickets
+raw columns       1.4e-10   6,360        0       0.8228      -0.00
+standardised      2.3e-01   6,134     -338       0.8261    -531.24
+raw-column weights more than 1% of the way to the answer: 3 of 9

@@ -1,0 +1,18 @@
+Placeholder text or sentinel dates in the warehouse: 0
+
+Most common value      share  distinct
+  days_since_order         1   6.4%      218
+  orders_90d               2  11.9%       86
+  orders_prev_90d          2  12.7%       89
+  spend_365              0.0   0.3%    5,023
+  tickets_90d              0  76.3%        7
+  tenure_days            274  11.0%       22
+  discount_pct          <NA>  24.1%        7
+
+Rows with spend_365 = 0: 16
+  last order over a year before: 2
+  no order on record at all:     14
+    key accounts marked before 2023-01-01: 12
+    all four counts zero on 12, segment missing on 12
+  the other 67 key-account rows: median spend 283,905
+    any of them zero: False

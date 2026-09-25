@@ -1,0 +1,14 @@
+Contract 5850, Small business, Midwest: 16 numbers in, one out
+column                     x_j     w_j  w_j x_j
+days_since_order          8.88   0.501    4.449
+orders_90d               -0.46  -1.584    0.733
+orders_prev_90d          -0.45   1.468   -0.668
+region=Midwest            2.25   0.142    0.319
+log_spend_365            -8.76   0.028   -0.241
+the other 11                              0.369
+w . x = 4.962, plus b = -3.099, gives z = 1.863
+sigmoid(z) = 0.8656; the library says 0.8656
+
+Z is 5,041 x 16, w has 16: Z @ w has 5,041 entries
+Largest difference from the library 0.0e+00
+Z.T @ error has 16 entries; largest size 1.4e-08

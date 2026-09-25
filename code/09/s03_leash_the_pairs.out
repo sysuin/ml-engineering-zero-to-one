@@ -1,0 +1,7 @@
+tuning cohorts          log loss     AUC  top 40
+152 columns, 0.001        0.2511  0.7105      75
+152 columns, 0.003        0.2374  0.7164      76
+152 columns, 0.01         0.2285  0.7214      75
+152 columns, 0.03         0.2256  0.7243      74
+152 columns, 0.1          0.2281  0.7193      75
+16 columns, lasso         0.2153  0.7643      90

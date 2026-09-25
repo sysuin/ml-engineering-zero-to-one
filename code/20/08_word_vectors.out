@@ -1,0 +1,14 @@
+533 words, 32 numbers each
+
+  stock    -> sotck, stokc, tsock, stok
+  twice    -> twce, tice, wtice, lpease
+  crushed  -> outer, throuhg, soaed, arirved
+  commande -> n, la, bestellung, immer
+  urgent   -> défectueux, produit, llegado, hoy
+
+validation accuracy (2,663 ordinary tickets, 1,424 about the
+Pemberton cloth)
+                         priority            category
+                  ordinary   cloth   ordinary   cloth
+  TF-IDF             81.5%   79.9%      96.2%   94.5%
+  word vectors       73.9%   33.5%      96.1%   72.0%

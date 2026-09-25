@@ -1,0 +1,13 @@
+Frauds already reported, by the transaction's age
+  age, days       7     14     30     60     90    120
+  reported      10%    34%    65%    85%    94%   100%
+
+Last 90 days, labels as of today: 66% of the frauds
+are labelled fraud; the rest are labelled legitimate.
+Newest fortnight: 11% of its frauds known.
+
+  wait W  labels complete  newest row
+     0 d            66.3%        0 d old
+    30 d            87.8%       30 d old
+    60 d            95.5%       60 d old
+    90 d            99.0%       90 d old

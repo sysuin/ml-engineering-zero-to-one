@@ -1,0 +1,9 @@
+20 random splits, AUC on the held-out 20%: lowest 0.718,
+  median 0.786, highest 0.834
+
+The same 5,027 contracts, 16 cohorts, 316 leavers
+  scored by         AUC  top-40 leavers  precision
+  random folds    0.790             142      22.2%
+  time            0.785             146      22.8%
+  the rule        0.744             140      21.9%
+Random folds with five other seeds: AUC 0.785 to 0.792

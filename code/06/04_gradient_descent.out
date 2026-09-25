@@ -1,0 +1,12 @@
+step     0   w   0.0000   b   0.0000   loss   614.559
+step     1   w   1.6802   b   0.0195   loss   281.434
+step     2   w   0.5947   b   0.0074   loss   142.405
+step     3   w   1.2959   b   0.0158   loss    84.381
+step    10   w   1.0078   b   0.0147   loss    42.911
+step   100   w   1.0204   b   0.0394   loss    42.815
+step  1000   w   1.0195   b   0.1187   loss    42.808
+step  2000   w   1.0194   b   0.1253   loss    42.808
+step  5000   w   1.0194   b   0.1257   loss    42.808
+
+next quarter = 1.0194 x last quarter + 125.69
+RMSE on training rows: 6,543

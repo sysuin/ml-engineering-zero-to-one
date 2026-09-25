@@ -1,0 +1,19 @@
+mean of the training rows  (actual minus predicted)
+  predicted             rows  mean resid  mean |resid|
+  5,000 to 10,000      2,083         470         6,632
+
+last value: the 90 days before  (actual minus predicted)
+  predicted             rows  mean resid  mean |resid|
+  under 2,000            717       1,285         1,707
+  2,000 to 5,000         639         329         2,267
+  5,000 to 10,000        471      -1,185         3,427
+  10,000 to 50,000       217      -2,333         6,213
+  50,000 and up           39       3,464        24,234
+
+run rate: last year x 90/365  (actual minus predicted)
+  predicted             rows  mean resid  mean |resid|
+  under 2,000            580         702         1,402
+  2,000 to 5,000         833         332         2,338
+  5,000 to 10,000        479        -124         3,944
+  10,000 to 50,000       154      -1,534         6,493
+  50,000 and up           37      15,902        21,282

@@ -1,0 +1,16 @@
+Days since the last order, 5,027 contracts
+  mean 26.65, by pandas 26.65
+  variance 1,428.2 square days, standard deviation 37.79 days
+  quartiles 5, 13, 32
+
+One guess for every contract, and what it costs
+         guess  squared error  absolute error
+          mean         1427.9           24.03
+        median         1614.3           21.05
+       30 days         1439.1           25.48
+
+Spend in the year before the mark, dollars
+  mean 22,226, median 13,160, standard deviation 74,861
+  largest row 3,848,735, 51.1 standard deviations above the mean
+  skewness by the formula 35.2, by pandas 35.2
+  on a log10 scale: mean 4.11 (= 12,958 dollars), skewness 0.05

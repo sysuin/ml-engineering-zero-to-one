@@ -1,0 +1,10 @@
+cohort (mark)    fit on  scored  leavers  model AUC  rule AUC
+2024-05-02        5,041     358       25      0.811     0.723
+2024-06-02        5,399     348       14      0.770     0.794
+2024-07-02        5,747     318       21      0.874     0.842
+2024-08-02        6,065     349       23      0.710     0.674
+2024-09-01        6,414     346       18      0.848     0.796
+2024-10-02        6,760     364       21      0.848     0.786
+Pooled AUC: model 0.808, rule 0.762
+Top 40 a cohort: model 23.3%, rule 22.1%
+TimeSeriesSplit: 6 of 6 folds cut a cohort in two

@@ -1,0 +1,13 @@
+training rows      rows  partial year   last partial mark
+long tail         4,962           577          2022-12-31
+key accounts         79            68          2023-12-01
+validation rows with a full year: 100%
+
+Validation, 2,083 rows
+                                           MAE      RMSE
+  mean of the training rows              6,632    19,196
+  last value: the 90 days before         3,159     5,682
+  run rate: last year x 90/365           3,090     5,561
+  nine features, all rows                3,256     5,530
+  nine features, 4,396 full-year         2,927     4,983
+predictions below zero: 7

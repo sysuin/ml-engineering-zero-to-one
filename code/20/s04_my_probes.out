@@ -1,0 +1,11 @@
+  sent ok  Quality  Urgent  0.48  the pallet jack snapped a whee
+  sent bad Billing  Normal  0.71  half the soap dispensers leak,
+  sent ok  Account  Low     0.64  can you stop sending paper sta
+  sent bad Account  Normal  0.54  rain got into the van, all our
+  sent bad Quality  Normal  0.28  we're closing the kitchen at n
+  sent ok  Delivery Normal  0.85  the courier says order 1400123
+  sent ok  Billing  Normal  0.82  Hemos pagado dos veces la fact
+  sent ok  Delivery Normal  0.99  Tilaus 1400456 ei ole vielä sa
+  sent bad Quality  Normal  0.36  do you do a recycled version o
+  sent ok  Returns  Normal  0.33  please collect the wrong mops,
+both right 6 of 10; sent 10; kept and wrong 0

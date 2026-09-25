@@ -1,0 +1,17 @@
+Safety in the Southwest: 2025-07, forecast at the end of 2025-06
+  seasonal naive         7,910
+  simple smoothing       5,769
+  seasonal smoothing     8,114
+  actual                 8,361
+
+WAPE, 2024-2025, 20 category x region series
+                      h=1    h=2    h=3
+naive               10.5%  15.7%  21.1%
+seasonal naive      13.7%  13.7%  13.7%
+simple smoothing    13.7%  16.5%  17.9%
+seasonal smoothing   7.9%   8.9%   9.7%
+
+Seasonal smoothing with other settings (not chosen from this)
+  alpha 0.1, gamma 0.1: 9.1%  9.6%  10.1%
+  alpha 0.3, gamma 0.2: 7.9%  8.9%  9.7%
+  alpha 0.5, gamma 0.5: 7.5%  8.9%  9.8%

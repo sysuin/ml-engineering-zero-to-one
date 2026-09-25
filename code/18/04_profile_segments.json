@@ -1,0 +1,73 @@
+{
+ "date": "2024-04-01",
+ "profile": [
+  {
+   "segment": "Newcomers",
+   "accounts": 463,
+   "share": 0.1076,
+   "spend_365": 3414.65,
+   "orders_365": 6.0,
+   "basket": 649.8844,
+   "recency_days": 17.0,
+   "tenure_years": 0.501,
+   "trend": 3.0051,
+   "spend_share": 0.0219
+  },
+  {
+   "segment": "Established core",
+   "accounts": 1549,
+   "share": 0.3599,
+   "spend_365": 18469.86,
+   "orders_365": 25.0,
+   "basket": 732.0531,
+   "recency_days": 9.0,
+   "tenure_years": 2.4997,
+   "trend": 0.0545,
+   "spend_share": 0.5285
+  },
+  {
+   "segment": "Drifting",
+   "accounts": 879,
+   "share": 0.2042,
+   "spend_365": 5275.56,
+   "orders_365": 8.0,
+   "basket": 673.34,
+   "recency_days": 78.0,
+   "tenure_years": 5.4155,
+   "trend": -0.9613,
+   "spend_share": 0.053
+  },
+  {
+   "segment": "Long-standing core",
+   "accounts": 1413,
+   "share": 0.3283,
+   "spend_365": 17206.85,
+   "orders_365": 23.0,
+   "basket": 726.5052,
+   "recency_days": 10.0,
+   "tenure_years": 9.4155,
+   "trend": 0.0372,
+   "spend_share": 0.3966
+  }
+ ],
+ "overall": {
+  "orders_365": 18.0,
+  "basket": 715.2780889724311,
+  "recency_days": 15.0,
+  "tenure_years": 5.002053388090349,
+  "trend": 0.0203102285350459,
+  "spend_365": 12867.544999999998
+ },
+ "key": {
+  "Drifting": 0,
+  "Established core": 37,
+  "Long-standing core": 21,
+  "Newcomers": 0
+ },
+ "small_business": {
+  "Drifting": 0.6542,
+  "Established core": 0.4003,
+  "Long-standing core": 0.4183,
+  "Newcomers": 0.5637
+ }
+}

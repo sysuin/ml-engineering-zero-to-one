@@ -1,0 +1,14 @@
+                      rows leavers   rate    Gini  entropy
+  training split     5,041     328   6.5%  0.1217   0.3472
+Split at 60 days since the last order, the whiteboard's
+  60 days or fewer   4,461     187   4.2%  0.0803   0.2510
+  more than 60         580     141  24.3%  0.3680   0.8002
+  weighted                                 0.1134   0.3142
+  decrease                                 0.0082   0.0330
+Split at 92.5 days since the last order, the tree's
+  92.5 days or fewer 4,742     228   4.8%  0.0915   0.2782
+  more than 92.5       299     100  33.4%  0.4452   0.9194
+  weighted                                 0.1125   0.3162
+  decrease                                 0.0092   0.0310
+Best cut by Gini: 92.5 days, decrease 0.0092
+Best cut by entropy: 49.5 days, decrease 0.0378

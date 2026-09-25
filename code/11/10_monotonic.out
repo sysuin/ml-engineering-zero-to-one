@@ -1,0 +1,21 @@
+               rounds  watched loss    AUC  leavers  falls
+unconstrained   1,360       0.18680  0.777       30      1
+constrained       960       0.18701  0.775       30      0
+
+days since order  unconstrained  constrained
+               0           3.4%         3.4%
+              30           6.4%         6.4%
+              60          11.2%        11.2%
+              90          11.8%        11.8%
+             120          22.1%        22.2%
+             180          22.1%        22.2%
+             240          31.2%        24.6%
+             270          31.2%        24.6%
+             300          23.5%        24.6%
+             365          23.5%        24.6%
+
+The unconstrained risk falls at a gap of 275 days.
+fitted contracts  contracts   left
+ 180 to 239 days         32  28.1%
+ 240 to 274 days          7  57.1%
+ 275 to 365 days          6   0.0%

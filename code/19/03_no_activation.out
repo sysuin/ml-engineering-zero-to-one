@@ -1,0 +1,7 @@
+Two layers vs one: largest gap 7.1e-14
+With ReLU, the nearest single layer misses by 2.337 on average
+
+log loss                        params  training  validation
+one neuron (Chapter 7)              17    0.2088      0.1865
+16 -> 8 -> 8 -> 1, identity        217    0.2088      0.1865
+16 -> 8 -> 8 -> 1, relu            217    0.1612      0.2309

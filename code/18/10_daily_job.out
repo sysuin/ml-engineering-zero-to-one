@@ -1,0 +1,15 @@
+2024-09-17: 0 alert(s)
+2024-10-07: 2 alert(s)
+ALERT 2024-10-07  category: Quality  [Poisson + forest]
+  27 tickets, expected 2.6, limit 9, forest rank 0.0001
+  products named: MRD-CLE-001 x21, MRD-SAN-045 x2
+  "morning, mrd-cle-001 shedding fibres everywhere, staff...
+  "mrd-cle-001 tearing straight out the pack, whole batch is...
+ALERT 2024-10-07  supplier: Pemberton Mills  [Poisson + forest]
+  22 tickets, expected 0.7, limit 4, forest rank 0.0001
+  products named: MRD-CLE-001 x22
+  "morning, mrd-cle-001 shedding fibres everywhere, staff...
+  "mrd-cle-001 tearing straight out the pack, whole batch is...
+
+2024, normal days: 7 alerts on 6 days, 0.73 a month
+Defect window: Pemberton alerted on 75 of 75 days

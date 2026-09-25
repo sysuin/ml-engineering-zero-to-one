@@ -1,0 +1,18 @@
+The table as built: 11,200 rows, 12 expectations hold
+
+discount gaps filled with 0: 1 of 12 expectations broken
+  discount_pct is missing exactly when legacy_terms is 1
+    fails for 1,216: 3420, 3428, 3430, ...
+
+no-order recency filled with 0: 3 of 12 expectations broken
+  days_since_order runs from 1 to the first order on record
+    fails for 14: 3415, 3416, 3417, ...
+  spend_365 is 0 exactly when no order in the year
+    fails for 14: 3415, 3416, 3417, ...
+  orders_90d is 0 exactly when no order in 90 days
+    fails for 14: 3415, 3416, 3417, ...
+
+label from the worst outcome: 1 of 12 expectations broken
+  the label rate in each split is between 3% and 13%
+    fails for 1: train
+  (its rate on the training rows: 17.2%)

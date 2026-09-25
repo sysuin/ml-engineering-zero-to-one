@@ -1,0 +1,12 @@
+    Foresight's forest, leaf 50     leaves of 1
+ 1  days_since_order       0.393    days_since_order       0.184
+ 2  orders_90d             0.286    log_spend_365          0.175
+ 3  log_spend_365          0.118    noise                  0.165
+ 4  orders_prev_90d        0.052    tenure_days            0.095
+ 5  noise                  0.042    orders_90d             0.088
+ 6  discount_pct           0.041    orders_prev_90d        0.084
+ 7  tenure_days            0.026    discount_pct           0.055
+ 8  segment=Mid-market     0.011    tickets_90d            0.024
+ 9  segment=Public sector  0.007    region=Northeast       0.020
+Foresight's forest: noise ranks 5 of 17, above 12 real columns
+leaves of 1: noise ranks 3 of 17, above 14 real columns

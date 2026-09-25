@@ -1,0 +1,23 @@
+             setting        2023  2024      caught
+mean + k sd  k=3           14.01 13.70  2024-10-07
+             k=4            4.67  4.08  2024-10-07
+             k=5            2.00  1.05  2024-10-07
+             k=6            0.33  0.31  2024-10-07  <- chosen
+             k=8            0.08  0.10  2024-10-07
+Poisson      alpha=0.01     4.25  3.14  2024-10-07
+             alpha=0.003    1.17  0.94  2024-10-07
+             alpha=0.001    0.08  0.21  2024-10-07  <- chosen
+             alpha=0.0001   0.00  0.00  2024-10-07
+             alpha=1e-05    0.00  0.00  2024-10-07
+forest       q=0.005        3.42  2.51  2024-10-07
+             q=0.002        1.33  1.05  2024-10-07
+             q=0.001        0.75  0.52  2024-10-07  <- chosen
+             q=0.0005       0.42  0.42  2024-10-07
+             q=0.0002       0.17  0.10  2024-10-07
+
+1424 defect tickets, 19.0 a day on top of Pemberton's 0.73
+  kept  a day   mean + k sd       Poisson        forest
+   50%    9.5        0 days        0 days        0 days
+   20%    3.8        missed        0 days        3 days
+   10%    1.9        missed       12 days       12 days
+    5%    0.9        missed        missed        missed

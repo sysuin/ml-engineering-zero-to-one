@@ -1,0 +1,14 @@
+Leave rate 0.0651. Samples drawn 2,000 times at each size:
+      n  spread seen   formula
+    250       0.0153    0.0156
+  1,000       0.0076    0.0078
+  4,000       0.0039    0.0039
+
+95% intervals by formula
+  legacy  0.0806   0.0653 to 0.0959
+  current 0.0601   0.0526 to 0.0677
+
+Legacy minus current +0.0205; 95% bootstrap intervals:
+  drawing contracts  +0.0038 to +0.0372, legacy ahead in 99.0%
+  drawing accounts   +0.0034 to +0.0376, legacy ahead in 99.2%
+Legacy rate alone, by account: 0.0651 to 0.0961

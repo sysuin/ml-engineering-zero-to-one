@@ -1,0 +1,11 @@
+Foresight: 5,041 renewals in 18 monthly cohorts
+
+                   Foresight    Fraud     Recs   Search   Demand
+rows scored a day        280       8M      15G     400M     672M
+rows a second         0.0778      370     521k    18.5k    46.7k
+requests in flight         -     14.8     83.3     13.9        -
+cores to score         <0.01     0.37     20.8    0.741     1.87
+online store, GB           0       72     50.4      9.6        0
+training table, GB     <0.01       19      504      230      640
+feature log, GB/yr     0.036     7.1k     135k    14.5k    5.89k
+retrain, core-h/mo     <0.01     13.2    2.62k      160      111

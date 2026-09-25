@@ -1,0 +1,18 @@
+tuning cohorts; columns kept by a fit on the training split
+ strength     AUC  top 40  kept
+    0.002  0.7643      90    14
+    0.005  0.7653      92     5
+            days_since_order, discount_pct, Enterprise,
+            Mid-market, Public sector
+     0.01  0.7636      90     4
+            days_since_order, discount_pct, Mid-market, Public
+            sector
+    0.015  0.7568      92     1
+            days_since_order
+     0.02  0.7522      93     1
+            days_since_order
+     0.03  0.7356      92     1
+            days_since_order
+     0.05  0.6709      73     1
+            days_since_order
+the rule on the same cohorts: top 40 92

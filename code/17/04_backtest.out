@@ -1,0 +1,17 @@
+24 target months x 20 series x 3 horizons = 1,440 forecasts per rule
+origins from 2023-10 to 2025-11
+
+WAPE, 2024-2025
+                  h=1    h=2    h=3
+naive           10.5%  15.7%  21.1%
+seasonal naive  13.7%  13.7%  13.7%
+moving average  14.3%  18.0%  20.0%
+
+WAPE by year, h=1
+  naive           2024: 11.4%   2025: 9.6%
+  seasonal naive  2024: 14.6%   2025: 12.9%
+  moving average  2024: 15.4%   2025: 13.2%
+
+Seasonal naive, h=1, scored one target month at a time
+  best  2024-02  6.5%
+  worst 2024-04  19.8%

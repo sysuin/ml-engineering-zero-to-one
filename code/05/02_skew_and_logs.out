@@ -1,0 +1,9 @@
+Spend: mean 22,226, median 13,160, skew 35.2
+log10 spend: mean 4.11, median 4.12, skew 0.05
+  (16 rows of zero spend have no logarithm)
+
+The top 1% of rows (50) hold 20.6% of all spend
+  long tail     4,962 rows  98.4%  spend  77.9%  median    12,991
+  key accounts     79 rows   1.6%  spend  22.1%  median   241,099
+
+Without the largest row (3,848,735): mean 21,467, median 13,159

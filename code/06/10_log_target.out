@@ -1,0 +1,13 @@
+Validation residuals on the log scale
+  spent something  1,937 rows   mean   0.44   std  1.03
+  spent nothing      146 rows   mean  -6.34   std  0.92
+
+Validation, 2,083 rows
+                                           MAE      RMSE
+  mean of the training rows              6,632    19,196
+  last value: the 90 days before         3,159     5,682
+  run rate: last year x 90/365           3,090     5,561
+  dollars, full-year rows                2,927     4,983
+  log(1 + spend), back to $              2,939     5,080
+
+sum of predictions / sum spent:  dollars 98.2%   log 79.0%

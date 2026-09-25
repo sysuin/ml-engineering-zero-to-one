@@ -1,0 +1,13 @@
+the table
+  every monthly cohort holds 150 to 400 renewals         1 fail
+  legacy terms only for customers from before 2019       0 fail
+  customers start on the first of a month                0 fail
+tenure off by one
+  every monthly cohort holds 150 to 400 renewals         1 fail
+  legacy terms only for customers from before 2019       0 fail
+  customers start on the first of a month           11,200 fail
+half the rows
+  every monthly cohort holds 150 to 400 renewals        12 fail
+  legacy terms only for customers from before 2019       0 fail
+  customers start on the first of a month                0 fail
+The cohort outside the bounds: 2025-10-02, 422 rows

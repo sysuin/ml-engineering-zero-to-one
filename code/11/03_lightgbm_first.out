@@ -1,0 +1,9 @@
+validation              AUC  log loss  top-40 leavers
+logistic (Ch. 7)      0.805    0.1865              52
+LightGBM, defaults    0.770    0.2101              44
+  1,000 rounds        0.729    0.5203              42
+LightGBM, matched     0.795    0.1855              54
+scikit-learn          0.793    0.1885              50
+
+Matched LightGBM against scikit-learn: correlation 0.936,
+  largest gap 0.432, 207 of 240 calls in common

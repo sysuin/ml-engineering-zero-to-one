@@ -1,0 +1,9 @@
+                       keep 1% legit  keep 10% legit
+rows scored a day                80M             80M
+rows a second                   3.7k            3.7k
+requests in flight              55.6            55.6
+cores to score                   3.7             3.7
+online store, GB                 720             720
+training table, GB               190           1.75k
+feature log, GB/yr               71k             71k
+retrain, core-h/mo               132           1.21k

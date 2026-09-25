@@ -1,0 +1,24 @@
+Foresight leaderboard: renewal risk
+
+Split      validation: contracts ending 2024-07-01 to 2024-12-31
+           6 monthly cohorts, 2,083 contracts, 122 leavers
+           240 calls: the top 40 of each cohort
+Method     every model by foresight.evaluate's backtest,
+           fitted on the outcomes known at each cohort's mark
+Intervals  95%, 2,000 bootstrap resamples, the same for every list
+
+           leavers  precision at 40   AUC
+logistic        57  23.8 (18.3-29.6)  0.801 (0.761-0.840)
+forest          58  24.2 (18.8-29.6)  0.792 (0.748-0.833)
+rule            53  22.1 (16.7-28.3)  0.762 (0.714-0.808)
+random          14  5.9               0.500
+perfect        122  50.8              1.000
+
+Paired differences (95%)
+                    precision, points     AUC
+logistic - rule     +1.7 (-1.7 to +5.0)   +0.039 (+0.004 to +0.076)
+forest - rule       +2.1 (-1.3 to +4.2)   +0.029 (+0.003 to +0.057)
+forest - logistic   +0.4 (-2.9 to +2.9)   -0.009 (-0.035 to +0.016)
+
+A difference whose interval includes zero is not a
+difference these cohorts can see.

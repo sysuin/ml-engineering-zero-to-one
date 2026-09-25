@@ -1,0 +1,28 @@
+feature                 weight   per unit  per std dev
+spend_365                0.204     dollar       13,067
+spend_90d                0.283     dollar        4,334
+orders_prev_90d       -142.789      order       -1,797
+orders_90d              70.302      order          830
+term_months            -46.208      month         -148
+tenure_days             -0.114        day         -144
+days_since_order         3.094        day          120
+legacy_terms          -228.436        yes          -98
+tickets_90d            -97.100     ticket          -58
+
+correlation           s_90d    s_365    o_90d   o_prev   target
+spend_90d              1.00     0.98     0.96     0.92     0.96
+spend_365              0.98     1.00     0.92     0.94     0.97
+orders_90d             0.96     0.92     1.00     0.91     0.91
+orders_prev_90d        0.92     0.94     0.91     1.00     0.90
+
+weight              with spend_90d     without
+spend_365                    0.204       0.256
+orders_90d                  70.302     239.508
+orders_prev_90d           -142.789    -217.758
+validation MAE               2,927       2,958
+
+by tickets in the 90 days before the mark
+  tickets     rows  mean spend_365  mean target
+  0          3,359          17,082        4,348
+  1            856          22,214        5,713
+  2+           181          56,720       14,304

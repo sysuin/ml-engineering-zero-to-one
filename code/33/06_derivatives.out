@@ -1,0 +1,19 @@
+Slope of the loss at b = -1.0
+  nudge 1.0    (L(b + h) - L(b)) / h = 0.314819
+  nudge 0.1    (L(b + h) - L(b)) / h = 0.213855
+  nudge 0.01   (L(b + h) - L(b)) / h = 0.204860
+  nudge 0.001  (L(b + h) - L(b)) / h = 0.203973
+  by the rule, mean(p - y)      = 0.203875
+
+Descent on b alone, learning rate 2
+  step  0  b = +0.0000  loss 0.693147
+  step  1  b = -0.8699  loss 0.406557
+  step  2  b = -1.3303  loss 0.321154
+  step  5  b = -1.9681  loss 0.258844
+  step 10  b = -2.3599  loss 0.243784
+  step 30  b = -2.6452  loss 0.240698
+  the bottom: log-odds of the rate, -2.6651
+
+Contract 5850: p = 0.8656, y = 1
+  (p - y) x_j = (0.8656 - 1) x 8.877 = -1.19298
+  by nudging w_j both ways: -1.19298

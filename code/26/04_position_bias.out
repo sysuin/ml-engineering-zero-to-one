@@ -1,0 +1,12 @@
+ position     1     2     3     5    10
+     true  1.00  0.54  0.37  0.23  0.13
+estimated  1.00  0.56  0.38  0.24  0.15
+from 12,000 swapped impressions of 600,000
+
+                               NDCG@10  fixes   far
+  production ranker              0.911     0%    0%
+  raw click rate                 0.961    70%   50%
+  click rate / estimated look    0.988    96%   95%
+  click rate / true look         0.988    96%   95%
+  true relevance                 1.000   100%  100%
+21,045 wrong pairs, 5,985 far apart

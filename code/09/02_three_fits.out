@@ -1,0 +1,16 @@
+pool of 3,710 training contracts; validation 2,083
+
+RMSE of log(1 + spend) after the mark
+degree  first 30: train      valid  200 draws: train      valid
+     0             2.21       2.38              2.20       2.40
+     1             2.15       2.22              1.85       2.23
+     2             2.10       2.10              1.81       2.20
+     3             2.10       2.10              1.74       2.31
+     4             2.06       3.89              1.69       3.00
+     5             2.06       3.66              1.65       8.95
+     6             1.96      94.53              1.61      29.96
+     7             1.86     375.98              1.57     121.58
+     8             1.86     717.34              1.52     636.36
+
+fitted on all 3,710 instead, validation RMSE
+  degree 0 2.38   degree 2 2.07   degree 8 2.08

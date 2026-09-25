@@ -11,7 +11,9 @@
 .PHONY: help setup preflight data listings verify test lint clean \
         train score serve monitor demo docker
 
-PY := python3
+# The project's own Python once `make setup` has made it, so no command depends on the
+# environment being switched on; the system's python3 only until then.
+PY := $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 export PYTHONPATH := $(CURDIR)/code
 
 help:  ## show this list
@@ -19,13 +21,17 @@ help:  ## show this list
 	  | awk 'BEGIN{FS=":.*?## "}{printf "  \033[1m%-10s\033[0m %s\n", $$1, $$2}'
 
 setup:  ## create the virtualenv and install everything
-	$(PY) -m venv .venv
+	python3 -m venv .venv
 	.venv/bin/pip install --upgrade pip
+	@# On Linux the default PyTorch wheel carries gigabytes of GPU libraries this book
+	@# never uses; take the CPU build first. macOS and Windows wheels are CPU-only anyway.
+	@if [ "$$(uname -s)" = "Linux" ]; then \
+	  .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu; fi
 	.venv/bin/pip install -r requirements.txt
 	@# One line in site-packages puts code/ on Python's path, so `from foresight.config
 	@# import ...` works from any folder without setting PYTHONPATH.
 	.venv/bin/python -c "import site, pathlib; pathlib.Path(site.getsitepackages()[0], 'zero-to-one-code.pth').write_text(str(pathlib.Path('code').resolve()) + chr(10))"
-	@echo "Now: make preflight, then make data."
+	@echo "Now: make data, then make preflight."
 
 preflight:  ## check Python, the libraries and the dataset before you start
 	$(PY) code/_preflight.py

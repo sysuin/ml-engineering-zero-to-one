@@ -1,0 +1,13 @@
+  days        rows    left  one neuron  network
+  1-7         1742    2.5%        4.2%     2.4%
+  8-14         919    2.9%        4.6%     3.1%
+  15-30       1058    4.9%        5.3%     4.5%
+  31-60        742    8.8%        6.8%     8.8%
+  61-90        276   14.9%        9.8%    18.1%
+  91-180       231   34.2%       17.8%    33.0%
+  181-411       73   28.8%       52.4%    25.5%
+
+What the three hidden units learned
+  unit 1: on before 114 days, output weight -1.62
+  unit 2: on after 28 days, output weight -0.19
+  unit 3: on before 51 days, output weight -0.83

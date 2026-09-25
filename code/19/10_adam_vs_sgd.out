@@ -1,0 +1,17 @@
+Gradient size over the first epoch (root mean square)
+                     count      size
+  layer 1 weights      512    0.0027
+  layer 1 biases        32    0.0088
+  layer 2 weights     1024    0.0058
+  layer 2 biases        32    0.0258
+  output weights        32    0.0710
+  output bias            1    0.4519
+
+training log loss after epoch      10     30     60
+SGD 0.01                       0.2537 0.2227 0.2119
+SGD 0.1                        0.2068 0.1999 0.1963
+SGD 0.3                        0.2032 0.1921 0.1909
+SGD 1                          0.2048 0.1883 0.1940
+Adam 0.0003                    0.2256 0.2046 0.1997
+Adam 0.001                     0.2038 0.1946 0.1842
+Adam 0.003                     0.1984 0.1828 0.1614

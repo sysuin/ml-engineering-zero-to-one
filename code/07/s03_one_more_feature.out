@@ -1,0 +1,4 @@
+                         leavers  precision  recall
+  sixteen columns             52      21.7%   42.6%
+  plus log spend_90d          54      22.5%   44.3%
+  days-since rule             53      22.1%   43.4%

@@ -18,4 +18,4 @@ beside it and never rewrites one an earlier chapter printed; `__version__` is th
 milestone the package completes.
 """
 
-__version__ = "0.2"
+__version__ = "0.4"

@@ -1,0 +1,8 @@
+standard deviation       orders   basket  recency   tenure    trend
+raw units                 56.59   226.96    56.29     3.71     1.45
+logs, unscaled             1.01     0.33     1.39     3.71     1.45
+
+k = 4                            sizes  agree  differ most in
+raw units        [2185 1012  972  135]   0.05  basket, tenure
+logs, unscaled   [1494 1213 1198  399]   0.37  tenure, trend
+standardised     [1549 1413  879  463]   1.00  trend, tenure

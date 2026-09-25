@@ -1,0 +1,22 @@
+333,057 orders before 2025, 48 products
+
+Nearest five to MRD-CLE-001, the Pemberton cloth (Cleaning):
+  MRD-CLE-006  Cleaning
+  MRD-SAF-013  Safety
+  MRD-PAC-027  Packaging
+  MRD-FAC-033  Facilities
+  MRD-FAC-036  Facilities
+
+Share of the nearest five in the product's own category
+  Cleaning                                 24%
+  Facilities                               22%
+  Packaging                                24%
+  Safety                                   33%
+  Sanitation                              100%
+  all 48 products                          41%
+  by chance                                18%
+  raw pair counts, 48 numbers each         37%
+
+Sanitation pairs in one order, as a multiple of chance
+  all orders before 2025                  3.45
+  orders since its launch                 1.07

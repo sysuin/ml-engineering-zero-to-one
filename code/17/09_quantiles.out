@@ -1,0 +1,17 @@
+Share of actuals inside the 80% interval, product x region
+          h=1     h=2     h=3   width
+  2024   65.8%   60.6%   56.6%   38.1%
+  2025   77.9%   78.4%   77.4%   43.2%
+  2024: below q10 34.4%, above q90 4.6%
+  2025: below q10 6.3%, above q90 15.8%
+
+Widened from earlier misses
+          h=1     h=2     h=3   width
+  2024   78.8%   73.3%   72.9%   53.0%
+  2025   87.4%   88.6%   90.0%   56.6%
+
+MRD-PAC-020, Southwest, forecast at the end of 2025-09
+           q10  median     q90   actual   widened
+  2025-10    678     839     994      933   643-1,029
+  2025-11    736     871   1,043      782   686-1,093
+  2025-12    776     891   1,107      972   713-1,170

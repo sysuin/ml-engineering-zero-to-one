@@ -1,0 +1,10 @@
+64 -> 64, Adam 0.001   lowest valid loss    at epoch 150  leavers
+no regularisation          0.1858 (ep   6)          0.2445       37
+dropout 0.3                0.1854 (ep   7)          0.1990       43
+dropout 0.5                0.1853 (ep  18)          0.1905       49
+weight decay 0.1           0.1859 (ep   6)          0.2216       37
+weight decay 1             0.1858 (ep 125)          0.1888       49
+dropout and decay          0.1848 (ep 104)          0.1869       54
+
+Early stopping on the held-back months: epoch 14
+  validation loss 0.1888, leavers in the top 40s 52

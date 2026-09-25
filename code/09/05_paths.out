@@ -1,0 +1,20 @@
+column                   unpenalised  lasso zero from
+days_since_order              +0.389          0.06813
+orders_90d                    -3.549          0.01778
+discount_pct                  -0.244          0.01778
+segment=Public sector         -0.364          0.01468
+segment=Mid-market            -0.212          0.01000
+segment=Enterprise            -0.236          0.00825
+log_spend_365                 +0.184          0.00562
+region=Northeast              +0.109          0.00383
+legacy_terms                  +0.053          0.00316
+region=Midwest                +0.102          0.00261
+region=Southeast              +0.096          0.00261
+orders_prev_90d               +1.008          0.00215
+tenure_days                   -0.082          0.00215
+tickets_90d                   +0.067          0.00178
+term_months                   -0.019          0.00100
+region=West                   +0.026          0.00046
+strength 0.0010: lasso keeps 14 of 16; ridge's largest |w| 1.484
+strength 0.0022: lasso keeps 11 of 16; ridge's largest |w| 0.980
+strength 0.0046: lasso keeps 7 of 16; ridge's largest |w| 0.607

@@ -1,0 +1,16 @@
+Round 0 gives every contract the training share, 6.5%
+Tree 1 cuts the gap at 49.5, 92.5, 291 days
+
+gap, days    contracts   left  round 1  round 2  round 5 round 50
+   0 to 30       3,719   3.3%     5.1%     4.2%     3.5%     3.3%
+  31 to 60         742   8.8%     6.6%     7.8%     8.3%     8.7%
+  61 to 90         276  14.9%    10.7%    12.8%    14.2%    14.8%
+  91 to 180        231  34.2%    20.7%    27.7%    32.8%    34.1%
+ 181 to 365         71  28.2%    17.2%    20.9%    27.6%    27.7%
+
+round  mean |left over|  squared error
+    0            0.1217        0.06083
+    1            0.1157        0.05638
+    2            0.1127        0.05511
+    5            0.1097        0.05421
+   50            0.1033        0.05064

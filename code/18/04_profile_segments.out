@@ -1,0 +1,24 @@
+Medians on 2024-04-01
+                    orders  basket  days  years  trend    spend
+Newcomers                6     650    17    0.5  +3.01    3,415
+Established core        25     732     9    2.5  +0.05   18,470
+Drifting                 8     673    78    5.4  -0.96    5,276
+Long-standing core      23     727    10    9.4  +0.04   17,207
+all accounts            18     715    15    5.0  +0.02   12,868
+
+                    accounts  share  of spend  key  small biz
+Newcomers                463    11%        2%    0        56%
+Established core       1,549    36%       53%   37        40%
+Drifting                 879    20%        5%    0        65%
+Long-standing core     1,413    33%       40%   21        42%
+all accounts           4,304   100%      100%   58        48%
+
+The other candidates accounts orders  basket  days  years  trend
+k = 3                    567      6     640    17    0.6  +2.56
+                       2,092     30     730     6    5.8  +0.09
+                       1,645     12     709    43    5.8  -0.50
+k = 5                    403      6     693    15    0.4  +3.23
+                       1,511     26     725     8    2.4  +0.06
+                         259      6     388    49    3.8  +0.20
+                         773      9     763    75    5.7  -1.07
+                       1,358     24     722     9    9.4  +0.06

@@ -1,0 +1,19 @@
+         left  renewed   all
+current   230     3595  3825
+legacy     98     1118  1216
+all       328     4713  5041
+
+P(leave)                  0.0651
+P(legacy)                 0.2412
+P(leave and legacy)       0.0194   if independent 0.0157
+P(leave | legacy)         0.0806
+P(leave | current)        0.0601
+P(legacy | leave)         0.2988
+Bayes: P(legacy | leave) x P(leave) / P(legacy) = 0.0806
+
+Risk ratio, legacy to current 1.34
+Odds of leaving: legacy 0.0877, current 0.0640, ratio 1.37
+Log-odds: legacy -2.434, current -2.749
+A call at p = 0.060: expected value  -47.10 dollars
+A call at p = 0.081: expected value  -32.50 dollars
+A call at p = 0.126: expected value   +0.00 dollars

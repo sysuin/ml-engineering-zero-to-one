@@ -32,3 +32,4 @@ venv/
 # every time. `_report.json` next to it IS committed — it is the staleness cache, and a
 # fresh clone needs it to know the captured output is current without re-running.
 code/_usage.jsonl
+code/_report.json.lock

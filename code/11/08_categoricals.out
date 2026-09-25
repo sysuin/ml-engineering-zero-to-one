@@ -1,0 +1,8 @@
+5,086 postcodes; the watched months hold 962 contracts
+
+                        rounds  watched loss    AUC  postcode splits
+categories (native)      1,360       0.18680  0.777                -
+one-hot columns          1,351       0.18718  0.776                -
+codes as numbers         1,046       0.18837  0.771                -
++ postcode, guarded      1,360       0.18680  0.777                0
++ postcode, unguarded      136       0.19353  0.742               22

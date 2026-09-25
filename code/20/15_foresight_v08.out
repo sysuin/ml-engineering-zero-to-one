@@ -1,0 +1,28 @@
+Foresight triage: 5,904 tickets from 2025
+
+priority: accuracy 81.3%
+           n  precision  recall
+class                          
+Urgent   407      0.895   0.673
+High    1341      0.786   0.786
+Normal  2871      0.811   0.878
+Low     1285      0.830   0.741
+
+category: accuracy 96.3%
+             n  precision  recall
+class                            
+Account    637      0.954   0.939
+Billing   1016      0.955   0.968
+Delivery  2013      0.973   0.985
+Quality    803      0.963   0.945
+Returns    629      0.953   0.936
+Stock      806      0.960   0.959
+
+Urgent found in the first 3 read each day
+  arrival       19.9%
+  urgent words  39.1%
+  model         86.5%
+
+answered by (threshold 0.7)
+  model            5,479
+  model (unsure)     425

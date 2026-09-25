@@ -1,0 +1,19 @@
+per standard deviation    descent  sklearn  odds x
+intercept                 -3.0994  -3.0994
+days_since_order          +0.5012  +0.5012    1.65
+orders_90d                -1.5844  -1.5844    0.21
+orders_prev_90d           +1.4676  +1.4676    4.34
+log_spend_365             +0.0275  +0.0275    1.03
+tickets_90d               +0.0734  +0.0734    1.08
+tenure_days               -0.1058  -0.1058    0.90
+term_months               -0.0246  -0.0246    0.98
+legacy_terms              +0.0561  +0.0561    1.06
+discount_pct              -0.2553  -0.2553    0.77
+segment=Enterprise        -0.3652  -0.3652    0.69
+segment=Mid-market        -0.3239  -0.3239    0.72
+segment=Public sector     -0.4111  -0.4111    0.66
+region=Midwest            +0.1419  +0.1419    1.15
+region=Northeast          +0.0872  +0.0872    1.09
+region=Southeast          +0.1410  +0.1410    1.15
+region=West               -0.0046  -0.0046    1.00
+Largest difference: 3.2e-07

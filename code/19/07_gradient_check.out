@@ -1,0 +1,13 @@
+parameter        backprop      nudging
+W1[0, 0]      -0.00053352  -0.00053352
+b1[0]         -0.03296588  -0.03296588
+v[0]          +0.40648143  +0.40648143
+c             +0.57011085  +0.57011085
+
+Largest relative gap, all 145 parameters
+  backprop as written            6.5e-07
+  ReLU's mask left out           1.0e+00
+  nudging the loss from p        1.0e+00
+Rows given p within a millionth of 0 or 1: 1
+  contract 6125, Enterprise, 633 orders in 90 days: 44.7 sd out
+Without that row, nudging the loss from p: 4.1e-07

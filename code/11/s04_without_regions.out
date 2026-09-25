@@ -1,0 +1,3 @@
+                   rounds  watched loss    AUC  leavers  region stumps
+with region           960       0.18701  0.775       30             18
+without region        924       0.18766  0.773       30              0

@@ -1,0 +1,18 @@
+FT-000214  card atken twice for inv-57936
+   tokens  card, atken, twice, for, inv
+FT-000232  MRD-SAN-047 showing out of stock again asap!!
+   tokens  sku, showing, out, of, stock, again, asap
+FT-000274  short delivery on 1001296, missing 4 cases regards
+   tokens  short, delivery, on, num, missing, num, cases, regards
+
+896 different words in 11,677 training tickets
+a ticket uses 8.6 of them on average, so 99.04% of the
+bag-of-words table is zeros
+
+             twice     inv     sku   stock    asap missing     num
+FT-000214        1       1       0       0       0       0       0
+FT-000232        0       0       1       1       1       0       0
+FT-000274        0       0       0       0       0       1       2
+
+363 words appear once in all of training, among them
+  delievred, deliverde, delivey, delivrey, delivry, delvered

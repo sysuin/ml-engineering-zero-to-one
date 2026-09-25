@@ -1,0 +1,15 @@
+                       train   left  validation   left
+Drifting                 926  18.3%         392  14.3%
+Established core       2,150   3.4%         812   2.6%
+Long-standing core     1,628   3.7%         756   4.1%
+Newcomers                321   6.9%         122  10.7%
+No order in the year      16  12.5%           1 100.0%
+all renewals           5,041   6.5%       2,083   5.9%
+
+Validation: Drifting is 19% of renewals, 46% of leavers
+The rule's 240 calls: 82% to Drifting accounts
+
+Validation, top 40 a cohort     leavers  precision
+  rule                              53      22.1%
+  Chapter 7's model                 52      21.7%
+  the same + segments               53      22.1%

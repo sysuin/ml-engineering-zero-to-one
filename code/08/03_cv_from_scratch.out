@@ -1,0 +1,9 @@
+fold  fit on  held out  leavers  model AUC  rule AUC
+   1   4,032     1,009       62      0.765     0.737
+   2   4,033     1,008       75      0.744     0.764
+   3   4,033     1,008       65      0.796     0.762
+   4   4,033     1,008       61      0.768     0.774
+   5   4,033     1,008       65      0.800     0.734
+model: mean 0.775, spread (SD) 0.021
+ rule: mean 0.754, spread (SD) 0.016
+Same folds as scikit-learn's KFold: True

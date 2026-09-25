@@ -1,0 +1,13 @@
+Pemberton defect: 2024-10-07 to 2024-12-20, 75 days
+                                first delay  days  false a month
+mean + 3 sd              2024-10-07     0     9          13.87
+Poisson                  2024-10-07     0    23           0.19
+Poisson, alerts kept out 2024-10-07     0    75           0.19
+forest, rows are days    2024-10-07     0    14           1.53
+forest, series-days      2024-10-07     0    23           0.70
+
+ALERT 2024-10-07  supplier: Pemberton Mills  [Poisson]
+  22 tickets, expected 0.7, limit 4
+  products named: MRD-CLE-001 x22
+  "morning, mrd-cle-001 shedding fibres everywhere, staff...
+  "mrd-cle-001 tearing straight out the pack, whole batch is...

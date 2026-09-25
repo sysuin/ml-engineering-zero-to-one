@@ -1,0 +1,21 @@
+One thread, one laptop, as the runner recorded it. A chapter
+last built with --twice shows both runs, so read these as
+upper bounds for running a chapter once.
+
+chapter  listings  seconds  about
+      2        17       44  under a minute
+      3         7        8  under a minute
+      4        15       40  under a minute
+      5        15       15  under a minute
+      6        15      101  2 minutes
+      7        13       42  under a minute
+      8        19      127  3 minutes
+      9        15      191  4 minutes
+     10        18      180  4 minutes
+     11         9       27  under a minute
+     17        15      326  6 minutes
+     18        13      209  4 minutes
+     19        18      218  4 minutes
+     20        14      228  4 minutes
+     26         7        5  under a minute
+    all       210     1762  30 minutes

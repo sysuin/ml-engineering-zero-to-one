@@ -1,0 +1,9 @@
+Validation: 2,083 contracts, 122 leavers (5.9%)
+         area under ROC  library  rank AUC  avg precision  library
+model            0.8011   0.8011    0.8011         0.2675   0.2675
+rule             0.7623   0.7623    0.7623         0.2444   0.2444
+random           0.5000                            0.0586
+
+The model's 240 calls: 57 leavers, 183 renewers
+  true positive rate (recall) 46.7%
+  false positive rate 9.3% of renewers

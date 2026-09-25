@@ -1,0 +1,8 @@
+trees  valid AUC  top-40 leavers
+    1      0.558              22
+    5      0.648              37
+   25      0.680              44
+  100      0.697              44
+  300      0.710              44
+One tree at a time: valid AUC 0.518 to 0.610, mean 0.560
+Rows a bootstrap sample leaves out: 36.7% (35.5% to 38.4%)

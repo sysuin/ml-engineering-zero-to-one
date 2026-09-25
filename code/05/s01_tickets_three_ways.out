@@ -1,0 +1,9 @@
+Histogram, one bar per count 0 to 4: [3847, 982, 177, 26, 7]
+  the bar at 0 holds 76.3%
+Box: quartiles 0, 0, 0; whisker 0; 1,194 rows beyond it (23.7%)
+ECDF and the rate of leaving, by count
+  0 tickets:  76.3% at or below, 3,847 rows,  6.9% left
+  1 ticket :  95.8% at or below,   982 rows,  5.1% left
+  2 tickets:  99.3% at or below,   177 rows,  6.2% left
+  3 tickets:  99.8% at or below,    26 rows,  0.0% left
+  4 or more: 9 rows, 1 left

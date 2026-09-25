@@ -1,0 +1,23 @@
+share not renewing    training  validation
+  Midwest                 7.0%        5.7%
+  Northeast               7.2%        5.7%
+  Southeast               7.0%        4.5%
+  Southwest               5.7%        6.9%
+  West                    6.1%        6.2%
+
+region weights, 95% of resamples (reference: Southwest)
+  region=Midwest    -0.061 to +0.254
+  region=Northeast  -0.054 to +0.270
+  region=Southeast  -0.063 to +0.242
+  region=West       -0.135 to +0.173
+
+                          tuning cohorts         validation
+                             AUC  log loss     AUC  log loss top 40
+v0.3                      0.7657    0.2329  0.8011    0.1861     57
+v0.3, no regions          0.7693    0.2331  0.8090    0.1850     59
+lasso                     0.7643    0.2153  0.8153    0.1869     60
+lasso, no regions         0.7664    0.2148  0.8186    0.1866     62
+
+v0.3 without regions minus v0.3, paired AUC
+  tuning cohorts  +0.0036 (-0.0007 to +0.0081)
+  validation      +0.0080 (+0.0013 to +0.0150)

@@ -1,0 +1,17 @@
+the rubric moves 730 of 21,668 labels
+desk                 North desk  South desk
+label                                      
+Account -> Delivery           0          11
+Billing -> Delivery           0          13
+Quality -> Delivery         679           7
+Returns -> Delivery           0          11
+Stock -> Delivery             0           9
+
+near-identical pairs across the desks, before 2025
+  as filed  same label 85.1%  kappa 0.815  Quality/Delivery 427
+  rubric    same label 92.2%  kappa 0.902  Quality/Delivery 18
+
+category accuracy on validation, each model scored on the
+labels it was trained to reproduce
+  as filed  93.2%   North 90.2%   South 95.3%
+  rubric    95.6%   North 95.2%   South 95.9%

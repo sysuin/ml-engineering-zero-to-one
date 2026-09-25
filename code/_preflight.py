@@ -47,12 +47,19 @@ def main() -> int:
         except ImportError:
             check(f"{package} installed", False,
                   f"needed from {part}: pip install -r requirements.txt")
+        except OSError as e:
+            # A library that installed but cannot load a system part it needs: on macOS,
+            # LightGBM without the OpenMP runtime. Appendix B has the fix.
+            check(f"{package} installed", False,
+                  f"installed but will not load ({str(e).splitlines()[0][:60]}); "
+                  "see Appendix B")
 
     print("\nDataset")
-    from foresight.config import ROOT, WAREHOUSE
-    check("Meridian warehouse present", WAREHOUSE.exists(),
-          str(WAREHOUSE.relative_to(ROOT)) if WAREHOUSE.exists()
-          else "run: make data")
+    from foresight.config import ML_WAREHOUSE, ROOT, WAREHOUSE
+    for label, path in (("Meridian warehouse present", WAREHOUSE),
+                        ("the scaled ML warehouse present", ML_WAREHOUSE)):
+        check(label, path.exists(),
+              str(path.relative_to(ROOT)) if path.exists() else "run: make data")
 
     print("\nDeterminism")
     from foresight.config import SEED, rng

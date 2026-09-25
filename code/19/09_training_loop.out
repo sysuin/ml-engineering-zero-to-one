@@ -1,0 +1,6 @@
+loss after epoch           1     2     5    10    20    30  valid
+full batch, SGD 0.1    0.721 0.681 0.577 0.451 0.314 0.266  0.247
+128s, SGD 0.1          0.390 0.240 0.217 0.208 0.203 0.201  0.187
+128s, Adam 0.001       0.598 0.343 0.215 0.206 0.199 0.196  0.188
+
+One epoch: 4,355 rows; 35 steps in batches of 128, 1 in a full batch

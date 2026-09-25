@@ -1,0 +1,17 @@
+negative spend               0 rows
+negative counts              0 rows
+order before the record      0 rows
+
+Box-plot outliers in spend: 315 rows, 66 of them key accounts
+The five largest             mark       spend orders_90d left
+  Halloway Healthcare   2024-04-01   3,848,735        611    1
+  Halloway Healthcare   2023-09-01   2,547,627        633    0
+  Vernham Healthcare    2023-12-01     595,471        106    0
+  Merrivale Holdings    2024-03-02     569,976         89    0
+  Gatesby Group         2024-01-01     569,521         94    0
+
+               rows  leavers   rate  median orders_90d
+long tail     4,962      327   6.6%                  4
+key accounts     79        1   1.3%                 72
+Largest long-tail spend 256,785
+Smallest key-account spend above zero 29,943

@@ -1,0 +1,21 @@
+Last training outcome on record: 2024-06-30
+Outcomes a model was fitted on that were not yet on record
+cohort ending     its mark  training split  earlier cohorts
+Jul 2024        2024-05-02             686              686
+Aug 2024        2024-06-02             338              696
+Sep 2024        2024-07-02               0              706
+Oct 2024        2024-08-02               0              666
+Nov 2024        2024-09-01               0              667
+Dec 2024        2024-10-02               0              695
+
+build(known_by=2024-05-02): 4,355 rows,
+  identical to the backtest's known_by(): True
+
+Validation, fitted on           AUC  top-40 leavers  precision
+  training split            0.805              52      21.7%
+  earlier cohorts           0.808              56      23.3%
+  known by the mark         0.801              57      23.8%
+  (the rule)                0.762              53      22.1%
+
+The same 5,027 contracts, known outcomes only:
+  AUC 0.779, top-40 leavers 148, precision 23.1%

@@ -1,0 +1,131 @@
+{
+ "systems": {
+  "Foresight": {
+   "name": "Foresight",
+   "requests_day": 280.05555555555554,
+   "scored_per_req": 1,
+   "peak_ratio": 1,
+   "cpu_ms": 0.05,
+   "wait_ms": 0,
+   "features": 40,
+   "entities": 0,
+   "logged_per_req": 1,
+   "train_rows": 5041,
+   "retrains_month": 1,
+   "window_h": 1,
+   "trees": 500
+  },
+  "Fraud": {
+   "name": "Fraud",
+   "requests_day": 8000000.0,
+   "scored_per_req": 1,
+   "peak_ratio": 4,
+   "cpu_ms": 0.5,
+   "wait_ms": 40,
+   "features": 300,
+   "entities": 15000000.0,
+   "logged_per_req": 1,
+   "train_rows": 7920000.0,
+   "retrains_month": 4,
+   "window_h": 0,
+   "trees": 500
+  },
+  "Recs": {
+   "name": "Recs",
+   "requests_day": 30000000.0,
+   "scored_per_req": 500,
+   "peak_ratio": 3,
+   "cpu_ms": 0.02,
+   "wait_ms": 80,
+   "features": 150,
+   "entities": 21000000.0,
+   "logged_per_req": 10,
+   "train_rows": 420000000.0,
+   "retrains_month": 30,
+   "window_h": 0,
+   "trees": 500
+  },
+  "Search": {
+   "name": "Search",
+   "requests_day": 2000000.0,
+   "scored_per_req": 200,
+   "peak_ratio": 4,
+   "cpu_ms": 0.02,
+   "wait_ms": 150,
+   "features": 120,
+   "entities": 5000000.0,
+   "logged_per_req": 20,
+   "train_rows": 240000000.0,
+   "retrains_month": 4,
+   "window_h": 0,
+   "trees": 500
+  },
+  "Demand": {
+   "name": "Demand",
+   "requests_day": 24000000.0,
+   "scored_per_req": 28,
+   "peak_ratio": 1,
+   "cpu_ms": 0.02,
+   "wait_ms": 0,
+   "features": 80,
+   "entities": 0,
+   "logged_per_req": 1,
+   "train_rows": 1000000000.0,
+   "retrains_month": 1,
+   "window_h": 4,
+   "trees": 500
+  }
+ },
+ "estimates": {
+  "Foresight": {
+   "rows scored a day": 280.05555555555554,
+   "rows a second": 0.0777932098765432,
+   "requests in flight": null,
+   "cores to score": 7.779320987654321e-06,
+   "online store, GB": 0.0,
+   "training table, GB": 0.00161312,
+   "feature log, GB/yr": 0.035981537777777774,
+   "retrain, core-h/mo": 0.0002800555555555555
+  },
+  "Fraud": {
+   "rows scored a day": 8000000.0,
+   "rows a second": 370.3703703703704,
+   "requests in flight": 14.814814814814815,
+   "cores to score": 0.3703703703703704,
+   "online store, GB": 72.0,
+   "training table, GB": 19.008,
+   "feature log, GB/yr": 7101.44,
+   "retrain, core-h/mo": 13.2
+  },
+  "Recs": {
+   "rows scored a day": 15000000000.0,
+   "rows a second": 520833.3333333334,
+   "requests in flight": 83.33333333333334,
+   "cores to score": 20.833333333333336,
+   "online store, GB": 50.4,
+   "training table, GB": 504.0,
+   "feature log, GB/yr": 134904.0,
+   "retrain, core-h/mo": 2625.0
+  },
+  "Search": {
+   "rows scored a day": 400000000.0,
+   "rows a second": 18518.51851851852,
+   "requests in flight": 13.88888888888889,
+   "cores to score": 0.7407407407407408,
+   "online store, GB": 9.6,
+   "training table, GB": 230.4,
+   "feature log, GB/yr": 14483.2,
+   "retrain, core-h/mo": 160.0
+  },
+  "Demand": {
+   "rows scored a day": 672000000.0,
+   "rows a second": 46666.666666666664,
+   "requests in flight": null,
+   "cores to score": 1.8666666666666665,
+   "online store, GB": 0.0,
+   "training table, GB": 640.0,
+   "feature log, GB/yr": 5886.72,
+   "retrain, core-h/mo": 111.11111111111111
+  }
+ }
+}

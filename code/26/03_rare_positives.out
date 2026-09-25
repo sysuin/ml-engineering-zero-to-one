@@ -1,0 +1,14 @@
+Recall of 60%, measured on n frauds: 95% interval
+  n =    50   60% +/- 13.6%
+  n =   200   60% +/- 6.8%
+  n = 1,000   60% +/- 3.0%
+  n = 5,000   60% +/- 1.4%
+  frauds needed for +/- 2 points: 2,305
+
+1,000,000 payments, 0.21% fraud
+Training rows: 500,000 in full, 11,242 downsampled
+
+on the test half            AUC   mean p  vs actual
+all rows                  0.859   0.216%      1.00x
+downsampled               0.859   7.241%     33.52x
+downsampled, corrected    0.859   0.207%      0.96x

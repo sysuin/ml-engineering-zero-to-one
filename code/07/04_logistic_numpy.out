@@ -1,0 +1,18 @@
+5,041 rows, 16 columns:
+  days_since_order      orders_90d            orders_prev_90d
+  log_spend_365         tickets_90d           tenure_days
+  term_months           legacy_terms          discount_pct
+  segment=Enterprise    segment=Mid-market    segment=Public sector
+  region=Midwest        region=Northeast      region=Southeast
+  region=West
+
+Descent, learning rate 1.0, log loss on the training rows
+  step      0   log loss 0.693147
+  step      1   log loss 0.522298
+  step     10   log loss 0.247317
+  step    100   log loss 0.212024
+  step  1,000   log loss 0.208834
+  step  5,000   log loss 0.208752
+  step 20,000   log loss 0.208752
+Everyone at the training rate: log loss 0.240686
+Mean predicted chance 0.0651; share that left 0.0651

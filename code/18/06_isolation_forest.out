@@ -1,0 +1,17 @@
+Training year: 2023-10-02 to 2024-09-30
+Each tree sees 256 rows; c(256) = 10.24
+
+Rows are days (22 columns)
+  path length, training days: median 12.42, shortest 7.16
+  2024-10-07: 8.78; 2.7% of training days were as short
+
+Rows are series-days (2 columns, 8,030 rows)
+  path length, training rows: median 12.36, shortest 3.27
+
+  row                               today   week   path  score
+  2024-02-23 Halvard Group            8.4    5.5   3.27   0.80
+  2024-04-30 Ingleby Works            4.4    4.2   3.81   0.77
+  2023-10-06 Marlowe Fabrication      6.4    3.5   3.85   0.77
+  2024-10-07 Pemberton Mills         24.9    8.3   3.27   0.80
+  2024-10-07 Quality                 15.2    5.2   3.29   0.80
+  2024-10-07 Billing                 -1.0   -0.7  11.65   0.45

@@ -1,0 +1,8 @@
+upkeep $540 a month, router sends 7%
+ $ per 1,000   trained < LLM   hybrid < LLM
+        0.50       1,080,000      1,161,290
+        2.00         270,000        290,323
+       10.00          54,000         58,065
+       50.00          10,800         11,613
+hybrid < trained alone: never, on cost; it is bought for the
+tickets the model is unsure of, not to save money

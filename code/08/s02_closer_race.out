@@ -1,0 +1,4 @@
+AUC: model 0.8011, without regions 0.8090, rule 0.7623
+pair                           SD of AUC gap  months for 0.02
+  model v. no regions                 0.0035              1.4
+  model v. rule                       0.0180             38.0

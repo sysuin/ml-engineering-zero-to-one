@@ -1,0 +1,6 @@
+column                   rank  importance  values
+discount_pct                5       0.040       7
+noise, any number           6       0.040   5,041
+noise, 1 to 10              7       0.028      10
+noise, coin flip           10       0.010       2
+(19 columns in all)

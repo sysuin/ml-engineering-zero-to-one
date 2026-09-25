@@ -1,0 +1,7 @@
+Contract 7332: orders in the last 90 days 1, in the 90 before 5
+  standardised: x1 = -0.40, x2 = -0.14
+unit 1: -1.0 x -0.40 +1.0 x -0.14 +0.2 = +0.46   ReLU -> 0.46
+unit 2: +0.5 x -0.40 +0.5 x -0.14 -0.1 = -0.37   ReLU -> 0.00
+output: +2.0 x 0.46 -1.0 x 0.00 -2.5 = -1.58
+sigmoid(-1.58) = 0.1708, the chance of not renewing
+It did not renew (y = 1): log loss -log(0.1708) = 1.7673

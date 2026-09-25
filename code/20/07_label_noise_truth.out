@@ -1,0 +1,14 @@
+desk labels that match the truth, every ticket
+  category as filed  92.7%   North 88.2%   South 95.7%
+  category, rubric   96.1%   North 96.0%   South 96.1%
+  priority           82.2%   North 82.1%   South 82.3%
+
+filed Urgent 1,478: truly Urgent 67.1%
+truly Urgent 1,096: filed Urgent 90.5%
+
+the baseline on validation (trained on desk labels, rubric
+categories), scored two ways
+                       desk labels    truth
+  priority accuracy          80.9%    97.6%
+  category accuracy          95.6%    99.5%
+  Urgent, 3 a day            56.3%    99.2%

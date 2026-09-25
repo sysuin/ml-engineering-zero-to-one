@@ -1,0 +1,10 @@
+Validation long tail, 2,046 rows (of 2,083)
+                                           MAE      RMSE
+  mean of the training rows              4,346     5,419
+  last value: the 90 days before         2,783     4,059
+  run rate: last year x 90/365           2,761     4,109
+  fitted on all 4,396 rows               2,623     3,800
+  fitted on 4,385 long-tail              2,491     3,562
+
+weight on spend_90d: 0.283 (all), -0.009 (long tail)
+weight on spend_365: 0.204 (all), 0.041 (long tail)

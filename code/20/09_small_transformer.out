@@ -1,0 +1,23 @@
+27,018 parameters; accuracy on validation after each epoch
+  epoch  train loss  priority  category
+      1       1.567     69.3%     87.2%
+      2       0.920     71.9%     86.0%
+      3       0.861     72.5%     89.3%
+      4       0.836     74.6%     89.5%
+      5       0.822     75.1%     89.1%
+      6       0.813     73.8%     88.6%
+      7       0.806     72.6%     88.2%
+      8       0.802     73.4%     88.5%
+      9       0.795     76.7%     88.5%
+     10       0.792     74.7%     87.6%
+     11       0.788     75.9%     88.4%
+     12       0.788     75.2%     88.2%
+
+                         priority            category
+                  ordinary   cloth   ordinary   cloth
+  TF-IDF             81.5%   79.9%      96.2%   94.5%
+  transformer        82.2%   62.1%      96.2%   73.4%
+
+transformer minus TF-IDF, ordinary tickets, 95% interval
+  priority +0.8 points  (+0.3 to +1.2)
+  category -0.1 points  (-0.2 to +0.0)

@@ -1,0 +1,31 @@
+training: 240 of 11,677 tickets not in English; with codes and
+numbers masked, they are 10 different sentences
+
+validation, both labels right
+           tickets       TF-IDF  transformer
+  de            21        71.4%        71.4%
+  en          4029        77.5%        68.2%
+  es            18        55.6%        72.2%
+  fr            19        89.5%        89.5%
+
+new sentences, written for this test: category given, and the
+model's confidence in it
+                           rubric         TF-IDF    transformer
+  known language
+  Nos gants sont arrivés Delivery   Quality 0.29  Delivery 0.80
+  Il nous faut du savon     Stock  Delivery 0.45   Billing 0.43
+  Merci de mettre à jour  Account  Delivery 0.28   Account 0.44
+  La factura INV-44821 t  Billing   Billing 0.56   Billing 0.99
+  Faltan tres cajas en e Delivery  Delivery 0.77  Delivery 0.99
+  Die Lieferung kam völl Delivery   Billing 0.31   Account 0.84
+  Wir möchten MRD-PAC-02  Returns   Quality 0.53   Quality 0.96
+  new language
+  L'ordine 1203341 non è Delivery  Delivery 0.98  Delivery 0.58
+  Il detergente MRD-SAN-  Quality  Delivery 0.61  Delivery 0.86
+  A fatura INV-55120 foi  Billing   Billing 0.83   Billing 1.00
+  O produto MRD-CLE-006   Quality   Quality 0.53   Quality 0.96
+  Bestelling 1302217 is  Delivery  Delivery 0.92  Delivery 0.66
+  Kunnen jullie ons adre  Account  Delivery 0.33   Account 0.50
+  Zamówienie 998120 jesz Delivery  Delivery 0.98  Delivery 0.75
+  TF-IDF: 2 of 7 in a known language, 5 of 7 in a new one
+  transformer: 4 of 7 in a known language, 6 of 7 in a new one

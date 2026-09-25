@@ -1,0 +1,11 @@
+                   leavers    AUC
+logistic                57  0.801
+logistic, no gap        45  0.774
+forest                  58  0.792
+forest, no gap          62  0.793
+
+Full minus no gap, paired (95%)
+  logistic  precision +5.0 (+0.0 to +9.2)
+            AUC +0.027 (+0.012 to +0.045)
+  forest    precision -1.7 (-4.2 to +2.1)
+            AUC -0.001 (-0.019 to +0.018)

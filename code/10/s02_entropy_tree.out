@@ -1,0 +1,8 @@
+gini: nodes 31 and 31, different 1 [6]
+  first question   days_since_order <= 92.5
+  then, if yes     days_since_order <= 49.5
+  then, if no      discount_pct <= 4
+entropy: nodes 29 and 29, different 0 []
+  first question   days_since_order <= 49.5
+  then, if yes     orders_90d <= 9.5
+  then, if no      days_since_order <= 92.5

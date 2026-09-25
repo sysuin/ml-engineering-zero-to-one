@@ -1,0 +1,8 @@
+validation: 2,083 contracts from 2,083 accounts
+test: 4,076 contracts from 4,076 accounts
+
+The model's precision at 40 a cohort: 23.8%
+2,000 resamples each         95% interval    width
+  contracts within cohorts    18.3% to 29.6%    11.3%
+  contracts, any cohort       18.3% to 29.6%    11.3%
+  whole cohorts               20.8% to 27.1%     6.2%

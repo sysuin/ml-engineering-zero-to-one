@@ -1,0 +1,8 @@
+training split: 5,041 contracts, 2,944 after the change
+  small business, after  +0.329   95% interval -0.260 to +0.819
+  discount, after        +0.066   95% interval -0.002 to +0.139
+  small-business odds after, times 1.39
+training and validation: 7,124 contracts, 5,027 after the change
+  small business, after  +0.559   95% interval +0.013 to +1.039
+  discount, after        +0.043   95% interval -0.026 to +0.104
+  small-business odds after, times 1.75

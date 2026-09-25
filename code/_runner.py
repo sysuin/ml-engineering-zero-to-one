@@ -333,9 +333,23 @@ def main() -> int:
               + (f", {len(unstable)} not reproducible" if args.twice else ""))
         return 1 if stale or unstable else 0
 
-    with open(REPORT, "w") as f:
-        json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
-                   "listings": cache}, f, indent=2, sort_keys=True)
+    # Several runs can share one repository (a chapter's listings while another chapter's
+    # run), and each read the report when it started. Writing back the whole cache would
+    # drop whatever the others recorded meanwhile, and their listings would then look
+    # stale. So re-read the report under a lock and replace only this run's listings.
+    import fcntl
+    with open(REPORT + ".lock", "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        latest = {}
+        if os.path.exists(REPORT):
+            with open(REPORT) as f:
+                latest = json.load(f).get("listings", {})
+        for path in listings:
+            if path in cache:
+                latest[path] = cache[path]
+        with open(REPORT, "w") as f:
+            json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                       "listings": latest}, f, indent=2, sort_keys=True)
 
     print(f"\n  ran {ran}{' (twice each)' if args.twice else ''}, "
           f"cached {len(listings) - ran - skipped}, skipped {skipped}, "

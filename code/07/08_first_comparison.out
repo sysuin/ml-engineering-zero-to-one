@@ -1,0 +1,19 @@
+Validation, top 40 of each monthly cohort, pooled
+                   calls  leavers  precision  recall
+  model              240       52      21.7%   42.6%
+  rule               240       53      22.1%   43.4%
+  random             240     14.1       5.9%   11.5%
+  perfect            240      122      50.8%  100.0%
+Model minus rule: -1 leaver in six months
+  model list, net of its calls: $15,502
+  rule list, net of its calls: $16,216
+
+Leavers reached at other capacities
+  calls a cohort    model  rule  model - rule
+  10                   29    26            +3
+  20                   40    42            -2
+  40                   52    53            -1
+  80                   79    70            +9
+  120                  94    84           +10
+
+Calls on both lists: 149 of 240

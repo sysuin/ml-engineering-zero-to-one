@@ -1,0 +1,9 @@
+                              x               y  rows      r rank r
+A long tail          orders_90d       spend_365 4,962   0.81   0.76
+B with an order            days        log_days 5,027   0.80   1.00
+C mid-market         orders_90d orders_prev_90d 1,678   0.81   0.64
+D key accounts  orders_prev_90d     tickets_90d    79   0.78   0.34
+
+C without its 13 key accounts: r = 0.70
+D without Halloway's 2 rows: r = 0.25
+B is exact: log_days is a function of days

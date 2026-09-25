@@ -1,0 +1,18 @@
+Discount missing on 974 of 3,398 fitted contracts,
+all of them on legacy terms
+
+                           rounds  watched loss
+gap kept, flag in           1,360       0.18680
+gap kept, no flag           1,360       0.18680
+filled with 0, flag in      1,237       0.18666
+filled with 0, no flag      1,345       0.18651
+filled with 5.9, no flag    1,286       0.18661
+
+No flag: 116 of 1,360 stumps ask about the discount; 85 send
+  a missing discount with the low discounts, 31 with the high
+   discount set to  average risk
+           missing          8.9%
+                0%          8.1%
+                2%          8.1%
+                5%          5.1%
+               10%          4.9%

@@ -1,0 +1,29 @@
+  left     of   the contracts in the leaf
+ 45.4%    130   last order 93 or more days ago
+                discount 4% or less
+                not Public sector
+ 33.8%     80   last order 93 or more days ago
+                discount 5% or more
+                2 or more orders in the 90 days before
+ 19.8%    202   last order 50 to 92 days ago
+                discount 1% or less
+ 16.7%     12   last order 93 or more days ago
+                discount 4% or less
+                Public sector
+ 15.6%     77   last order 93 or more days ago
+                discount 5% or more
+                1 or fewer orders in the 90 days before
+ 11.4%    273   last order 50 to 92 days ago
+                discount 2% or more
+  7.4%    761   last order 49 or fewer days ago
+                2 or fewer orders in 90 days
+  2.9%  3,506   last order 49 or fewer days ago
+                3 or more orders in 90 days
+
+fitted on  first question then, if yes       if no               AUC
+training   gap <= 92.5    gap <= 49.5        discount <= 4     0.744
+resample 1 gap <= 83.5    orders <= 2.5      legacy <= 0.5     0.746
+resample 2 gap <= 85.5    orders <= 3.5      discount <= 6.5   0.734
+resample 3 gap <= 92.5    gap <= 46.5        log spend <= 8.16 0.731
+resample 4 gap <= 49.5    log spend <= 9.02  gap <= 94.5       0.696
+resample 5 gap <= 76.5    gap <= 46.5        discount <= 4     0.696

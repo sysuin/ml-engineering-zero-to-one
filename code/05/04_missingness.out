@@ -1,0 +1,21 @@
+Missing values in the training split
+  days_since_order      14    0.3%
+  segment               12    0.2%
+  discount_pct       1,216   24.1%
+
+Discount missing, against legacy terms (rows)
+discount missing  False  True 
+legacy_terms                  
+0                  3825      0
+1                     0   1216
+  legacy_terms 0: customers since 2012-01 to 2023-07
+  legacy_terms 1: customers since 2012-01 to 2018-12
+
+Not renewed
+  discount missing    98 of 1,216  8.1%
+  discount recorded  230 of 3,825  6.0%
+
+Drop the rows: 3,825 left; 98 of 328 leavers lost (30%); rate 6.0%
+Fill with 0: 'no discount' now 1,992 rows, 8.1% not renewed
+  the 776 real zeros alone: 8.1%
+Fill with the mean: 1,216 rows get 5.9%, a discount no contract has

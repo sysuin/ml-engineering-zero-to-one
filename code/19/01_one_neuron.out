@@ -1,0 +1,13 @@
+                          neuron  Chapter 7
+bias / intercept         -3.0994    -3.0994
+days_since_order         +0.5012    +0.5012
+orders_90d               -1.5844    -1.5844
+orders_prev_90d          +1.4676    +1.4676
+log_spend_365            +0.0275    +0.0275
+tickets_90d              +0.0734    +0.0734
+... and 11 more weights
+Largest difference, all 17 numbers: 3.2e-07
+
+Validation, 2,083 contracts
+  largest gap in probability: 3.4e-07
+  top-40 lists: 240 of 240 calls the same

@@ -1,0 +1,20 @@
+Watched log loss at the best round (best round beneath)
+leaves      min 20      min 50     min 100     min 200
+     2     0.18766     0.18680     0.18782     0.18705
+             1,310       1,360         858         924
+     4     0.18684     0.18699     0.18774     0.18757
+               211         204         164         175
+     8     0.18808     0.18773     0.18874     0.18821
+               153         191         148         142
+    16     0.18810     0.18933     0.18992     0.18934
+               105          74          76         100
+    31     0.19236     0.19067     0.19074     0.18934
+                55          55          60         100
+
+Lowest: 2 leaves, at least 50 contracts a leaf, 1,360 rounds
+From best to worst of the 20 settings: 0.0056
+
+31 leaves, depth limited to  rounds     loss
+                           2    335  0.18736
+                           3    196  0.18805
+                           5     98  0.19069

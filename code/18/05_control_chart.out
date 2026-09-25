@@ -1,0 +1,15 @@
+21,668 tickets; 9,657 name a product, 3,340 only in lower case
+22 series: 16 suppliers, 6 categories, 1,461 days
+
+False alerts on 656 normal days, 2023-2024
+                alerts  a month  from series < 1/day
+mean + 3 sd        299    13.87                  82%
+Poisson              4     0.19                  25%
+
+supplier: Pemberton Mills, trailing 56-day baseline
+day          count   mean  3 sd limit  Poisson limit
+2024-10-04       0   0.75        3.95              4
+2024-10-05       0   0.75        3.95              4
+2024-10-06       1   0.71        3.88              4
+2024-10-07      22   0.73        3.89              4
+2024-10-08      14   1.11       10.20              5

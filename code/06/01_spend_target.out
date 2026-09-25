@@ -1,0 +1,20 @@
+training rows    5,041  ending 2023-01-01 to 2024-06-30
+validation rows  2,083  ending 2024-07-01 to 2024-12-31
+days from mark to end: 90 to 90
+
+contract 7332: mark 2024-01-01, ends 2024-03-31
+  spend_90d            1,501.54  before the mark
+  spend_next_90d         844.77  the target
+
+The target on the training rows, in dollars
+  mean     6,509      median     3,185
+  25% of rows spent less than     1,311
+  75% of rows spent less than     6,360
+  99% of rows spent less than    98,973
+  top 1% of rows (50) spent 24.4% of all of it
+  the largest row: Halloway Healthcare, 1,014,893
+
+Spend after the mark, against the 90 days before it
+               rows   median ratio  spent nothing
+  renewers    4,713           0.96           5.7%
+  leavers       328           0.69          21.3%

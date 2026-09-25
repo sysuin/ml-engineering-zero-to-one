@@ -1,0 +1,6 @@
+Fixed split: validation AUC, and leavers in the top 40s
+useless columns        LightGBM       network  epochs
+0                   0.788    54   0.791    54      18
+25                  0.777    50   0.766    50      13
+50                  0.770    55   0.768    48       6
+100                 0.765    55   0.739    47       6

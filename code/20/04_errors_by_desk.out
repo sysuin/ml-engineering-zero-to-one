@@ -1,0 +1,17 @@
+category accuracy on validation, by desk
+  North desk 90.2%  of 1,651
+  South desk 95.3%  of 2,436
+
+the commonest mistakes (desk's label -> model's)
+  North desk   Quality -> Delivery    85
+  South desk  Delivery -> Quality     19
+  North desk     Stock -> Quality     11
+  South desk     Stock -> Quality     10
+  North desk   Billing -> Quality     10
+  South desk   Returns -> Quality      9
+
+113 of 277 mistakes are Quality/Delivery; a few of them:
+  North Qual  MRD-SAN-040 came in a torn pack, half of it spilled 
+  North Qual  MRD-FAC-031 arrived crushed, outer box soaked throug
+  South Deli  Hi, driver dropped the delivery, MRD-CLE-006 split o
+  South Deli  Hi, driver dropped the delivery, MRD-CLE-008 splti o

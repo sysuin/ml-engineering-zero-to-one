@@ -1,0 +1,19 @@
+Validation residuals, 2,083 rows (dollars)
+  mean     -317   median     -535   above zero 43.0%
+  percentiles 5% -6,753  25% -2,427  75% 1,741  95% 6,678
+  predictions below zero: 35
+
+predicted             rows  mean resid  mean |resid|
+under 2,000            460       1,298         1,883
+2,000 to 5,000         895         -61         2,374
+5,000 to 10,000        494      -1,284         3,469
+10,000 to 50,000       196      -2,019         6,325
+50,000 and up           38      -4,573        22,041
+
+worst training rows          mark key  spend_365    actual     resid
+Gatesby Group          2022-12-31   1          0   138,089   124,875
+Rushmere Retail        2022-12-31   1          0   107,405    94,086
+Vernham Healthcare     2022-11-30   1          0   102,299    88,994
+Southwell Facilities   2023-01-30   1     29,943   104,862    78,150
+Gatesby Partners       2023-07-02   1    250,277   178,923    67,243
+Ardenwood Services     2022-11-30   1          0    70,986    57,668

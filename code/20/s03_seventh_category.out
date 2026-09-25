@@ -1,0 +1,8 @@
+Leaving: 169 training tickets, 32 validation
+ examples   recall  precision
+        2     0.0%       0.0%
+        5     0.0%       0.0%
+       10     0.0%       0.0%
+       20    31.2%      90.9%
+       50   100.0%      91.4%
+      169   100.0%      91.4%

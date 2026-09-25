@@ -1,0 +1,29 @@
+validation: share sent on, and both labels right among the
+tickets kept and the tickets sent
+  threshold  ordinary  Pemberton    kept    sent
+        0.5      0.4%      27.6%   78.8%   64.5%
+        0.6      2.1%      76.1%   78.8%   73.8%
+        0.7      8.4%      84.0%   78.9%   74.6%
+        0.8     44.7%      99.6%   79.6%   76.1%
+        0.9     98.2%      99.9%   77.1%   77.4%
+
+comparison set at 0.7: 70 of 1,000 sent on (7.0%);
+the model gets 78.4% of the rest and 65.7% of those right
+
+hybrid accuracy if the LLM gets a share of the sent tickets
+right (assumed shares, not measured)
+   50% of the sent -> 76.4%   (model alone 77.5%)
+   60% of the sent -> 77.1%   (model alone 77.5%)
+   70% of the sent -> 77.8%   (model alone 77.5%)
+   80% of the sent -> 78.5%   (model alone 77.5%)
+   90% of the sent -> 79.2%   (model alone 77.5%)
+
+2025 brought 492 tickets a month. Assumed: the trained model
+costs $400 a month to keep, and the LLM the first column per
+1,000 tickets. Meridian's monthly LLM bill, and the monthly
+volume at which each design costs the same as the LLM alone:
+  $ per 1,000   Meridian     trained      hybrid
+         0.50       0.25     800,000     860,215
+         2.00       0.98     200,000     215,054
+        10.00       4.92      40,000      43,011
+        50.00      24.60       8,000       8,602
