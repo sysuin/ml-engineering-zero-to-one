@@ -1,0 +1,42 @@
+-> server/discover
+<- foresight, protocol 2026-07-28
+-> tools/list
+<- renewal_risk(region, month?)
+<- why(contract_id)
+<- demand_forecast(category, region)
+
+-> {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params":
+   {"name": "renewal_risk", "arguments": {"region": "Midwest"}}}
+   (and _meta: protocolVersion, clientCapabilities, clientInfo)
+<- the list of record, marked 2025-12-31 (renewal v1, run 1):
+   45 Midwest contracts, 8 of the 40 calls, 0 key accounts
+    8  Warebury Nursery     30.8%  hold out Dara Whitlock
+   13  Lynhaven Motors      23.2%  call     Hana Osei
+   15  Marshhaven Offices   22.8%  hold out Colm Reyes
+   24  Newworth Veterinary  20.1%  hold out Hana Osei
+   33  Otham Foods          15.1%  call     Hana Osei
+   34  Bradvale Builders    14.9%  call     Hana Osei
+   35  Prescombe Laundry    14.9%  hold out Colm Reyes
+   40  Norcombe Hotels      14.6%  call     Hana Osei
+   Warebury Nursery:
+     Last order 132 days ago (typical: 13)
+     Small business: 10.8% of these left, 7.2% of all
+     Orders fell from 1 to 0, quarter on quarter
+   Lynhaven Motors:
+     Small business: 10.8% of these left, 7.2% of all
+     A discount of 0% (typical: 5%)
+     Orders fell from 4 to 2, quarter on quarter
+
+-> tools/call why {"contract_id": 15458}
+<- Thornstead Motors, list: 14.0%; not on the list (rank 43); run 1
+   Small business: 10.8% of these left, 7.2% of all
+   Orders fell from 4 to 1, quarter on quarter
+   A discount of 3% (typical: 5%)
+
+-> tools/call renewal_risk {"region": "Mid-west"}
+<- isError: true
+   Error executing tool renewal_risk: 1 validation error for
+     renewal_riskArguments
+   region
+   Input should be 'Midwest', 'Northeast', 'Southeast',
+     'Southwest' or 'West'

@@ -1,0 +1,11 @@
+Validation: 6 cohorts, 2,083 contracts, 122 leavers, 240 calls
+            v0.6                    rule                     ceiling
+leavers     60                      53                            64
+precision   25.0% (19.2%-30.4%)     22.1% (16.7%-28.3%)        26.7%
+AUC         0.818 (0.780-0.857)     0.762 (0.714-0.808)        0.819
+log loss 0.1848 (base rate 0.2233); slope 1.29 (lasso alone 1.46)
+Key-account contracts ending 2023-24: 116, left 1
+v0.6's chance for Halloway at its mark: 1.9e-07
+Weight on orders_prev_90d: +0.000 in May, +0.488 in October
+Missed: largest quarter 14 of 14; Mid-market 71%, small business 48%
+Written to docs/foresight-model-card.md

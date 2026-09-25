@@ -1,0 +1,14 @@
+The 240 calls on the validation lists: largest part
+booster  discount  gap  orders  segment  spend
+lasso                                         
+gap             0  135       3        0      0
+orders          0   47      13        1      1
+segment         2    7      22        6      3
+Same largest part under both models: 64.2%
+
+October's 40 calls, the lasso fitted in October against May
+May      gap  orders
+October             
+gap        7      21
+segment    0      12
+Same largest part: 17.5%

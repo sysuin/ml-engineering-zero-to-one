@@ -1,0 +1,73 @@
+Foresight v0.5 on the test year: reported once
+
+Split      test: contracts ending 2025-01-01 to 2025-12-31
+           12 monthly cohorts, 4,076 contracts, 364 leavers
+Method     rolling-origin backtest: each cohort scored by a
+           model fitted on the 6,414 to 10,051 outcomes
+           known at its mark; rule and random on the same rows
+Intervals  95%, 2,000 bootstrap resamples of contracts
+           within each cohort
+
+Verdict    The model's list beats the rule's at capacity.
+
+                model                rule                   baseline
+precision at 40 30.0 (25.8-34.2)     25.6 (22.1-30.0)            8.9
+recall at 40    39.6 (34.8-44.2)     33.8 (30.1-38.9)           11.7
+AUC             0.769 (0.743-0.794)  0.708 (0.679-0.738)       0.500
+log loss        0.272 (0.251-0.295)  -                         0.305
+Brier score     0.076 (0.070-0.084)  -                         0.082
+
+Precision and recall in per cent. Baseline: a random
+list; for log loss and Brier, the training base rate for
+every contract (the rule gives no probability to score).
+
+Model minus rule, paired
+  precision at 40   +4.4 points (+0.8 to +6.9)
+  recall at 40      +5.8 points (+1.1 to +9.1)
+  AUC               +0.061 (+0.036 to +0.085)
+
+cohort mark    contracts  leavers  model hits  rule hits
+2024-11-02           274       21          10          7
+2024-11-30           273       28          14         11
+2024-12-31           264       25           9          9
+2025-01-30           300       19           7          6
+2025-03-02           365       41          17         14
+2025-04-01           353       23           7          3
+2025-05-02           370       37          17         13
+2025-06-02           378       31          15         14
+2025-07-02           350       39          15         14
+2025-08-02           348       26          10         10
+2025-09-01           379       33          10         10
+2025-10-02           422       41          13         12
+all                4,076      364         144        123
+
+A perfect list would reach 75.4% precision.
+Not measured here: calibration and value in dollars
+(Chapter 14), performance by segment (Chapter 16).
+
+Test year, 480 calls   leavers    AUC  minus v0.5, paired
+  v0.5                     144  0.769
+  lasso+                   141  0.765  -0.6 (-2.7 to +2.3)
+  booster                  142  0.760  -0.4 (-2.9 to +2.1)
+  with pemberton           143  0.773  -0.2 (-1.7 to +1.3)
+  AUC, lasso+ - v0.5: -0.004 (-0.018 to +0.010)
+  AUC, booster - v0.5: -0.009 (-0.023 to +0.005)
+  AUC, with pemberton - v0.5: +0.004 (-0.001 to +0.011)
+  ceiling (true chances)   173
+
+The test year is now spent for v0.5.
+
+Left, by quarter of the mark    with a cloth complaint    without
+  2022Q4                               -             6.1%
+  2023Q1                               -             6.7%
+  2023Q2                               -             6.4%
+  2023Q3                               -             6.8%
+  2023Q4                            0.0% of 2        7.7%
+  2024Q1                            0.0% of 2        5.6%
+  2024Q2                            0.0% of 2        5.7%
+  2024Q3                               -             6.1%
+  2024Q4                           19.4% of 139      6.6%
+  2025Q1                           18.8% of 64       8.0%
+  2025Q2                            0.0% of 2        8.3%
+  2025Q3                            0.0% of 1        9.1%
+  2025Q4                            0.0% of 2        9.8%

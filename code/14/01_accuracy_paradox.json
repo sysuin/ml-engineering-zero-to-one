@@ -1,0 +1,38 @@
+{
+ "nobody leaves": {
+  "accuracy": 0.9414306289006241,
+  "calls": 0,
+  "leavers": 0,
+  "net": 0.0
+ },
+ "everybody leaves": {
+  "accuracy": 0.0585693710993759,
+  "calls": 2083,
+  "leavers": 122,
+  "net": -100423.0
+ },
+ "lasso above 50%": {
+  "accuracy": 0.941910705712914,
+  "calls": 5,
+  "leavers": 3,
+  "net": 1690.5
+ },
+ "rule, top 40": {
+  "accuracy": 0.8771003360537686,
+  "calls": 240,
+  "leavers": 53,
+  "net": 16215.5
+ },
+ "lasso, top 40": {
+  "accuracy": 0.8838214114258282,
+  "calls": 240,
+  "leavers": 60,
+  "net": 21210.0
+ },
+ "perfect, top 40": {
+  "accuracy": 0.9433509361497839,
+  "calls": 240,
+  "leavers": 122,
+  "net": 65447.0
+ }
+}

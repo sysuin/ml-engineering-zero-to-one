@@ -1,0 +1,17 @@
+On the Retention desk        today   at the mark
+  training leavers             74.4%         0.0%
+  training renewers             8.9%         0.0%
+  renewers on the desk today: 418, and 100.0% of their
+  accounts left at a later renewal
+
+Account 1130: mark 2024-05-02, contract ends 2024-07-31
+  from 2022-01-01  Priti Nair
+  from 2023-11-01  Owen Castell
+  from 2024-06-01  Retention desk
+
+Validation, 240 calls                leavers     AUC
+  v0.4's lasso                           60   0.815
+  with today's manager                   92   0.920
+  the same, on the morning               53   0.765
+
+Manager's past-year leaving rate, alone: AUC 0.522 on training

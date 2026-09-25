@@ -1,0 +1,8 @@
+cohort 2025-09-01; model fitted on 7,124 outcomes to 2025-01-01
+Platt's map: refitted on the cohorts marked 2025-04-01 to 2025-06-02
+
+                        slope   shift  mean chance
+  as fitted              1.47    1.12         7.0%
+  refitted               1.09    0.68         9.7%
+
+the forty, in order: 40 of 40 the same either way

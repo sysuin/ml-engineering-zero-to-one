@@ -57,3 +57,30 @@ if os.getenv("BOOK_RUN") == "1":
 
     _install()
     atexit.register(_flush)
+
+
+# The book's code a listing imported, so the runner can rerun a listing
+# when a module it depends on changes, not only when its own text does.
+# Every process a listing starts appends its own line; the runner reads
+# them all and hashes the files.
+if os.getenv("BOOK_RUN") == "1" and os.getenv("BOOK_DEPS_FILE"):
+    import sys
+
+    _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    _MINE = (os.path.join(_ROOT, "code") + os.sep,
+             os.path.join(_ROOT, "tests") + os.sep)
+
+    def _imported() -> None:
+        here = os.path.abspath(__file__)
+        files = set()
+        for module in list(sys.modules.values()):
+            path = getattr(module, "__file__", None)
+            if not path:
+                continue
+            path = os.path.abspath(path)
+            if path.startswith(_MINE) and path != here:
+                files.add(os.path.relpath(path, _ROOT))
+        with open(os.environ["BOOK_DEPS_FILE"], "a") as f:
+            f.write(json.dumps(sorted(files)) + "\n")
+
+    atexit.register(_imported)

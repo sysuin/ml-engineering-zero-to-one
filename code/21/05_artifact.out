@@ -1,0 +1,17 @@
+manifest.json     3.0 KB
+model.joblib     12.1 KB
+model_card.md     5.4 KB
+
+inputs     11 columns, e.g. days_since_order: Int64
+features   16 numbers, from days_since_order to region_West
+data       renewals_table.parquet, aecfe428, matches its manifest
+           7,124 rows, ec1decf9, outcomes known on 2025-01-01
+code       foresight/config.py, foresight/pipeline/model.py
+library    scikit-learn 1.9.1
+metrics    60 leavers in 240 calls, AUC 0.818
+
+loaded again: the same chances for all 7,124 rows
+a line added to the card: refused
+  model_card.md does not match its manifest
+saved by another scikit-learn: refused
+  saved with scikit-learn 1.5.2; this is 1.9.1

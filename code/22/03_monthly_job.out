@@ -1,0 +1,35 @@
+Foresight v0.6: the list for the cohort marked 2025-12-31
+283 contracts reach their mark; 40 calls; break-even 12.6%
+Model fitted on the 10,778 outcomes known on 2025-12-31
+
+ 1  15378  Hartton Cleaning         Priti Nair     76.5%
+      - Last order 274 days ago (typical: 13)
+      - Small business: 10.8% of these left, 7.2% of all
+      - No orders in the last six months
+ 2  15330  Hartdale Nursery         Tom Ashby      44.5%
+      - Last order 118 days ago (typical: 13)
+      - Orders fell from 7 to 0, quarter on quarter
+      - Small business: 10.8% of these left, 7.2% of all
+40  15445  Norcombe Hotels          Hana Osei      14.6%
+      - Small business: 10.8% of these left, 7.2% of all
+      - A discount of 0% (typical: 5%)
+      - 1 support tickets in 90 days (typical: 0)
+   ... and 37 more
+
+0 of the 40 calls are below the break-even; together they
+are expected to reach 0.0 leavers.
+
+Key accounts at their mark: 2, not ranked
+                                                   orders  tickets
+                                                   90d prior   90d
+    15229  Gatesby Group          Bea Montrose     138   141     0
+    15230  Rushmere Retail        Tom Ashby        123   146     1
+
+Platt's map: as fitted
+holdout: 20 to call, 20 held out
+run 1 finished: 283 rows written
+
+cohort 2025-12-31: list made by run 1; nothing to do
+
+ run       mark     run_on     source model_as_of   status  rows
+   1 2025-12-31 2025-12-31 renewal v1  2025-12-31 finished   283

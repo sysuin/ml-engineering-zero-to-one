@@ -1,0 +1,28 @@
+lasso+    13 more columns, strength 0.005
+booster+  12 more columns, 2 leaves of at least 50
+
+           leavers  precision at 40   AUC
+lasso           60  25.0 (19.2-30.4)  0.815 (0.776-0.854)
+lasso+          57  23.8 (17.9-29.6)  0.795 (0.752-0.837)
+booster         56  23.3 (17.9-29.2)  0.812 (0.773-0.849)
+booster+        58  24.2 (19.2-30.4)  0.806 (0.767-0.846)
+rule            53  22.1 (16.7-28.3)  0.762 (0.714-0.808)
+random          14  5.9               0.500
+perfect        122  50.8              1.000
+
+Paired differences (95%)
+                    precision, points     AUC
+lasso - rule        +2.9 (-0.8 to +5.8)   +0.053 (+0.022 to +0.087)
+lasso+ - rule       +1.7 (-1.7 to +4.6)   +0.033 (+0.004 to +0.062)
+booster - rule      +1.3 (-1.7 to +4.2)   +0.050 (+0.022 to +0.079)
+booster+ - rule     +2.1 (-0.8 to +5.4)   +0.044 (+0.016 to +0.074)
+lasso+ - lasso      -1.3 (-4.2 to +2.1)   -0.020 (-0.039 to -0.001)
+booster - lasso     -1.7 (-4.2 to +1.7)   -0.003 (-0.023 to +0.017)
+booster+ - lasso    -0.8 (-3.3 to +2.9)   -0.009 (-0.029 to +0.011)
+lasso+    does not replace the lasso
+booster   does not replace the lasso
+booster+  does not replace the lasso
+
+booster+ - booster +0.8 (-0.8 to +2.9) -0.006 (-0.015 to +0.003)
+
+Ceiling: 64 leavers in 240 calls, AUC 0.819

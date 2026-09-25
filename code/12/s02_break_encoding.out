@@ -1,0 +1,4 @@
+Full postcode        training AUC  validation AUC  leavers
+  out of fold               0.788           0.820       58
+  own label inside          0.994           0.709       50
+  validation inside         0.989           0.996      122

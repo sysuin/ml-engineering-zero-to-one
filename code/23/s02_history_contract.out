@@ -1,0 +1,17 @@
+account_history  v0.1  owner: CRM team
+  account_id    integer   in accounts.account_id
+  valid_from    text      like 9999-99-99
+  valid_to      text?     like 9999-99-99
+  segment       text      one of Enterprise, Mid-market, Public
+                          sector, Small business
+  account_manager text
+  one row per account_id, valid_from
+  rule: a period ends on or after the day it starts
+  rule: each account has exactly one open period
+  rule: no period starts after the record ends
+  promise: a change is a new row; an old row is closed, never edited
+
+account_history: one row per account_id, valid_from (2 rows)
+account_history: a period ends on or after the day it starts (2 rows)
+account_history: no period starts after the record ends (79 rows)
+17 clauses, 3 broken

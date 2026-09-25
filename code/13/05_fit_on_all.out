@@ -1,0 +1,11 @@
+Fitted on training, scored on validation      leavers    AUC
+  v0.4, every step on the training rows            58   0.8203
+  the scaler fitted on both periods                58   0.8199
+  gaps filled with the mean of both periods        57   0.8206
+      the mean discount: 5.98%
+  gaps filled with the mean of training            57   0.8206
+      the mean discount: 5.94%
+  noise chosen with both periods' labels           59   0.7932
+      the twenty noise columns alone, validation AUC 0.614
+  noise chosen with the training labels            46   0.7514
+      the twenty noise columns alone, validation AUC 0.471

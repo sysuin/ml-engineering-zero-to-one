@@ -1,0 +1,28 @@
+the lasso's weights (standardised inputs):
+  days_since_order  +0.507
+  discount_pct      -0.266
+  tickets_90d       +0.000
+
+behavioural test                                            result
+an_account_name_changes_nothing                           1 passed
+the_order_of_the_rows_changes_nothing                     1 passed
+a_region_spelt_another_way_is_refused_not_rescored        4 passed
+a_renamed_account_never_loses_its_history_quietly         1 passed
+a_longer_gap_never_lowers_the_risk                        3 passed
+a_larger_discount_never_raises_the_risk                   1 passed
+more_complaints_never_lower_the_risk                      1 passed
+more_complaints_raise_the_risk                           1 xfailed
+
+contract 10524, marked 2024-10-02: Mid-market, Midwest,
+  gap 51 days, discount 8, 0 ticket(s); chance 3.30%
+  name changed                 3.30% -> 3.30%
+  region spelt 'Mid-west'      3.30% -> refused
+  gap 90 days longer           3.30% -> 15.28%
+  discount 5 points larger     3.30% -> 2.16%
+  3 more tickets               3.30% -> 3.30%
+
+the rows it learned from: share that left, by tickets in the quarter
+  0     6.8% of 5,415
+  1     4.9% of 1,411
+  2     5.2% of   250
+  3+    2.1% of    48

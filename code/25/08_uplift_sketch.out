@@ -1,0 +1,13 @@
+Expected saves a year, choosing 40 of each 2025 top 80
+
+flat world                             saves
+  v0.6's top 40                         35.6
+  the truly most saveable (simulator)   39.2
+  sketch, 1 year of calls               30.5   beats v0.6 in 0%
+  sketch, 10 years of calls             35.0   beats v0.6 in 0%
+
+further gone world                     saves
+  v0.6's top 40                         37.6
+  the truly most saveable (simulator)   44.7
+  sketch, 1 year of calls               35.7   beats v0.6 in 24%
+  sketch, 10 years of calls             37.3   beats v0.6 in 54%

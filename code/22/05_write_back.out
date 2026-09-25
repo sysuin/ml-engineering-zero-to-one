@@ -1,0 +1,17 @@
+scores.db
+  runs          1 rows
+  scores      283 rows
+  inputs      283 rows
+  forecasts     0 rows
+
+The dashboard's query: the warehouse, the scores beside it
+ rank  contract_id              name chance      arm
+    1        15378  Hartton Cleaning  76.5% held out
+    2        15330  Hartdale Nursery  44.5%   called
+    3        15308  Greyworth Dental  43.4% held out
+    4        15415 Warehurst Storage  40.4%   called
+    5        15256 Yorkhurst Storage  38.0%   called
+    6        15421   Oakvale Storage  37.5%   called
+  ... 40 listed: 20 to call, 20 held out
+
+The 283 rows run 1 scored, scored again: largest change 0.0e+00

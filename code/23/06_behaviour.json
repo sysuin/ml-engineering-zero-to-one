@@ -1,0 +1,30 @@
+{
+ "contract": 10524,
+ "pairs": [
+  {
+   "change": "name changed",
+   "before": 0.03298575295274987,
+   "after": 0.03298575295274987
+  },
+  {
+   "change": "region spelt 'Mid-west'",
+   "before": 0.03298575295274987,
+   "after": null
+  },
+  {
+   "change": "gap 90 days longer",
+   "before": 0.03298575295274987,
+   "after": 0.15284613253194246
+  },
+  {
+   "change": "discount 5 points larger",
+   "before": 0.03298575295274987,
+   "after": 0.02164284587488823
+  },
+  {
+   "change": "3 more tickets",
+   "before": 0.03298575295274987,
+   "after": 0.03298575295274987
+  }
+ ]
+}

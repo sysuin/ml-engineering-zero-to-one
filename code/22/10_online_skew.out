@@ -1,0 +1,14 @@
+36 marks, 11,200 contracts
+
+A scope that forgets legacy ids, against the training table
+  days_since_order     212 differ   e.g. 3438
+  orders_90d           216 differ   e.g. 3438
+  orders_prev_90d      262 differ   e.g. 3438
+  spend_365            340 differ   e.g. 3438
+  tickets_90d           51 differ   e.g. 3478
+
+online.rows() against the training table: 14 columns,
+  0 differences
+
+Tonight's 281 long-tail contracts, by the API's path
+  largest gap from the list's chance: 0.0e+00

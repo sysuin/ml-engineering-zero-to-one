@@ -1,0 +1,19 @@
+prepare  ColumnTransformer
+scale    StandardScaler
+lasso    Lasso
+  gap       days_since_order
+  orders    orders_90d, orders_prev_90d
+  spend     spend_365
+  as_is     tickets_90d, tenure_days, term_months, legacy_terms
+  discount  discount_pct
+  segment   segment
+  region    region
+
+Validation, 2,083 contracts     Chapter 16   pipeline
+leavers in 240 calls                  60         60
+AUC                               0.8182     0.8182
+largest difference in any contract's chance: 6.9e-14
+
+Saved as one file of 12 KB. Loaded again, its chances for
+October's 364 contracts differ by 0.
+It reads 11 columns of the table and makes 16 numbers.

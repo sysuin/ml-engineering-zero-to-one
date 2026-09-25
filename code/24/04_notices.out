@@ -1,0 +1,16 @@
+list         contracts  expected  notices      limits
+2025-01-30       300      15.1       19      5 to 28
+2025-03-02       365      21.9       41      9 to 38  alert
+2025-04-01       353      19.6       23      7 to 35
+2025-05-02       370      19.9       37      8 to 35  alert
+2025-06-02       378      21.1       31      8 to 37
+2025-07-02       350      19.2       39      7 to 34  alert
+2025-08-02       348      19.5       26      7 to 34
+2025-09-01       379      26.2       33     12 to 43
+2025-10-02       422      20.7       41      8 to 36  alert
+
+The list of 2 March, as it stood on 2 April
+                 contracts  expected  notices  on price
+Voss under 10%         181      13.4       18         4
+10 to 30%              106       5.0       13         7
+over 30%                78       3.5       10         7

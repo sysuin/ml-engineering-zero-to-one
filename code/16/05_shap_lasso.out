@@ -1,0 +1,16 @@
+column                     value   brute w times z    shap
+days_since_order              99   0.879     0.879   0.879
+orders_90d                     0   0.229     0.229   0.229
+orders_prev_90d                1  -0.201    -0.201  -0.201
+spend_365                  1,348   0.000     0.000   0.000
+tickets_90d                    0   0.000     0.000   0.000
+tenure_days                  275   0.015     0.015   0.015
+segment           Small business   0.376     0.376   0.376
+region                   Midwest   0.030     0.030   0.030
+term_months                   12   0.000     0.000   0.000
+legacy_terms                   0  -0.009    -0.009  -0.009
+discount_pct                   0   0.243     0.243   0.243
+base                              -2.962    -2.962  -2.962
+base + parts = log-odds           -1.401    -1.401
+log-odds of the chance, 19.8%: -1.401
+Largest difference, brute force against w times z: 3e-15

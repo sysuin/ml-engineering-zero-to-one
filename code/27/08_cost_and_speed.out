@@ -1,0 +1,20 @@
+How fast, on one core of the book's laptop
+  the monthly list                    3.2 s
+  a night with nothing due           0.00 s
+  next quarter's forecast            20.9 s
+  a retrain, checks and all          13.8 s
+  /renewal, from the list         4 ms median
+  /renewal, scored now           62 ms median
+  renewal_risk over MCP          34 ms median
+
+Core-hours a month
+  the job, 30 nights             0.001
+  the forecast, once             0.006
+  the feed check, daily          0.018
+  retrains: 3 challengers        0.011
+  the API, always on           730.000
+  the MCP server                 0.000
+  all of it                    730.036
+  without the API                0.036
+The MCP server runs inside the host that starts it: its time
+is the user's, not the service's.

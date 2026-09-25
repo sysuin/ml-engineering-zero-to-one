@@ -1,0 +1,13 @@
+run failed: [Errno 28] No space left on device
+  lock left behind: False; scores written: 0
+retry: run 2 finished, 283 rows
+cohort 2025-12-31: list made by run 2; nothing to do
+while another run works: another run holds batch.lock
+a dead run's lock: taken over, done already; lock left: False
+a second list, written by hand:
+  UNIQUE constraint failed: runs.job, runs.mark
+
+The runs table
+  run 1  2025-12-31  failed   step holdout
+        OSError: [Errno 28] No space left on device
+  run 2  2025-12-31  finished step done

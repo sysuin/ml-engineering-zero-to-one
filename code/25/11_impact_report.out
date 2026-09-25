@@ -1,0 +1,41 @@
+Foresight: what it changed in 2025
+One page for finance. Every range is a 95% interval unless
+it says otherwise.
+
+SIMULATED. No retention calls are on record. The retention
+lines come from a simulation in which a call keeps 25% of
+would-be leavers (the brief's assumption). They show what the
+test will report, not what it has found.
+
+Retention calls: 12 cohorts; of each top 40, 20 called,
+20 held out at random
+  Left, held out / called  31.2% / 19.2%
+  Calls cut leaving by     12.1 points (4.2 to 19.6)
+  Save rate                39% of would-be leavers (13% to 63%)
+  Net per call             $255 ($29 to $469)
+  A year of 480 calls      $122,000 ($14,000 to $225,000)
+  Caution: 12 of the 35 cohorts planned. At a 25% save rate
+  a year this size finds the effect 38% of the time, and
+  overstates it when it does.
+
+Stock: ordering to the forecast, 190 product x region series
+  Point forecast against last year's month   $409,000 a year
+  Range forecast against a padded last year  $384,000 a year
+  As the cost assumptions move: $227,000 to $772,000
+
+Urgent tickets: 407 in 2025, hours to first read
+                          median  90% within
+  arrival order              2.0        19.4
+  urgent words first         0.6        16.5
+  v0.8's ranking             0.3         0.6
+  Assumed desk: 7:00 to 19:00, a ticket every 40 minutes
+
+Not claimed here
+  Accounts kept by the forecast or by triage; the retention
+  effect on accounts outside the top 40; any effect of calls
+  on accounts that were staying anyway.
+
+Asked of finance
+  Keep 20 of each list uncalled until cohort 35 (September
+  2027), read the test once a year, and judge the calls on the
+  final reading. Until then, cost the calls at the brief's 25%.

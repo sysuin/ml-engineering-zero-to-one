@@ -1,0 +1,14 @@
+Assumed: the desks read from 7:00 to 19:00 every day,
+one ticket every 40 minutes.
+2025: 5,904 tickets, 407 Urgent (the desks' label)
+
+read in order of     Urgent: median  90th pct  in 1 hour  all: mean
+arrival order                 2.0 h    19.4 h        32%      5.9 h
+urgent words first            0.6 h    16.5 h        54%      5.9 h
+v0.8's P(Urgent)              0.3 h     0.6 h        94%      5.9 h
+
+Urgent median wait, hours, as the desk's pace moves
+minutes a ticket          30      40      45
+arrival order            0.2     2.0    43.2
+urgent words first       0.2     0.6    12.5
+v0.8's P(Urgent)         0.1     0.3     0.4

@@ -1,0 +1,9 @@
+Retention test: 24 cohorts, Nov 2023 to Oct 2025
+
+  held out    480 contracts  129 left   26.9%
+  called      480 contracts   91 left   19.0%
+
+  held out minus called  +7.9 points (+2.9 to +13.1)
+  p-value, re-randomised 0.004
+  save rate  29.5% of would-be leavers (10.9% to 48.8%)
+  net per call $136 (-$7 to $285)

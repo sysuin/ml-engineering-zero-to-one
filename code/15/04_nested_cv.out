@@ -1,0 +1,15 @@
+Gain over Chapter 11's setting, in log loss
+outer cohort  known before it  chosen   claimed      real
+2024-01-31    Oct                   4  +0.00861  +0.00016
+2024-02-29    Oct, Nov              4  +0.00301  -0.00064
+2024-03-31    Oct, Nov, Dec         4  +0.00118  -0.00181
+2024-04-30    Oct, Nov, Dec         4  +0.00118  -0.00244
+
+The four outer cohorts together: 957 contracts, 53 leavers
+
+                               log loss    AUC  leavers
+Chapter 11's setting            0.18150  0.784       31
+chosen on earlier cohorts       0.18274  0.780       30
+chosen on the four cohorts      0.18156  0.780       30
+
+Optimism of choosing on the rows you report: 0.00118

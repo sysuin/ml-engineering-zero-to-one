@@ -1,0 +1,16 @@
+the feeds on the morning of 2025-12-31:
+  orders       order platform team  17 clauses, 0 broken
+  order_lines  order platform team  23 clauses, 0 broken
+  tickets      support desks        34 clauses, 0 broken
+
+the same feeds on a bad night:
+  orders: order_date looks like 9999-99-99
+    193 rows; e.g. 60728
+  orders: rows to within 1 day(s) of the morning
+    e.g. latest 2025-12-29
+  orders: at least 100 rows a day for 28 days
+    1 day(s); e.g. 2025-12-30: 0
+  order_lines: order_id is in orders.order_id
+    515 rows; e.g. 60583
+  tickets: channel is one of 3
+    28 rows; e.g. FT-021179

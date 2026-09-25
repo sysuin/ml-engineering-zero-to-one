@@ -1,0 +1,9 @@
+order of joining                manager  analyst    buyer
+manager > analyst > buyer            12       12       12
+manager > buyer > analyst            12       18        6
+analyst > manager > buyer            24        0       12
+analyst > buyer > manager            30        0        6
+buyer > manager > analyst            12       18        6
+buyer > analyst > manager            30        0        6
+Shapley share (average)            20.0      8.0      8.0
+Shares add up to 36.0, the whole bonus

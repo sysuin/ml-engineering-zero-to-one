@@ -1,0 +1,17 @@
+Contract 10222, Wickholm Foods, marked 2024-10-02
+column                      value   typical    v0.6  booster
+days_since_order               99        13   +1.30    +1.82
+segment            Small business             +0.56    +0.30
+discount_pct                    0         5   +0.36    +0.27
+orders_90d                      0         4   +0.34    +0.53
+region                    Midwest             +0.04    +0.07
+tenure_days                   275     1,736   +0.02    +0.09
+spend_365                   1,348    13,189   +0.00    +0.32
+tickets_90d                     0         0   +0.00    -0.01
+term_months                    12        12   +0.00    +0.00
+legacy_terms                    0         0   -0.01    +0.00
+orders_prev_90d                 1         5   -0.30    -0.45
+v0.6     base -3.36 + parts +2.31 = -1.05, a chance of 26.0%
+booster  base -3.21 + parts +2.93 = -0.28, a chance of 43.1%
+Platt map: log-odds x 1.481 +1.027
+Outcome: left

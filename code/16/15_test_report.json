@@ -1,0 +1,1 @@
+{"version": "0.6", "first": "2025-01-01", "last": "2025-12-31", "contracts": "4,076", "leavers": 364, "calls_total": 480, "calls": 40, "hits": 144, "rule_hits": 123, "ceiling_hits": 173, "auc": "0.749", "rule_auc": "0.708", "log_loss": "0.2706", "raw_log_loss": "0.2721", "slope": "0.86", "raw_slope": "1.11", "diff": "+4.4 points (+0.8 to +6.9)"}

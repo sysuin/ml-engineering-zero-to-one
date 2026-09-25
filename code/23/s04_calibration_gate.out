@@ -1,0 +1,5 @@
+branch                   log loss   change               (95%)
+v0.6                       0.1848
+a tidy-up of the code      0.1848  +0.0000  +0.0000 to +0.0000
+strength 0.002 -> 0.02     0.1961  +0.0113  +0.0058 to +0.0171
+region dropped             0.1845  -0.0003  -0.0009 to +0.0004

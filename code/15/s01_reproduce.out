@@ -1,0 +1,8 @@
+The table on disk is the one recorded: True
+  training period      5,041 rows  matches: True
+  2023 only            3,398 rows  matches: False
+  everything to 2024   7,124 rows  matches: False
+
+Recorded rate, as printed: 0.23831
+Rebuilt log loss 0.21304, recorded 0.21304
+Rebuilt id d0676f33da16, recorded c23918019fe9: False

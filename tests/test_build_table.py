@@ -62,7 +62,7 @@ CONTRACTS = [   # contract 10's moment is 2024-01-01
     (12, 2, "2024-04-01", "2025-03-31", 12, 1, None, None, None, None),
 ]
 ORDERS = [      # (order_id, account_id, day, value)
-    (1, 90001, "2022-12-01", 70.0),   # 396 days before: outside the year
+    (1, 90001, "2022-12-01", 70.0),  # 396 days before: outside the year
     (2, 90001, "2023-09-15", 50.0),   # 108 days before: the previous 90
     (3, 90001, "2023-12-01", 100.0),  # 31 days before: the last order
     (4, 1, "2024-01-01", 999.0),      # on the day of the moment
@@ -126,12 +126,12 @@ def test_events_refuse_history_left_under_a_legacy_id(tiny):
 
 def test_features_read_only_what_came_before_the_moment(table):
     r = row(table, 10)
-    assert r.account_id == 1                  # the legacy id is resolved
+    assert r.account_id == 1  # the legacy id is resolved
     assert r.days_since_order == 31           # not the order on the day
     assert r.orders_90d == 1
     assert r.orders_prev_90d == 1
-    assert r.spend_365 == 150.0               # 50 + 100: not 70, not 999
-    assert r.tickets_90d == 1                 # not the ticket on the day
+    assert r.spend_365 == 150.0  # 50 + 100: not 70, not 999
+    assert r.tickets_90d == 1  # not the ticket on the day
     assert r.tenure_days == 1461
 
 

@@ -1,0 +1,21 @@
+64 series (supplier x segment), 2022-01-01 to 2025-12-31
+24 alerts at a shift of 3%, on 3 days
+
+day         index   series   usual  today  supplier
+2023-07-01  price       16   1.000  1.060  16 suppliers
+2025-01-01  cost         4   1.000  1.120  Voss Industrial
+2025-02-01  price        4   1.000  1.080  Voss Industrial
+
+The Voss alerts of 2025, series by series
+  2025-01-01 cost  Voss Industrial / Enterprise       1.120
+  2025-01-01 cost  Voss Industrial / Mid-market       1.120
+  2025-01-01 cost  Voss Industrial / Public sector    1.120
+  2025-01-01 cost  Voss Industrial / Small business   1.120
+  2025-02-01 price Voss Industrial / Enterprise       1.080
+  2025-02-01 price Voss Industrial / Mid-market       1.080
+  2025-02-01 price Voss Industrial / Public sector    1.080
+  2025-02-01 price Voss Industrial / Small business   1.145
+
+With today's segment instead of the segment on the day: 25 alerts,
+1 of them more than a week from any alert above
+  2024-01-05 price Marlowe Fabrication / Mid-market   1.036

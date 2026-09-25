@@ -1,0 +1,22 @@
+52 columns, 5,041 training contracts. Fail at 0.811,
+review from 0.780; the true chances on these rows score 0.794
+
+column                 alone, AUC  verdict
+notice_date                 1.000  fail
+cancellation_reason         1.000  fail
+account_rows                0.968  fail
+manager_today               0.834  fail
+orders_90d                  0.754  pass
+days_since_order            0.754  pass
+spend_90d                   0.739  pass
+orders_30d                  0.727  pass
+spend_30d                   0.723  pass
+tickets_to_end              0.716  pass
+small_x_gap                 0.710  pass
+order_trend                 0.702  pass
+... and 40 more, from 0.693 down to 0.500
+
+                        fail  review  pass
+Chapter 4's columns        0       0    11
+the library                0       0    36
+this chapter's leaks       4       0     1

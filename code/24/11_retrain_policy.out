@@ -1,0 +1,12 @@
+Trigger days: 02 Apr, 01 Jun, 02 Jun, 01 Aug, 02 Aug, 01 Oct, 02 Nov
+
+3,265 contracts in 9 lists with outcomes; 8.9% left
+policy     models  leavers  log loss  average chance
+never           1      111    0.2752            5.6%
+monthly         9      111    0.2624            9.0%
+trigger         5      110    0.2663            8.6%
+
+Minus never, paired over the same contracts
+policy      leavers per call, points          AUC within lists
+monthly       +0.0 (-1.7 to +2.2)    +0.002 (-0.003 to +0.008)
+trigger       -0.3 (-1.4 to +1.7)    -0.001 (-0.005 to +0.003)

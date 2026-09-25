@@ -1,0 +1,17 @@
+364 contracts, 687 stumps
+TreeExplainer against LightGBM, largest difference: 0e+00
+base + parts against the log-odds, largest difference: 2e-14
+base: -3.209, the log-odds of 3.9%
+
+Average size of each column's part           booster   lasso
+  days_since_order                              0.439   0.279
+  orders_90d                                    0.348   0.178
+  segment                                       0.299   0.377
+  discount_pct                                  0.272   0.217
+  orders_prev_90d                               0.227   0.170
+  spend_365                                     0.120   0.000
+  tenure_days                                   0.065   0.011
+  region                                        0.049   0.030
+  tickets_90d                                   0.023   0.000
+  term_months                                   0.000   0.000
+  legacy_terms                                  0.000   0.013

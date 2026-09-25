@@ -1,0 +1,13 @@
+Training, web share      contracts    left
+  none                         735   18.9%
+  under half                 1,921    4.1%
+  half or more               1,716    3.0%
+  all                          669    8.8%
+
+Tuning cohorts               log loss    AUC
+  v0.4's lasso                0.21532  0.764
+    + web_share_90d           0.21618  0.762
+
+Validation, with minus without
+            leavers  points               AUC
+  lasso          -1  -0.4 (-2.9 to +2.1)  +0.001 (-0.006 to +0.007)

@@ -1,0 +1,18 @@
+                                     median  median,
+Training, one column alone     AUC      all  leavers
+  order_trend                0.702    0.000   -0.405
+  spend_trend                0.687   -0.003   -0.783
+  spend_slope                0.612    0.021   -0.025
+  quarter_share              0.692    0.242    0.116
+
+Plain ratio of order counts, last quarter over the one before:
+   236 contracts divide by zero (none before, some since)
+   231 have a ratio of 0, whose log is minus infinity
+    73 have 0 over 0; order_trend adds 1 to each count
+
+Rank correlation
+            orders   spend   slope   share   o_90d  o_prev
+  orders      1.00    0.82    0.32    0.66    0.41   -0.38
+  spend       0.82    1.00    0.35    0.77    0.34   -0.30
+  slope       0.32    0.35    1.00    0.78    0.41    0.15
+  share       0.66    0.77    0.78    1.00    0.53    0.01

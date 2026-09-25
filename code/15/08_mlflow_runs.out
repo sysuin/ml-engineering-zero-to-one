@@ -1,0 +1,14 @@
+3 runs in experiment 'foresight-renewals'
+
+           run name leaves   rate strength  log loss   AUC  leavers
+        lasso, v0.4                  0.002   0.21903 0.771       63
+booster, Chapter 11      2   0.03            0.21517 0.779       65
+     booster, tuned      2  0.238            0.21304 0.789       66
+
+Lowest log loss: booster, tuned
+  data aecfe42891d25b8c..., rows 5041
+  code 885a2eeb262d3568..., from
+    foresight/config.py
+    foresight/models/boosting.py
+    foresight/tune.py
+  artifacts: model.pkl, record.json

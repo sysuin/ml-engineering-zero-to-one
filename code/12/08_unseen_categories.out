@@ -1,0 +1,14 @@
+training    buying Sanitation   0.0%; as the top category: 0
+validation  buying Sanitation  77.4%; as the top category: 66
+
+handle_unknown='error': ValueError
+  Found unknown categories ['Sanitation']
+handle_unknown='ignore': 66 validation rows become all zeros
+
+Validation cohort   known rows  buying it  left   weight
+  mark 2024-05-02        4,355          0     0   +0.000
+  mark 2024-06-02        4,703          0     0   +0.000
+  mark 2024-07-02        5,041          0     0   +0.000
+  mark 2024-08-02        5,399        179     7   +0.000
+  mark 2024-09-01        5,747        419    13   -0.020
+  mark 2024-10-02        6,065        670    25   -0.006

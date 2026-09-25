@@ -1,0 +1,26 @@
+Average chance with every validation contract's gap set to
+  days    lasso  booster
+     1     3.9%     3.0%
+     7     4.2%     3.0%
+    14     4.5%     3.8%
+    30     5.4%     5.8%
+    45     6.5%     5.8%
+    60     7.7%     9.2%
+    90    10.6%     9.2%
+   120    14.6%    22.8%
+   150    19.6%    22.8%
+   180    25.8%    22.8%
+   240    41.1%    23.7%
+   300    58.3%    23.9%
+   365    74.8%    23.9%
+
+The rows learned from        rows   left
+  gap   0 to 14  days       3,194   2.5%
+  gap  14 to 30  days       1,262   5.0%
+  gap  30 to 60  days         905   8.6%
+  gap  60 to 90  days         342  12.9%
+  gap  90 to 180 days         277  35.0%
+  gap 180 to 420 days          71  35.2%
+
+Validation contracts with an order in the last 90 days: 94.4%
+Largest gap among the 6,065 rows learned from: 411 days

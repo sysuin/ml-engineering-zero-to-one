@@ -1,0 +1,15 @@
+version  stage       as of        leavers    AUC
+      1  production  2024-11-01        58  0.776
+      2  archived    2024-12-01        56  0.795
+
+    log
+      1  staged      trained
+      2  staged      trained
+      1  production  November's list
+      1  archived    replaced by 2
+      2  production  December's list
+      2  archived    rolled back: December's list queried
+      1  production  restored: December's list queried
+
+in production: the model fitted on 2024-11-01
+runs in the log: 2; versions in the folder: 2

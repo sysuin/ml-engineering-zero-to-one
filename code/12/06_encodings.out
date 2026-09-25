@@ -1,0 +1,18 @@
+Training rows    values  columns  under 20 rows  their rows
+  segment             4        3              0        0.0%
+  region              5        4              0        0.0%
+  main_category       5        4              1        0.3%
+  area              410      409            393       72.7%
+  postcode        3,370    3,369          3,370      100.0%
+
+Segments by median spend in the year before the mark
+  0  Small business       9,726 dollars     9.5% left
+  1  Public sector       14,854 dollars     2.4% left
+  2  Mid-market          17,619 dollars     4.2% left
+  3  Enterprise          28,550 dollars     1.9% left
+
+Tuning cohorts               log loss    AUC  leavers
+  one-hot segment, 3 columns  0.21532  0.764       90
+  ordinal segment, 1 column   0.21443  0.767       89
+
+One-hot on every category above: 3,789 columns for 5,041 rows

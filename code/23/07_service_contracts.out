@@ -1,0 +1,16 @@
+the CRM reads as              the API offers
+contract_id   integer         integer
+account       string          string
+mark          string          string
+answered_by   string          string
+chance        number|null     number|null
+rank          integer|null    integer|null
+reasons       array           array
+note          string          string
+broken: nothing
+after renaming chance and sending rank as text:
+  chance: gone
+  rank: now ['string']
+
+contract tests: 7 of 7 pass
+Chapter 22's list, 283 rows: 34 clauses, 0 broken

@@ -1,0 +1,21 @@
+Cohort marked 2025-03-02, the first ten of its list
+   1  contract 11917  chance 97.3%  called
+   2  contract 11883  chance 77.2%  called
+   3  contract 11677  chance 75.7%  held out
+   4  contract 11927  chance 73.9%  held out
+   5  contract 11825  chance 63.8%  called
+   6  contract 11889  chance 47.6%  held out
+   7  contract 11764  chance 41.1%  called
+   8  contract 11803  chance 39.0%  called
+   9  contract 11779  chance 34.1%  called
+  10  contract 11733  chance 34.0%  held out
+
+All twelve cohorts, by arm
+          contracts  mean_chance  mean_rank  top_ten
+arm                                                 
+called          240        0.253     20.288       57
+held out        240        0.258     20.712       63
+held out in each cohort: 20 to 20
+
+written: 480 rows; again: 0 rows
+a second draw: cohort 2024-11-02 is on record with another draw

@@ -1,0 +1,20 @@
+Chapter 11's setting: 0.21517
+
+best log loss after         TPE   random
+   5 trials             0.21490  0.21490
+  10 trials             0.21482  0.21482
+  15 trials             0.21322  0.21482
+  20 trials             0.21322  0.21320
+  30 trials             0.21304  0.21320
+  40 trials             0.21304  0.21315
+median, trials 11-40    0.21422  0.21892
+two leaves, 11-40            18        4
+
+TPE's best, trial 28:
+  leaves 2, min_leaf 29, rate 0.238
+  columns 0.885, rows 0.983, l2 16.8
+
+seed        TPE best  random best
+SEED + 0     0.21304      0.21315
+SEED + 1     0.21298      0.21463
+SEED + 2     0.21478      0.21365

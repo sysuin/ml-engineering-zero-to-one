@@ -1,0 +1,8 @@
+                  encoding alone, AUC   lasso with it, AUC
+                   training validation  training validation  leavers
+  without it                               0.788      0.820       58
+  naive               0.787      0.488     0.864      0.716       39
+  out of fold         0.494      0.488     0.788      0.821       58
+
+Areas: 410 in training, median 9 rows each; 100.0%
+of validation rows are in an area seen in training

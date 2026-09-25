@@ -1,0 +1,11 @@
+Validation          leavers  renewers   alone, AUC
+  account_rows          1.75      2.73        0.890
+  rows_before           0.75      0.81        0.531
+
+Validation, 240 calls                leavers     AUC
+  v0.4's lasso                           60   0.815
+  with account_rows                     101   0.973
+  with rows_before                       60   0.815
+
+86.9% of validation contracts have an account-mate in the test
+year; among leavers, 0.0%

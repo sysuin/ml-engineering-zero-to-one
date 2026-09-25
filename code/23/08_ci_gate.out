@@ -1,0 +1,40 @@
+branch: a tidy-up of the code
+gate: UNCHANGED
+  - every chance equals the champion's
+  leavers at capacity +0 (+0.0 to +0.0) in 240 calls
+  AUC within lists    +0.0000 (+0.0000 to +0.0000)
+
+branch: strength 0.002 -> 0.02
+gate: BLOCKED
+  - behind at capacity
+  - worse on region = Midwest
+  - worse on segment = Small business
+  - worse on size = third
+  leavers at capacity -7 (-14.0 to +2.0) in 240 calls
+  AUC within lists    -0.0495 (-0.0828 to -0.0170)
+  slice                  leavers     called change           (95%)
+  region Midwest              18   14 ->  9  -27.8   -50.0 to -7.7 *
+  region Southeast            19    8 ->  7   -5.3  -25.0 to +12.5
+  region Southwest            37   15 -> 14   -2.7   -12.5 to +6.2
+  segment Mid-market          17    5 ->  7  +11.8    0.0 to +28.6
+  segment Small business     101   53 -> 44   -8.9   -15.3 to -3.0 *
+  size smallest               60   41 -> 39   -3.3   -12.0 to +4.2
+  size second                 29   13 -> 12   -3.4   -15.6 to +8.3
+  size third                  19    6 ->  2  -21.1   -40.8 to -4.8 *
+  tenure under 1 year         18   11 ->  8  -16.7   -36.4 to  0.0
+  tenure 3-6 years            25   12 -> 13   +4.0   -9.5 to +17.6
+  tenure over 6 years         60   28 -> 23   -8.3   -16.9 to  0.0
+  population long tail       122   60 -> 53   -5.7   -11.4 to  0.0
+  16 slices judged; 3 have under 10 leavers. * worse: all below zero
+
+branch: region dropped
+gate: REGISTER
+  - not behind, and not shown to be better
+  leavers at capacity +2 (-3.0 to +6.0) in 240 calls
+  AUC within lists    +0.0035 (-0.0009 to +0.0079)
+
+register(): the gate blocked this model:
+  behind at capacity
+  worse on region = Midwest
+  worse on segment = Small business
+  worse on size = third

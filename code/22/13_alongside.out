@@ -1,0 +1,12 @@
+forecast from 2025-12: run 2, finished
+forecast from 2025-12: run 2, done already
+     job  runs  rows
+forecast     1   720
+ renewal     1   283
+
+GET /forecast/MRD-CLE-001/Midwest (run 2)
+  2026-01     563 units, 80% between 428 and 652
+  2026-02     542 units, 80% between 401 and 681
+  2026-03     543 units, 80% between 380 and 672
+GET /forecast/MRD-CLE-999/Midwest -> 404
+  no forecast for MRD-CLE-999 in the Midwest

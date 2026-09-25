@@ -1,0 +1,7 @@
+Telling training from validation, alone
+  tenure_days    AUC 0.842  review
+  tenure_months  AUC 0.622  pass
+
+The lasso on validation              leavers     AUC
+  tenure in days                         60   0.815
+  tenure in whole months                 60   0.815

@@ -1,0 +1,11 @@
+Library features the lasso uses: 20 of 36
+Weakest five: chasing_90d, behaviour_newcomers, supplier_aldridge,
+  spend_slope, product_tickets_90d
+
+Tuning cohorts           columns  log loss    AUC
+  whole library               52   0.22167  0.745
+  without the five            47   0.21852  0.753
+
+Validation, without minus with the five
+            leavers  points               AUC
+  lasso          +0  +0.0 (-0.8 to +0.8)  -0.000 (-0.002 to +0.001)

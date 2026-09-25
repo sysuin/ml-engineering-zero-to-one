@@ -1,0 +1,28 @@
+seed 20260925, synthetic: True, personal data: False
+  key_accounts                    58
+  long_tail_accounts           6,000
+  legacy_duplicate_ids           212
+  contracts                   19,220
+  orders                     478,242
+  order_lines              1,229,062
+  tickets                     21,668
+
+Rows in the warehouse
+  accounts                     6,270
+  account_history              9,910
+  products                        48
+  suppliers                       20
+  regions                          5
+  price_events                     3
+  contracts still running      4,606
+
+Long-tail renewals decided, 2023-2025    11,027
+  not renewed                              7.4%
+  ceiling AUC                             0.811
+  by year ending  2023 7.0%  2024 5.9%  2025 9.1%
+
+The ceiling at 40 calls a cohort, every renewal
+split       contracts  leavers   ceiling  precision    AUC
+train           5,041      328   167/720      23.2%  0.794
+validation      2,083      122    64/240      26.7%  0.819
+test            4,076      364   173/480      36.0%  0.820

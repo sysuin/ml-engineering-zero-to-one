@@ -1,0 +1,26 @@
+rfm          orders_365, avg_order_365
+windows      orders_30d, spend_30d, spend_90d, tickets_365
+trends       order_trend, spend_trend, spend_slope, quarter_share
+time         mark_month_sin, mark_month_cos, log_tenure_years
+history      days_of_history, no_order_record
+tickets      complaints_90d, complaints_365, chasing_90d,
+             product_tickets_90d
+products     share_cleaning, share_facilities, share_packaging,
+             share_safety, share_sanitation, categories_365
+suppliers    supplier_kestrel, supplier_aldridge,
+             supplier_pemberton, supplier_voss, supplier_penhale,
+             suppliers_365
+interactions small_x_gap, small_x_trend
+behaviour    behaviour_drifting, behaviour_newcomers,
+             behaviour_long_standing
+
+order_trend: group trends, added 2026-09-25, reads orders,
+  looks back 180 days, raw for a linear model
+  log of (orders in the last 90 days + 1) over (orders in the 90
+  days before + 1)
+
+ValueError: feature 'order_trend' is already defined
+
+features_table.parquet: 11,200 rows, 52 columns,
+  36 of them from the library
+tests/test_features.py: 117 passed

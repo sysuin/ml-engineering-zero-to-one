@@ -1,0 +1,25 @@
+                                 chance  rank  40th chance
+  v0.6: lasso, calibrated       1.9e-07   338        10.7%
+  v0.5: lasso                   6.1e-37   338        10.8%
+  booster                        0.0033   335        12.9%
+  lasso + ticket features       6.1e-37   338        10.8%
+  booster + ticket features      0.0035   335        13.2%
+
+Parts, in log-odds                         lasso   booster
+  orders_90d                              -80.23     -1.21
+  days_since_order                         -0.25     -0.37
+  discount_pct                             -0.24     -0.34
+  segment                                  -0.22     -0.44
+  legacy_terms                             -0.02     +0.00
+  orders_prev_90d                          +0.00     +0.43
+  tickets_90d                              +0.00     +0.19
+  tenure_days                              +0.00     -0.12
+  term_months                              +0.00     +0.00
+  region                                   +0.01     +0.05
+  spend_365                                +0.73     -0.70
+  base                                     -3.17     -3.21
+  lasso log-odds -83.39: a chance of 6.1e-37
+  booster log-odds -5.72: a chance of 0.0033
+orders_90d stands 42.2 standard deviations above the average
+Rarely seen, fewer than 20 training rows as far out:
+  orders_90d, orders_prev_90d, spend_365, tickets_90d

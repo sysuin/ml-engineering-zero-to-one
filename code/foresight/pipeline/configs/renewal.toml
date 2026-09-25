@@ -1,0 +1,32 @@
+# Foresight's renewal-risk model: what `make train MODEL=renewal`
+# reads. Change a value here, or for one run with
+# `--set section.key=value`; the run records every value it used.
+
+[model]
+name = "renewal"
+version = "0.6"            # the milestone whose model this is
+strength = 0.002           # Chapter 9's lasso, per contract
+calibration_months = 3     # Chapter 14: the cohorts Platt learns on
+no_order_days = 365        # the gap for an account with no order
+
+[data]
+first = "2023-01-01"       # contracts ending from this day
+last = "2025-12-31"        # to this one
+as_of = "2025-01-01"       # fit on the outcomes known this morning
+
+[evaluation]
+cohorts = 6                # the latest cohorts the backtest scores
+
+# Measured once, from the generator's true chances (DECISIONS.md),
+# and only for these cohorts; any other window says "not measured".
+[evaluation.ceiling]
+first = "2024-07-01"
+last = "2024-12-31"
+hits = 64
+precision = "26.7%"
+auc = "0.819"
+
+[paths]
+table = "data/foresight/renewals_table.parquet"
+artifacts = "artifacts"
+mlruns = "mlruns"

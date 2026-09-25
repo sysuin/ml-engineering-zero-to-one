@@ -1,0 +1,10 @@
+Validation contracts        not renewed   renewed
+  silent for six months              12        18
+  ordered                           110     1,943
+
+Settled on the morning of the mark: 94.4% of contracts,
+  every one of them labelled 0
+
+The days-since rule, ranking      AUC
+  not renewed (Foresight)       0.762
+  silent for six months         0.980

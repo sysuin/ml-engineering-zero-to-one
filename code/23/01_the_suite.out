@@ -1,0 +1,16 @@
+508 tests in 30 files
+
+layer        fast   slow  total  files
+unit          382      4    386     26
+data            0     27     27      7
+model          20     32     52     13
+service        42      1     43      3
+all           444     64    508     30
+
+where the layers above unit come from:
+  data: data 18, contracts 3, forecast 2, build_table 1,
+    expectations 1, pipeline 1, serve 1
+  model: model 20, behaviour 13, forest 4, boosting 3, mlp 2,
+    monitor 2, triage 2, anomaly 1, gate 1, logistic 1, pipeline 1,
+    regularised 1, segments 1
+  service: serve 29, pipeline 7, service_contracts 7

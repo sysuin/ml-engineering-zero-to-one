@@ -1,0 +1,17 @@
+Deletion test on 854 contracts, the cohorts marked
+2022-11-02, 2023-08-02, 2024-04-01
+
+kind of source     columns  rows moved  fail
+event log               35         220     1
+fixed at opening         8         261     1
+history                  1           0     0
+signed                   3           0     0
+calendar                 2           0     0
+written late             1           -     1
+
+Failed
+  tickets_to_end  tickets                   220 rows moved
+  drifting_once   orders+accounts           261 rows moved
+  manager_today   accounts.account_manager  not testable
+
+Region in the old CRM and today: the same for 212 of 212 accounts

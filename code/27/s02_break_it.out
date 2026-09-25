@@ -1,0 +1,13 @@
+1. the production model's file deleted
+   the job the next night: done already
+   the API: degraded; renewal model missing
+   /renewal 15378: list, chance 0.7646
+   /renewal 14942: rule, Last order 138 days ago
+
+2. the manifest says the model knows the future
+   the job: refused, the production model knows the outcomes to
+   2026-02-01; this list is for the morning of 2026-01-01
+
+3. the MCP server asked for a month not yet reached
+   isError True: Error executing tool renewal_risk: no list for
+   2026-02 yet: it is 2026-01-01

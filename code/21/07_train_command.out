@@ -1,0 +1,29 @@
+1 table     11,200 rows, aecfe428; Chapter 4's checks pass
+2 expect    Chapter 5's expectations hold
+3 leakage   11 columns, no failure; 2 for a person to review
+4 fit       7,124 outcomes known on 2025-01-01; next list
+            264 contracts marked 2024-12-31
+5 backtest  6 cohorts ending 2024-07-01 to 2024-12-31:
+            60 leavers in 240 calls (rule 53), AUC 0.818 (0.762)
+6 record    the run, its rows and how they were chosen, in the
+            hand-built log and in MLflow
+7 card      122 lines, every number measured on this run
+8 register  renewal version 1, staged
+
+The card: 122 lines, the same as Chapter 16's line for line
+as far as its test year's section
+
+version  stage       as of        leavers    AUC
+      1  staged      2025-01-01        60  0.818
+
+    log
+      1  staged      trained
+
+artifacts/renewal/1/manifest.json
+artifacts/renewal/1/model.joblib
+artifacts/renewal/1/model_card.md
+artifacts/renewal/registry.json
+data/foresight/renewals_table.manifest.json
+data/foresight/renewals_table.parquet
+mlruns/mlflow.db
+mlruns/runs.jsonl

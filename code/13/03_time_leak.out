@@ -1,0 +1,14 @@
+notice_date: filled for 328 training contracts, 100% of
+  them leavers; 60 to 60 days before the end; on record by
+  the mark for 0 of them
+
+Validation            leavers  renewers   alone, AUC
+  tickets_90d             0.19      0.30        0.542
+  tickets_to_end          0.98      0.40        0.661
+  days_since_order       72.13     23.52        0.762
+  gap_to_end             67.80     26.53        0.773
+
+Validation, 240 calls                leavers     AUC
+  v0.4's lasso                           60   0.815
+  with tickets to the end                68   0.832
+  with the gap to the end                67   0.839

@@ -1,0 +1,13 @@
+Notices over expected, list by list
+  Jan 1.26  Mar 1.87  Apr 1.17  May 1.86  Jun 1.47
+  Jul 2.04  Aug 1.33  Sep 1.26  Oct 1.98
+
+trigger      refits  leavers  log loss  average
+never             0      111    0.2752     5.6%
+ratio 1.25        5      109    0.2625     9.1%
+ratio 1.5         3      110    0.2667     8.4%
+ratio 2.0         1      112    0.2708     7.1%
+Poisson           3      110    0.2667     8.4%
+monthly           8      111    0.2624     9.0%
+
+Share that left: 8.9%

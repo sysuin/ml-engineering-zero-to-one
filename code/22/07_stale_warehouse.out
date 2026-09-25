@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "code/22/07_stale_warehouse.py", line 12, in <module>
+    batch.main(["--on", "2026-01-30", "--root", tmp])
+  File "code/foresight/serve/batch.py", line 296, in main
+    print(summary(month(a.on, a.root, a.again, a.rule)))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "code/foresight/serve/batch.py", line 154, in month
+    return _make(con, run, on, mark, root, done is None,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "code/foresight/serve/batch.py", line 164, in _make
+    fresh(mark, warehouse)
+  File "code/foresight/serve/batch.py", line 119, in fresh
+    raise StaleData(f"orders on record to {last};\nthe list"
+foresight.serve.batch.StaleData: orders on record to 2025-12-31;
+the list marked 2026-01-30 needs them to 2026-01-29

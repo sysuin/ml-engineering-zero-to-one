@@ -1,0 +1,8 @@
+                  training    2025    PSI
+tenure_days           2100    1735   0.42
+tenure_months           70      57   0.14
+tenure_years             5       4   0.14
+past_a_year            275     275   0.06
+
+v0.6's weight on tenure: -0.0256 per standard deviation
+The drift's effect on the average log-odds: -0.0019

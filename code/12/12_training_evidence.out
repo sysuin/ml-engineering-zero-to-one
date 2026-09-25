@@ -1,0 +1,19 @@
+Change on the training period       lasso, tuning   booster
+group          features   log loss     AUC   watched  keep
+  rfm                 2   +0.00052  +0.001  +0.00424
+  windows             4   -0.00247  -0.008  -0.00068  lasso booster
+  trends              4   -0.00561  +0.011  +0.00068  lasso
+  time                3   +0.00606  -0.023  -0.00022
+  history             2   +0.00035  +0.001  -0.00002
+  tickets             4   +0.00294  -0.013  -0.00020
+  products            6   +0.00259  -0.009  -0.00066  booster
+  suppliers           6   +0.00039  -0.003  +0.00513
+  interactions        2   -0.00409  +0.004  -0.00054  lasso booster
+  behaviour           3   -0.00147  -0.001  +0.00000  lasso
+  everything         36   +0.00636  -0.019  +0.00274
+
+The rule: keep a group for a model if it lowers that model's
+log loss on the training period by more than 0.0003.
+
+The lasso, given all 36 library features, keeps 20;
+  largest weights: order_trend, orders_365, small_x_gap

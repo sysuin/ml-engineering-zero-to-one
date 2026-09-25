@@ -1,11 +1,49 @@
-# Foresight and what it needs. For now that is one container: the book's environment,
-# with the generated dataset kept on the host so it survives a rebuild. Chapter 22 adds
-# the API, and Chapter 24 the monitor; each arrives with the chapter that builds it.
+# Foresight running: the API, and the job that makes the monthly list
+# and the forecast (Chapter 22; Chapter 24 adds the monitor).
+#   docker compose run --rm setup     once: generate the dataset
+#   make train, then promote          outside, by a person
+#   make docker                       the API and the job
+# Data and models live on the host, not in the image: both are
+# rebuilt from seeds, and neither belongs in a layer.
+x-foresight: &foresight
+  build: .
+  environment:
+    # The morning it takes it to be. Meridian's records stop at the
+    # end of 2025, so the book sets it; empty means the calendar's.
+    FORESIGHT_ON: "${FORESIGHT_ON:-2025-12-31}"
+  restart: unless-stopped
+
 services:
-  foresight:
-    build: .
+  api:
+    <<: *foresight
+    ports:
+      - "127.0.0.1:8000:8000"     # this machine only
     volumes:
-      # Generated data and trained models live on the host, not in the image: both are
-      # rebuilt from seeds, and neither belongs in a layer.
+      - ./data:/app/data          # opened read-only by the code
+      - ./artifacts:/app/artifacts:ro
+
+  batch:
+    <<: *foresight
+    # Asked every hour. Most hours no mark is due and it says so; a
+    # failed run is tried again an hour later.
+    command: ["sh", "-c", "while true;
+      do python -m foresight.serve.batch;
+      python -m foresight.serve.batch forecast;
+      sleep 3600; done"]
+    healthcheck:
+      disable: true               # the image's check asks for the API
+    volumes:
       - ./data:/app/data
-      - ./artifacts:/app/artifacts
+      - ./artifacts:/app/artifacts:ro
+
+  setup:
+    <<: *foresight
+    profiles: ["setup"]           # only when asked for by name
+    restart: "no"
+    healthcheck:
+      disable: true
+    command: ["sh", "-c", "python code/meridian/generate.py
+      && python code/meridian/generate_ml.py
+      && python code/_preflight.py"]
+    volumes:
+      - ./data:/app/data

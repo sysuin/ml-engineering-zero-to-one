@@ -30,7 +30,17 @@ USER foresight
 ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/code PYTHONHASHSEED=0 \
     OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 TZ=UTC
 
-# Until Chapter 22 gives Foresight an API, the container checks its own environment and
-# generates the dataset. Chapter 22 replaces this line with the service, adds a health
-# check, and exposes port 8000.
-CMD ["sh", "-c", "python code/meridian/generate.py && python code/meridian/generate_ml.py && python code/_preflight.py"]
+# The container runs Foresight's API (Chapter 22). Data, registry and
+# scores arrive as volumes (docker-compose.yml), never in the image;
+# the same image runs the monthly job with another command.
+EXPOSE 8000
+
+# Healthy means the process answers. /health also says "degraded" when
+# a model is missing: a reason to alert somebody, not to restart, which
+# would load the same registry and miss the same model. No curl here.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
+  CMD python -c "import urllib.request as u; \
+u.urlopen('http://127.0.0.1:8000/health', timeout=4)"
+
+CMD ["uvicorn", "foresight.serve.api:app", \
+     "--host", "0.0.0.0", "--port", "8000"]

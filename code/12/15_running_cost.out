@@ -1,0 +1,14 @@
+group          features lines  window  reads
+  rfm                 2     9     365  orders
+  windows             4    16     365  orders, tickets
+  trends              4    35     365  orders
+  time                3    18       0  accounts
+  history             2    13       0  accounts, orders
+  tickets             4    24     365  tickets
+  products            6    12     365  lines
+  suppliers           6    12     365  lines
+  interactions        2    13     365  orders
+  behaviour           3    20     365  accounts, orders + k-means
+
+Chapter 4's builder, for scale: 269 lines
+  for its sixteen columns and their checks

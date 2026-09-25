@@ -1,0 +1,21 @@
+Weights per standard deviation, each cohort's fit
+mark           rows  orders_90d  prev_90d     sum   corr
+2024-05-02    4,355      -1.769     0.000  -1.769   0.90
+2024-06-02    4,703      -1.701     0.152  -1.549   0.90
+2024-07-02    5,041      -0.588     0.599   0.012   0.93
+2024-08-02    5,399      -0.536     0.553   0.017   0.93
+2024-09-01    5,747      -0.478     0.498   0.020   0.93
+2024-10-02    6,065      -0.474     0.488   0.014   0.93
+
+Shuffled                      AUC drop        95% range  lost
+  orders_90d                     0.070   0.039 to 0.108   9.6
+  orders_prev_90d                0.008  -0.002 to 0.019   4.0
+  orders_90d+orders_prev_90d     0.035   0.008 to 0.072   4.3
+
+Refitted without               leavers     AUC
+  (nothing: v0.5)                       60   0.815
+  orders_90d                            59   0.823
+  orders_prev_90d                       59   0.814
+  orders_90d and orders_prev_90d        59   0.824
+  days_since_order                      52   0.779
+Without both, minus v0.5: AUC +0.008 (-0.004 to +0.022)

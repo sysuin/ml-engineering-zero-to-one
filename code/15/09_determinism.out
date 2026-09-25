@@ -1,0 +1,18 @@
+The fitted chances, added up four ways
+  left to right           326.39802246785865
+  right to left           326.39802246785865
+  NumPy, in pairs         326.3980224678587
+  exactly, then rounded   326.39802246785865
+
+One thread against four: largest difference 0.0e+00
+
+seed          tuned  Chapter 11
+SEED + 0    0.21304     0.21517
+SEED + 1    0.21324     0.21517
+SEED + 2    0.21371     0.21517
+SEED + 3    0.21356     0.21517
+SEED + 4    0.21212     0.21517
+  tuned: spread 0.00159
+  Chapter 11: spread 0.00000
+
+python 3.12.1, numpy 2.5.3, lightgbm 4.7.0

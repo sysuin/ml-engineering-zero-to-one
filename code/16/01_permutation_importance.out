@@ -1,0 +1,29 @@
+lasso              AUC drop        95% range  lost
+  days_since_order    0.109   0.084 to 0.133  31.7
+  segment             0.079   0.052 to 0.104   8.6
+  orders_90d          0.067   0.030 to 0.100   9.9
+  discount_pct        0.030   0.012 to 0.055   5.5
+  orders_prev_90d     0.008  -0.002 to 0.020   4.0
+  spend_365           0.004   0.001 to 0.009   0.7
+  tenure_days         0.001   0.000 to 0.002   0.1
+  legacy_terms        0.000  -0.001 to 0.002   0.4
+  term_months         0.000   0.000 to 0.000   0.0
+  tickets_90d         0.000   0.000 to 0.000  -0.1
+  region             -0.002  -0.009 to 0.003  -0.5
+
+booster            AUC drop        95% range  lost  splits  gain
+  days_since_order    0.093   0.068 to 0.116  28.3     13%   58%
+  segment             0.036   0.022 to 0.051   4.0     11%    8%
+  orders_90d          0.056   0.016 to 0.092   5.3     15%   19%
+  discount_pct        0.026   0.011 to 0.042   2.0     10%    5%
+  orders_prev_90d     0.014  -0.003 to 0.028   0.2     24%    5%
+  spend_365           0.008   0.000 to 0.016   0.7     15%    3%
+  tenure_days         0.001  -0.002 to 0.003   0.6      5%    1%
+  legacy_terms        0.000   0.000 to 0.000   0.0      0%    0%
+  term_months         0.000   0.000 to 0.000   0.0      0%    0%
+  tickets_90d         0.001  -0.002 to 0.004  -0.1      2%    0%
+  region             -0.002  -0.006 to 0.002  -1.4      5%    1%
+
+AUC drop and leavers lost from 240 calls: mean over 50
+resamples, each shuffled afresh. splits, gain: LightGBM's own
+shares, from the rows each booster was fitted on.

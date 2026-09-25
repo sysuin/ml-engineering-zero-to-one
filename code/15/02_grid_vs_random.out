@@ -1,0 +1,18 @@
+                    grid                        random
+  min leaf   rate  log loss          min leaf   rate  log loss
+         5  0.020   0.21610                19  0.183   0.21520
+         5  0.077   0.21582                22  0.295   0.21570
+         5  0.300   0.21614                20  0.196   0.21484
+        45  0.020   0.21496               101  0.022   0.21568
+        45  0.077   0.21489               203  0.032   0.22312
+        45  0.300   0.21568                21  0.166   0.21526
+       400  0.020   0.23180               120  0.026   0.21550
+       400  0.077   0.23083                90  0.204   0.21460
+       400  0.300   0.22830               139  0.041   0.21465
+
+             best   0.21489                            0.21460
+grid:   3 values of min leaf, 3 of the rate
+random: 9 values of min leaf, 9 of the rate
+
+Ten more random searches of nine: best log loss 0.21433 to 0.21479
+  better than the grid's best in 10 of 10, median 0.21459

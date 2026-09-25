@@ -1,0 +1,41 @@
+status    ok
+version   1.0
+today     2025-12-31
+renewal   renewal v1
+calibrationas fitted
+triage    triage v1
+problems  []
+last_run  run 1, 2025-12-31, finished
+
+POST /renewal 14942 -> 200
+{
+ "contract_id": 14942,
+ "account": "Easbury Salon",
+ "mark": "2025-11-30",
+ "answered_by": "model",
+ "chance": 0.3076,
+ "rank": null,
+ "reasons": [
+  "Last order 138 days ago (typical: 13)",
+  "Small business: 10.8% of these left, 7.2% of all",
+  "Orders fell from 2 to 0, quarter on quarter"
+ ],
+ "model": "renewal v1",
+ "note": "scored now: no monthly list holds it"
+}
+
+15330  200
+       list: on the list: call; run 1
+15378  200
+       list: on the list, held out this month: no call; run 1
+15229  200
+       key account: no chance given; ask the account manager
+ 7424  409
+       contract 7424 ended on 2024-03-31; its outcome is on record
+16000  409
+       contract 16000 is not at its mark until 2026-03-02
+99999  404
+       no contract 99999
+
+POST /triage -> 200: Urgent (0.58), Delivery (0.88),
+  P(Urgent) 0.58; model (unsure), triage v1

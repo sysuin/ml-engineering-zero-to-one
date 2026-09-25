@@ -1,0 +1,11 @@
+feed      2025-01-01  Voss Industrial
+volume    never
+inputs    2025-11-02  discount_pct
+scores    never
+notices   2025-04-02  list 2025-03-02
+outcomes  2025-06-01  list 2025-03-02
+
+The notice check at looser tail probabilities
+  alpha 0.001  4 lists: Mar, May, Jul, Oct
+  alpha 0.01   4 lists: Mar, May, Jul, Oct
+  alpha 0.05   5 lists: Mar, May, Jun, Jul, Oct

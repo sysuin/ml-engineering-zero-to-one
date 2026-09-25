@@ -1,0 +1,20 @@
+Days from mark to renewal: 90 for 5,041 of 5,041 contracts
+
+Training, by tenure        contracts    left   margin
+  renewal 1                      786    6.5%    1.7%
+  renewal 2                      630    7.3%    2.0%
+  renewal 3                      363    6.9%    2.6%
+  renewal 4                      420    3.8%    1.8%
+  renewal 5                      358    6.1%    2.5%
+  renewal 6 or later           2,484    6.8%    1.0%
+
+Training, by season        contracts    left   margin
+  mark in Q1                   1,406    6.0%    1.2%
+  mark in Q2                   1,292    6.3%    1.3%
+  mark in Q3                     943    6.8%    1.6%
+  mark in Q4                   1,400    7.0%    1.3%
+
+Windows not fully on record: 645 of 5,041 training rows
+  long tail     577 rows, median  333 days on record,   0 with none
+  key accounts   68 rows, median  182 days on record,  12 with none
+No order at all before the mark: 14 rows

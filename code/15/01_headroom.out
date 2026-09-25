@@ -1,0 +1,11 @@
+Tuning cohorts: contracts ending 2023-10-01 to 2024-04-30
+7 cohorts, 1,964 contracts, 136 leavers, 280 calls
+
+                             log loss    AUC  leavers
+booster, 31 leaves of 20      0.22122  0.754       64
+booster, Chapter 11           0.21517  0.779       65
+lasso, v0.4                   0.21903  0.771       63
+the true probabilities        0.20925  0.790       65
+
+Chapter 11's booster to the true probabilities:
+  log loss 0.00593, AUC 0.010, leavers 0

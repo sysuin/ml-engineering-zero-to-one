@@ -1,0 +1,10 @@
+validation  leavers    AUC  log loss  slope  top bin said   left
+lasso            60  0.815    0.1869   1.46         18.9%  25.0%
+booster          56  0.812    0.1814   1.12         25.5%  24.5%
+defaults         48  0.770    0.2075   0.57         29.3%  21.2%
+
+On the 4,355 rows each was fitted on at the 2 May mark
+             log loss  slope
+lasso          0.2095   1.14
+booster        0.1952   1.14
+defaults       0.0682   3.75

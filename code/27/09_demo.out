@@ -1,0 +1,62 @@
+Foresight v1.0: the demonstration, on the morning of 2026-01-01
+in a temporary installation with the sandbox's models
+
+1  The monthly list                                       make score
+   cohort marked 2025-12-31: 283 contracts, 40 calls, 20 held out at
+   random; 2 key accounts listed apart
+    1  Hartton Cleaning      76.5%  Last order 274 days ago
+    2  Hartdale Nursery      44.5%  Last order 118 days ago
+    3  Greyworth Dental      43.4%  Last order 165 days ago
+   the next night: done already, list made by run 1
+
+2  Next quarter's demand                    make score ARGS=forecast
+   from 2025-12: 720 product-region months written, each with an 80%
+   range
+
+3  The API                                                make serve
+   GET /health: ok; renewal v1, triage v1; Platt's map as fitted
+   POST /renewal 15378: list, 76.5%; on the list, held out this
+   month: no call; run 1
+   POST /renewal "15378": 422, input should be a valid integer
+   POST /triage: Urgent, Delivery (model (unsure))
+   GET /forecast/MRD-CLE-001/Midwest: 2026-01, 563 units (428 to
+   652)
+
+4  The monitor                                       the weekly page
+   chances: average 8.8%, PSI 0.05 against the 10,778 rows the model
+   learned from
+   inputs over a PSI of 0.25, and how far they move the average log-
+   odds:
+     tenure_days       0.91   +0.007
+     discount_pct      0.33   -0.036
+     legacy_terms      0.32   -0.022
+   order feed: cost alert 2025-01-01, Voss Industrial
+   order feed: price alert 2025-02-01, Voss Industrial
+   this list's notices are due 2026-01-30, its outcomes on
+   2026-04-01
+
+5  The MCP server                     python -m foresight.mcp_server
+   tools/list: renewal_risk, why, demand_forecast
+   renewal_risk(region="Midwest"): 8 of the 40 calls, 4 of them held
+   out; first, Warebury Nursery (30.8%), last order 132 days ago
+   (typical: 13)
+
+6  It fails correctly
+   the job on 2026-01-30: refused, orders on record to 2025-12-31;
+   the list marked 2026-01-30 needs them to 2026-01-29
+   POST /renewal 16000: 409, contract 16000 is not at its mark until
+   2026-03-02
+   no model in the registry: answered by the rule, "Last order 274
+   days ago"
+   renewal_risk(region="Mid-west"): refused by the schema: Input
+   should be 'Midwest', 'Northeast', 'Southeast', 'Southwest' or
+   'West'
+
+7  The evidence
+   run: renewal  2025-12-31  finished at done
+   run: forecast 2025-12-01  finished at done
+   run: renewal  2026-01-30  failed   at fresh
+   holdout.csv: 40 contracts, 20 held out, drawn once
+   the 283 rows the list scored, scored again: largest change
+   0.0e+00
+   renewal v1's model card, beside it in the registry: 122 lines

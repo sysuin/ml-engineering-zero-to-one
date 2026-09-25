@@ -1,0 +1,20 @@
+Appendix F, the rule's 21.9% on training: 805 per arm
+v0.6's validation lists: 25.0% of top 40s left, 18.1% of top 80s
+v0.6 at 25.0%: 683 per arm
+
+each cohort           held called cohorts unreached      cost
+top 40, 20 held out     20     20      35       5.0   124,862
+top 40, 10 held out     10     30      48       2.5    85,620
+top 80, 40 held out     40     40      26       2.8    51,015
+
+Power with 20 of 40 held out, simulated from the six lists
+save rate     1 year  2 years  3 years  formula, 1 year
+0.00              5%       5%       4%               5%
+0.05              5%       7%       8%               5%
+0.10              8%      14%      20%               9%
+0.15             16%      27%      40%              16%
+0.20             25%      46%      64%              26%
+0.25             38%      65%      84%              38%
+0.30             52%      81%      95%              52%
+0.40             77%      98%     100%              79%
+0.50             94%     100%     100%              94%

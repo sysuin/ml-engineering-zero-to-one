@@ -1,0 +1,25 @@
+
+Training, by breadth       contracts    left   margin
+  2 or fewer                      55   18.2%   10.2%
+  3 categories                   173   12.7%    5.0%
+  4 categories                 4,813    6.2%    0.7%
+
+Training, by Voss share    contracts    left   margin
+  no Voss                      2,359    7.5%    1.1%
+  up to 10%                    1,656    5.0%    1.0%
+  10% to 25%                     709    6.1%    1.8%
+  over 25%                       317    7.9%    3.0%
+
+One column alone, training       AUC
+  share_cleaning               0.525
+  share_facilities             0.533
+  share_packaging              0.508
+  share_safety                 0.506
+  share_sanitation             0.500
+  categories_365               0.528
+  supplier_kestrel             0.524
+  supplier_aldridge            0.563
+  supplier_pemberton           0.532
+  supplier_voss                0.525
+  supplier_penhale             0.536
+  suppliers_365                0.670

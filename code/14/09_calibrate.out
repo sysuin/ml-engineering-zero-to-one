@@ -1,0 +1,10 @@
+                   leavers  log loss  slope  mean p  calls   made $
+lasso, as fitted        60    0.1869   1.46    6.1%    155  +18,871
+  platt                 60    0.1848   1.29    5.6%    149  +17,984
+  isotonic              56    0.2024   0.83    5.6%    171  +17,431
+    107 contracts scored exactly 0, of which 0 left
+booster, as fitted      56    0.1814   1.12    6.2%    247  +18,440
+  platt                 56    0.1805   1.10    5.8%    227  +18,099
+  isotonic              56    0.2116   0.80    5.9%    155  +18,871
+    196 contracts scored exactly 0, of which 2 left
+calls, made $: every contract above the 12.6% break-even

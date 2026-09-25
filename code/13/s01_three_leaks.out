@@ -1,0 +1,14 @@
+The screen, training rows
+  col_a  AUC 0.709  pass
+  col_b  AUC 0.938  fail
+  col_c  AUC 0.995  fail
+
+The lasso with each, validation     leavers     AUC
+  none                                   60   0.815
+  col_a                                  63   0.780
+  col_c                                 122   0.998
+
+Training against validation, each column alone
+  col_a  AUC 0.578  pass
+  col_b  AUC 0.514  pass
+  col_c  AUC 0.512  pass

@@ -1,0 +1,19 @@
+5,041 training contracts against 2,083 validation contracts.
+Fail at 0.95, review from 0.75
+
+v0.5's columns: 11 columns, together AUC 0.841
+  tenure_days           0.842  review
+with the library: 47 columns, together AUC 0.999
+  categories_365        0.883  review
+  share_sanitation      0.882  review
+  tenure_days           0.842  review
+  log_tenure_years      0.842  review
+  mark_month_cos        0.802  review
+  mark_month_sin        0.757  review
+with contract_id: 12 columns, together AUC 1.000
+  contract_id           1.000  fail
+  tenure_days           0.842  review
+
+Days past a whole year     274   275   276   277   278
+  training                 24%   37%   31%    8%    0%
+  validation                0%   40%   30%   29%    1%

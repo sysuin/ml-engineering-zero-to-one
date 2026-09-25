@@ -40,6 +40,7 @@ fastapi>=0.115
 uvicorn[standard]>=0.30
 httpx>=0.27           # FastAPI's test client
 joblib>=1.4           # model artifacts, Ch 21
+mcp>=2.0              # Ch 27: Foresight as a tool for Clarity; the SDK Book 1 uses
 
 # --- The toolchain the repository itself uses
 pytest>=8.0

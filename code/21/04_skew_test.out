@@ -1,0 +1,22 @@
+36 marks, 11,200 contracts
+
+The nightly SQL against the training table
+  column               rows  differ   e.g.
+  days_since_order   11,200     989   3438
+  orders_90d         11,200     992   3438
+  orders_prev_90d    11,200     262   3438
+  spend_365          11,200   1,106   3438
+  tickets_90d        11,200      81   3478
+  SkewError: the test fails
+
+The shared definition against the training table
+  14 columns, 11,200 contracts: 0 differences
+
+Tonight's list, marked 2025-12-31: 283 contracts
+  the training table's query finds 0 of them
+  the SQL against the shared definition, tonight only:
+  days_since_order      283      19
+  orders_90d            283      19
+  orders_prev_90d       283       0
+  spend_365             283      19
+  tickets_90d           283       2

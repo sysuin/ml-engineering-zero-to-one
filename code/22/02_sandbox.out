@@ -1,0 +1,14 @@
+renewal  version 1 in production
+         fitted on 10,778 outcomes known on 2025-12-31
+         reads 11 column(s)
+triage   version 1 in production
+         fitted on 15,764 tickets opened before 2025-01-01
+         reads 1 column(s)
+
+artifacts/renewal/1/manifest.json
+artifacts/renewal/1/model.joblib
+artifacts/renewal/1/model_card.md
+artifacts/renewal/registry.json
+artifacts/triage/1/manifest.json
+artifacts/triage/1/model.joblib
+artifacts/triage/registry.json

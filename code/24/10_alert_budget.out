@@ -1,0 +1,24 @@
+check       naive  budget
+feed            8       2
+inputs         30       2
+notices         4       4
+outcomes        3       3
+all            45      11   (3.8 and 0.9 a month)
+Naive input alerts:
+  supplier_voss      12
+  tenure_days        12
+  discount_pct        3
+  legacy_terms        3
+
+The alerts that survive the budget
+2025-01-01  feed     Voss Industrial    1.12   1.00 cost, 4 series
+2025-02-01  feed     Voss Industrial    1.08   1.00 price, 4 series
+2025-04-02  notices  list 2025-03-02   41.00  38.00 expected 21.9
+2025-06-01  outcomes list 2025-03-02   41.00  38.00 expected 21.9
+2025-06-02  notices  list 2025-05-02   37.00  35.00 expected 19.9
+2025-08-01  outcomes list 2025-05-02   37.00  35.00 expected 19.9
+2025-08-02  notices  list 2025-07-02   39.00  34.00 expected 19.2
+2025-10-01  outcomes list 2025-07-02   39.00  34.00 expected 19.2
+2025-11-02  inputs   discount_pct       0.41   0.25 effect -0.120
+2025-11-02  notices  list 2025-10-02   41.00  36.00 expected 20.7
+2025-11-30  inputs   discount_pct       0.48   0.25 effect -0.118

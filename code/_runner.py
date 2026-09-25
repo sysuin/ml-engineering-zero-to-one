@@ -32,6 +32,12 @@ Conventions a listing may declare on its first few lines:
 Listings run with the project root as the working directory, so every path in the book
 reads the same way: `data/meridian/...`.
 
+DEPENDENCIES. A listing is stale when its own text changes, and also when a file of the
+book's own code that it imported has changed since it ran: a module under code/foresight/,
+a helper beside it, a test file a listing ran. sitecustomize.py records what each run
+imported (every process the listing started), and the report keeps each file's digest.
+Data and settings files a listing reads are not tracked; a change to them needs --all.
+
 Model calls are counted, not required. Part IV compares a trained classifier against a
 language model on cost; when a listing makes such a call, `sitecustomize.py` records its
 tokens and this runner reports them. A book build with no model calls reports nothing.
@@ -114,8 +120,44 @@ def source_digest(path: str) -> str:
         return digest(f.read())
 
 
+def dependencies(listing: str, deps_file: str) -> dict[str, str]:
+    """The book's own files the listing's processes imported, besides the listing itself,
+    each with its digest. sitecustomize.py writes the list; see DEPENDENCIES."""
+    files: set[str] = set()
+    if os.path.exists(deps_file):
+        with open(deps_file) as f:
+            for line in f:
+                files.update(json.loads(line))
+        os.remove(deps_file)
+    files.discard(os.path.join("code", listing))
+    return {p: file_digest(p) for p in sorted(files)}
+
+
+def file_digest(relative: str) -> str | None:
+    path = os.path.join(ROOT, relative)
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as f:
+        return digest(f.read())
+
+
+def changed_dependencies(entry: dict) -> list[str]:
+    """Recorded dependencies whose contents are no longer what the listing ran against. An
+    entry recorded before dependencies were kept has none, and is judged by its text alone."""
+    return [p for p, d in entry.get("deps", {}).items() if file_digest(p) != d]
+
+
 def execute(path: str, spec: dict) -> tuple[str, int, float]:
     """Run one listing once. Returns (captured output, return code, seconds)."""
+    body, code, elapsed, _ = execute_recording(path, spec)
+    return body, code, elapsed
+
+
+def execute_recording(path: str, spec: dict) -> tuple[str, int, float, dict]:
+    """execute(), and the dependencies the run imported."""
+    deps_file = os.path.join(CODE, f"_deps.{os.getpid()}.jsonl")
+    if os.path.exists(deps_file):
+        os.remove(deps_file)
     started = time.time()
     try:
         proc = subprocess.run(
@@ -125,7 +167,8 @@ def execute(path: str, spec: dict) -> tuple[str, int, float]:
                  "PYTHONUNBUFFERED": "1", "BOOK_RUN": "1", "COLUMNS": "88",
                  # sitecustomize.py counts model calls; only the build ever sees it.
                  "PYTHONPATH": CODE + os.pathsep + os.environ.get("PYTHONPATH", ""),
-                 "BOOK_LISTING": path, "BOOK_USAGE_FILE": USAGE},
+                 "BOOK_LISTING": path, "BOOK_USAGE_FILE": USAGE,
+                 "BOOK_DEPS_FILE": deps_file},
         )
         body, code = proc.stdout, proc.returncode
         if proc.stderr.strip():
@@ -137,7 +180,7 @@ def execute(path: str, spec: dict) -> tuple[str, int, float]:
     # Tracebacks carry absolute paths. The book must not contain the author's home
     # directory, and a reader's output should match the book's on their own machine.
     body = body.replace(ROOT + os.sep, "").replace(ROOT, ".")
-    return body.rstrip("\n") + "\n", code, elapsed
+    return body.rstrip("\n") + "\n", code, elapsed, dependencies(path, deps_file)
 
 
 def first_difference(a: str, b: str) -> str:
@@ -149,12 +192,12 @@ def first_difference(a: str, b: str) -> str:
 
 
 def run_one(path: str, spec: dict, twice: bool) -> dict:
-    body, code, elapsed = execute(path, spec)
+    body, code, elapsed, deps = execute_recording(path, spec)
     failed = code != 0
     ok = failed if spec["expect_fail"] else not failed
     result = {"ok": ok, "returncode": code, "seconds": round(elapsed, 2),
               "bytes": len(body), "expect_fail": spec["expect_fail"],
-              "out_hash": digest(body.encode())}
+              "out_hash": digest(body.encode()), "deps": deps}
 
     if twice and ok and not spec["nondeterministic"]:
         again, _, more = execute(path, spec)
@@ -289,11 +332,13 @@ def main() -> int:
 
         h = source_digest(path)
         outfile = os.path.join(CODE, path[:-3] + ".out")
-        fresh = cache.get(path, {}).get("hash") == h and os.path.exists(outfile)
+        moved = changed_dependencies(cache.get(path, {}))
+        fresh = (cache.get(path, {}).get("hash") == h and os.path.exists(outfile)
+                 and not moved)
 
         if args.check:
             if not fresh:
-                stale.append(path)
+                stale.append(path + (f"  (imports changed: {moved[0]})" if moved else ""))
             elif args.twice and not spec["nondeterministic"]:
                 problem = check_twice(path, spec)
                 if problem:
@@ -311,6 +356,9 @@ def main() -> int:
         note = "  (expected to fail)" if spec["expect_fail"] else ""
         print(f"  {mark}  {path:34} {result['seconds']:6.2f}s  "
               f"{result['bytes']:>6} bytes{note}")
+        if moved and before.get("hash") == h:
+            print(f"        rerun: {moved[0]} changed"
+                  + (f", and {len(moved) - 1} more" if len(moved) > 1 else ""))
         if result.get("nondeterministic"):
             print(f"        not deterministic: {result['nondeterministic']}")
         # Same source, different output: something the listing does not control changed —

@@ -1,0 +1,10 @@
+Training: 5,041 renewals, 6.5% left; 'nobody leaves' is right 93.5%
+Validation: 2,083 renewals, 122 left (5.9%), scored by v0.4's lasso
+
+list               accuracy  calls  leavers     net $
+nobody leaves         94.1%      0        0        +0
+everybody leaves       5.9%  2,083      122  -100,423
+lasso above 50%       94.2%      5        3    +1,690
+rule, top 40          87.7%    240       53   +16,216
+lasso, top 40         88.4%    240       60   +21,210
+perfect, top 40       94.3%    240      122   +65,447

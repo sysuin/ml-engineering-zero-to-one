@@ -1,0 +1,15 @@
+Training, days since order   small business  the rest  ratio
+  up to 14                             3.5%      2.0%    1.8
+  15 to 45                             7.6%      2.8%    2.7
+  46 to 90                            16.3%      9.6%    1.7
+  over 90                             36.7%     23.3%    1.6
+
+Tuning cohorts, lasso          log loss    AUC  leavers
+  v0.4's columns                0.21532  0.764       90
+    + two interactions          0.21123  0.768       91
+
+Watched months, booster         watched  rounds
+  stumps                        0.18701     960
+  stumps + two interactions     0.18648     863
+  trees of 4 leaves             0.18747     201
+  4 leaves + two interactions   0.18767     188

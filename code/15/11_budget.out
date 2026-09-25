@@ -1,0 +1,16 @@
+Budget: 60 trials, patience 20, 15 minutes; noise 0.0003
+
+trial  log loss  a new best by more than 0.0003
+    1   0.23532
+    2   0.22385
+    4   0.21571
+    5   0.21490
+   14   0.21447
+   15   0.21322
+
+Stopped after trial 35, by patience; best 0.21304 (trial 28)
+  leaves 2, min_leaf 29, rate 0.238
+  columns 0.885, rows 0.983, l2 16.8
+
+The same search run to 60 trials: best 0.21304 (trial 28)
+  trials 36-60 improved on the best of the first 35 by 0.00000

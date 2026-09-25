@@ -1,0 +1,10 @@
+Training contracts   reason filled   empty
+  not renewed                 328       0
+  renewed                       0   4,713
+
+Validation, 6 cohorts, 240 calls     leavers     AUC
+  v0.4's lasso                           60   0.815
+  with the reason                       122   1.000
+  ceiling (true chances)                 64   0.819
+  the same, on the morning                7   0.510
+  a perfect list                        122

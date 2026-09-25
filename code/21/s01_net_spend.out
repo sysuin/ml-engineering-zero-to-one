@@ -1,0 +1,11 @@
+The skew test, validation cohorts:
+  spend_365    1,809 of 2,083 rows differ
+  net spend is 3.9% below list spend over these rows
+
+mark          calls moved: lasso   booster
+2024-05-02                   0         0
+2024-06-02                   0         0
+2024-07-02                   0         1
+2024-08-02                   0         1
+2024-09-01                   0         0
+2024-10-02                   0         0

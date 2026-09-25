@@ -1,0 +1,22 @@
+POST /renewal {"contract_id": "14942"} -> 422
+    contract_id: Input should be a valid integer
+POST /renewal {"contract_id": 14942.5} -> 422
+    contract_id: Input should be a valid integer
+POST /renewal {"contract": 14942} -> 422
+    contract_id: Field required
+    contract: Extra inputs are not permitted
+POST /renewal {"contract_id": -1} -> 422
+    contract_id: Input should be greater than 0
+POST /renewal contract_id=14942 -> 422
+    0: JSON decode error
+POST /triage {"body": "   "} -> 422
+    body: String should have at least 1 character
+POST /triage {"body": "xx...x"} -> 422
+    body: String should have at most 2000 characters
+GET /forecast/mops/Midwest -> 422
+    sku: String should match pattern '^MRD-[A-Z]{3}-\d{3}$'
+GET /forecast/MRD-CLE-001/Mid-west -> 422
+    region: Input should be 'Midwest', 'Northeast', 'Southeast',
+      'Southwest' or 'West'
+
+The service was asked 0 times.

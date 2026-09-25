@@ -1,0 +1,16 @@
+version  stage       as of        leavers    AUC
+      1  production  2024-12-01        56  0.795
+      2  archived    2025-01-01        60  0.818
+
+    log
+      1  staged      trained
+      1  production  December's list
+      2  staged      trained
+      1  archived    replaced by 2
+      2  production  January's retrain; checks passed
+      2  archived    rolled back: account team queried half the list
+      1  production  restored: account team queried half the list
+
+in production: version 1, fitted on the outcomes known on 2024-12-01
+promote version 2 again: refused, version 2 is archived, not staged
+in the folder: 1, 2, registry.json

@@ -1,0 +1,27 @@
+Mark 2024-04-01, notice 2024-05-01, end 2024-06-30
+
+Tickets by quarter      Delivery  Quality  Billing  Account  Returns
+  2023Q2                       1        0        0        1        0
+  2023Q3                       2        0        0        0        0
+  2023Q4                       0        0        0        0        1
+  2024Q1                       8        1        2        0        0
+  2024Q2                       0        0        1        2        0
+  2024-04-15: "we are moving to another supplier when our
+    contrat ends regards"
+  2024-05-02: "morning, we are moving to another supplier when
+    our contract ends thx"
+
+At the mark: 4,079 outcomes known, 272 leavers
+  key-account contracts     70, leavers 0
+                                Halloway  long tail  largest
+  orders_90d                         611          4       87
+  tickets_90d                         11          0        6
+  complaints_90d                       9          0        4
+  (long tail: median of its contracts; largest: the most)
+
+Complaints in 90 days           contracts    left
+  0 or more                        4,079    6.7%
+  1 or more                          529    5.1%
+  2 or more                           47    2.1%
+  3 or more                            5    0.0%
+  9 or more                            0

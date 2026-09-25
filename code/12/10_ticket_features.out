@@ -1,0 +1,18 @@
+Training: left with a complaint in 90 days 5.6% (658),
+  without 6.6%
+
+Training, by size    complaint rate  left, none  left, 1+
+  fewest orders                8.7%       11.4%     12.9%
+  middle third                12.0%        5.5%      5.0%
+  most orders                 18.5%        2.5%      2.6%
+
+Tickets in the training rows' 90-day windows: 1,459
+  naming a product, by the sku column: 385
+  naming a product, read from the body: 598
+  filed as Quality or Delivery: 734
+
+Training: left (rows)           none           one   two or more
+  complaints_90d        6.6% (4,383)    5.7% (597)     4.9% (61)
+  chasing_90d           6.5% (4,834)    5.4% (202)     40.0% (5)
+  product_tickets_90d   6.6% (4,488)    5.5% (511)     7.1% (42)
+  tickets_90d           6.9% (3,847)    5.1% (982)    5.7% (212)

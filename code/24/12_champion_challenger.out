@@ -1,0 +1,20 @@
+The gate, exposure against the champion of the day
+mark   lists        points (95%)         AUC within (95%)
+07-02      3  +0.0 (-2.5 to +3.3) +0.009 (-0.001 to +0.020)
+08-02      4  +0.0 (-2.5 to +2.5) +0.002 (-0.006 to +0.011)
+09-01      5  +0.0 (-2.5 to +3.0) +0.009 (-0.002 to +0.022)
+10-02      6  +1.2 (-2.1 to +4.6) +0.014 (+0.002 to +0.027) promoted
+Serving from 02 October: exposure. That morning, against v0.6:
+  monthly     AUC within +0.001 (-0.006 to +0.009)
+  voss share  AUC within +0.005 (-0.002 to +0.013)
+  exposure    AUC pooled -0.006 (-0.027 to +0.016)
+
+The 9 lists of 2025 with outcomes, 360 calls, 290 leavers
+             leavers  precision     minus rule, points (95%)
+as served        117      32.5%         +5.8 (+1.4 to +8.6)
+v0.6             111      30.8%         +4.2 (+0.3 to +6.9)
+monthly          111      30.8%         +4.2 (+0.6 to +7.5)
+voss share       113      31.4%         +4.7 (+0.8 to +8.3)
+exposure         124      34.4%         +7.8 (+3.1 to +10.8)
+rule              96      26.7%
+ceiling          136      37.8%

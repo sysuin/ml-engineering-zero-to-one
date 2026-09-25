@@ -1,17 +1,35 @@
 name: code guarantee
 
-# Two promises, checked on every pull request: no captured output is stale, and every
-# listing prints exactly the same thing when it is run again. The second is BOOK-PLAN §10's
-# determinism rule, and it is the one a machine-learning book breaks most easily — a
-# thread count, an unseeded split, a library that sums in a different order.
+# Three jobs, each run when its answer is worth its time (Chapter 23).
+#
+#   fast      every push and pull request: lint, no captured output
+#             stale, and the fast tests, every layer, with no dataset.
+#             Minutes, so nobody waits long to hear they broke something.
+#   gate      every pull request: the model this branch's code and
+#             settings would train, backtested beside the one main's
+#             would, on the same cohorts. A model behind at capacity, or
+#             clearly worse on any protected slice, fails the check and
+#             is never registered.
+#   nightly   every night: the dataset generated from its seed, the
+#             slow tests, the feeds against their contracts, and every
+#             listing run twice, which is BOOK-PLAN §10's determinism
+#             rule and the one a machine-learning book breaks most
+#             easily: a thread count, an unseeded split, a library that
+#             sums in a different order.
 on:
   pull_request:
   push:
     branches: [main]
+  schedule:
+    - cron: "30 2 * * *"
   workflow_dispatch:
 
+env:
+  PYTHONPATH: ${{ github.workspace }}/code
+
 jobs:
-  guarantee:
+  fast:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,10 +44,64 @@ jobs:
           pip install -r requirements.txt
       - name: lint
         run: ruff check code/ tests/
+      - name: no captured output stale
+        run: python3 code/_runner.py --check
+      - name: fast tests
+        run: pytest tests/ -q -m "not slow"
+
+  gate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
       - name: generate the Meridian dataset
-        # Not committed — it regenerates from a fixed seed in seconds, with no network.
-        run: python3 code/meridian/generate.py && python3 code/meridian/verify.py
+        # Not committed: it regenerates from a fixed seed, with no network.
+        run: |
+          python3 code/meridian/generate.py && python3 code/meridian/verify.py
+          python3 code/meridian/generate_ml.py && python3 code/meridian/verify_ml.py
+      - name: the champion, as main's code would train it
+        run: |
+          git worktree add --detach ../champion "origin/${{ github.base_ref }}"
+          ln -s "$GITHUB_WORKSPACE/data" ../champion/data
+          PYTHONPATH=../champion/code python3 -m foresight.gate scores champion.csv
+      - name: the challenger, as this branch's code would train it
+        run: python3 -m foresight.gate scores challenger.csv
+      - name: the gate
+        run: python3 -m foresight.gate compare champion.csv challenger.csv
+
+  nightly:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: generate the Meridian dataset
+        run: |
+          python3 code/meridian/generate.py && python3 code/meridian/verify.py
+          python3 code/meridian/generate_ml.py && python3 code/meridian/verify_ml.py
+      - name: the training table
+        run: python3 -m foresight.data.build_table
+      - name: the feeds against their contracts
+        # Meridian's records stop at the end of 2025.
+        run: python3 -m foresight.contracts --on 2025-12-31
+      - name: every test, slow ones too
+        run: pytest tests/ -q
       - name: every capture current, every listing deterministic
         run: python3 code/_runner.py --check --twice
-      - name: tests
-        run: pytest tests/ -q

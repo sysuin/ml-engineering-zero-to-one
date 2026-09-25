@@ -1,0 +1,25 @@
+health: degraded
+  renewal: no version is in production
+  triage: no version is in production
+
+no model in the registry -> 200
+  rule: Last order 138 days ago
+  the model could not answer (no renewal model is loaded); Chapter
+    3's rule gives the gap alone
+no triage model -> 200
+  keywords: Normal, no category
+a segment the model has never seen -> 200
+  rule: Last order 138 days ago
+  the model could not answer (ValueError: Found unknown categories
+    ['Wholesale'] in column 0 during transform); Chapter 3's rule
+    gives the gap alone
+the warehouse cannot be read -> 503
+  the warehouse cannot be read: unable to open database file
+
+Chapter 3's rule: the list for the cohort marked 2025-12-31
+ 1  15378  Hartton Cleaning         Last order 274 days ago
+ 2  15308  Greyworth Dental         Last order 165 days ago
+ 3  15415  Warehurst Storage        Last order 164 days ago
+
+holdout: 20 to call, 20 held out
+run 1 finished: 283 rows written

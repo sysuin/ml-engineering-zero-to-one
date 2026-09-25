@@ -1,0 +1,7 @@
+run 2: finished
+  run 1  finished
+  run 2  finished finance corrected two discounts
+
+answers now come from run 2; run 1's 283 rows are still there
+holdout arms unchanged for 40 of 40 listed
+holdout file: 40 rows, as drawn

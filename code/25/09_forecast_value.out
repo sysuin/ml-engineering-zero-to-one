@@ -1,0 +1,16 @@
+Assumed: holding a unit costs 25% of its cost a year; a surplus
+waits 1 month; 50% of a shortfall is lost, at list margin.
+190 product x region series, 2025, one month ahead.
+
+order to                   surplus  shortfall      total
+seasonal naive             100,727  1,757,881  1,858,608
+model, median               55,002  1,394,616  1,449,619
+seasonal naive x 1.20      266,049    582,079    848,128
+model, 90th percentile     247,332    216,715    464,047
+
+What the model saves, as the assumptions move
+surplus waits, share lost        point     range
+1 month, 25%                   227,357   201,399
+1 month, 50%                   408,989   384,081
+1 month, 100%                  772,254   749,445
+3 months, 50%                  500,439   421,516

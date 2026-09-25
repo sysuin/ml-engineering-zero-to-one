@@ -9,12 +9,21 @@
 
 .DEFAULT_GOAL := help
 .PHONY: help setup preflight data listings verify test lint clean \
-        train score serve monitor demo docker
+        test-all contracts train score serve monitor demo docker
 
 # The project's own Python once `make setup` has made it, so no command depends on the
 # environment being switched on; the system's python3 only until then.
 PY := $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 export PYTHONPATH := $(CURDIR)/code
+
+# `make train` trains the model named here; its settings are in
+# code/foresight/pipeline/configs/$(MODEL).toml. ARGS passes anything
+# else, for example ARGS="--set data.as_of=2024-12-01".
+# `make score` and `make serve` take the day from FORESIGHT_ON if it is
+# set, and Meridian's records stop at the end of 2025, so the book runs
+# FORESIGHT_ON=2025-12-31 make score (or ARGS="--on 2025-12-31").
+MODEL ?= renewal
+ARGS ?=
 
 help:  ## show this list
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -48,27 +57,37 @@ listings:  ## run every listing whose source changed, and capture its output
 verify:  ## the code guarantee: nothing stale, and every listing prints the same thing twice
 	$(PY) code/_runner.py --check --twice
 
-test:  ## the test suite
+# The suite has four layers (unit, data, model, service) and a second
+# mark, slow, for every test that needs the generated dataset. `make
+# test` is what to run after every change and what CI runs on every
+# push; `make test-all` is what CI runs nightly.
+test:  ## the fast tests, every layer, no dataset needed
+	$(PY) -m pytest tests/ -q -m "not slow"
+
+test-all:  ## every test, slow ones too: needs make data and the table
 	$(PY) -m pytest tests/ -q
+
+contracts:  ## check the warehouse's feeds against their data contracts
+	$(PY) -m foresight.contracts $(ARGS)
 
 lint:  ## the checks CI runs
 	$(PY) -m ruff check code/ tests/
 	$(PY) code/_runner.py --check
 
-train:  ## train Foresight's models with one command
-	@echo "Foresight's one-command training arrives in Chapter 21."
+train:  ## train, check, evaluate and register a model: make train MODEL=renewal
+	$(PY) -m foresight.pipeline.run $(MODEL) $(ARGS)
 
-score:  ## write tonight's scores back to the warehouse
-	@echo "Batch scoring arrives in Chapter 22."
+score:  ## the monthly list, if one is due, into data/foresight/scores.db
+	$(PY) -m foresight.serve.batch $(ARGS)
 
 serve:  ## run the prediction API on :8000
-	@echo "The online API arrives in Chapter 22."
+	$(PY) -m uvicorn foresight.serve.api:app --host 127.0.0.1 --port 8000
 
 monitor:  ## check the live model for drift
 	@echo "Drift monitoring arrives in Chapter 24."
 
-demo:  ## the ten-minute demonstration
-	@echo "The ten-minute demonstration arrives in Chapter 27."
+demo:  ## the ten-minute demonstration: list, forecast, API, monitor, MCP server
+	$(PY) -m foresight.demo
 
 docker:  ## build and run the book's environment in a container
 	docker compose up --build

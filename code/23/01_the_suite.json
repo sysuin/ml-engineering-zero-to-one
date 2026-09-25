@@ -1,0 +1,18 @@
+{
+ "unit": {
+  "fast": 382,
+  "slow": 4
+ },
+ "data": {
+  "fast": 0,
+  "slow": 27
+ },
+ "model": {
+  "fast": 20,
+  "slow": 32
+ },
+ "service": {
+  "fast": 42,
+  "slow": 1
+ }
+}

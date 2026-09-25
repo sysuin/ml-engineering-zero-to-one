@@ -1,0 +1,16 @@
+model.name                renewal
+model.version             0.6
+model.strength            0.002
+model.calibration_months  3
+model.no_order_days       365
+data.first                2023-01-01
+data.last                 2025-12-31
+data.as_of                2025-01-01
+
+for one run: as of 2024-12-01, 3 cohorts
+(the file still says 2025-01-01, 6 cohorts)
+data.as-of=2024-12-01     refused: KeyError
+model.strenght=0.01       refused: KeyError
+evaluation.cohorts=six    refused: ValueError
+
+no settings for model 'renewals'; known: renewal

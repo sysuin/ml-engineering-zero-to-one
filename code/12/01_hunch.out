@@ -1,0 +1,22 @@
+Training contracts     contracts    left
+  orders fell by over 60%       350   23.7%
+  orders fell                 1,247    8.7%
+  orders steady               1,927    5.3%
+  orders rose                 1,164    2.7%
+  orders rose by over 170%      353    0.8%
+
+v0.4's weights: orders_90d -0.588, orders_prev_90d +0.599
+
+Training period                    log loss    AUC  leavers
+  lasso, no penalty                 0.23295  0.766       92
+  lasso, Chapter 9's penalty        0.21532  0.764       90
+    + order_trend                   0.21004  0.777       91
+                                    watched   rounds
+  booster, LightGBM's 31 leaves     0.18997       62
+  booster, Chapter 11's stumps      0.18701      960
+    + order_trend                   0.18563      903
+
+Validation, with minus without, 95% intervals
+          leavers  points               AUC
+  lasso        -1  -0.4 (-3.3 to +2.5)  -0.018 (-0.040 to +0.005)
+  booster      +2  +0.8 (-0.8 to +2.9)  -0.002 (-0.011 to +0.006)

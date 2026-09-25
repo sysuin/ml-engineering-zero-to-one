@@ -1,0 +1,15 @@
+Share of the six boosters' splits
+   1  orders_prev_90d      22.0%
+   2  orders_90d           15.3%
+   3  days_since_order     13.1%
+   4  spend_365            13.0%
+   5  segment              10.8%
+   6  discount_pct          9.6%
+   7  noise                 5.7%
+   8  region                4.4%
+   9  tenure_days           4.1%
+  10  tickets_90d           2.2%
+  11  term_months           0.0%
+  12  legacy_terms          0.0%
+Shuffling noise: AUC drop 0.002 (-0.001 to 0.005)
+Shuffling days_since_order: AUC drop 0.092 (0.061 to 0.128)

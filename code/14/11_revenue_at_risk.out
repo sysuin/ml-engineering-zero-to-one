@@ -1,0 +1,18 @@
+Long tail: 2,046 contracts, 122 left. A quarter's revenue, $
+
+region          lasso     Platt            95% range    walked
+Midwest        59,164    52,767     25,020 to  89,478    34,816
+Northeast      97,100    86,876     47,673 to 133,321    64,911
+Southeast      86,147    76,718     39,083 to 123,059    53,775
+Southwest     103,404    91,678     50,737 to 137,187    96,499
+West           64,036    57,149     25,273 to  98,873    49,494
+all           409,852   365,186    277,166 to 456,114   299,495
+range: the Platt total in 95% of 2,000 simulated half-years
+
+Forecast minus walked, all regions, resampled (95%)
+  lasso as fitted   +110,356  (+36,689 to +171,130)
+  lasso, Platt       +65,691  (-6,540 to +126,394)
+  booster, Platt     +19,145  (-51,358 to +79,568)
+
+Key accounts: 37 contracts, 0 left
+  at risk: lasso 65,939, Platt 55,397; 95% range 0 to 276,740

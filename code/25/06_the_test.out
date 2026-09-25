@@ -1,0 +1,19 @@
+SIMULATED, assumed save rate 0.25: twelve cohorts
+
+  held out    240 contracts   75 left   31.2%
+  called      240 contracts   46 left   19.2%
+
+  held out minus called +12.1 points (+4.2 to +19.6)
+  p-value, re-randomised 0.002
+  save rate  38.7% of would-be leavers (13.3% to 62.7%)
+  net per call $255 ($29 to $469)
+  would-be leavers in the called arm (simulator): 69, saved 23
+
+assumed        difference, points        p  save rate   kept
+0.00        +2.5 (-5.4 to +10.4)    0.623         8%     0%
+0.10        +4.6 (-3.3 to +12.5)    0.318        15%     7%
+0.25       +12.1 (+4.2 to +19.6)    0.002        39%    33%
+0.40       +17.1 (+9.6 to +24.2)  <0.0005        55%    51%
+
+2,000 simulated years at 0.25: 46% significant; average
+difference 7.4 points, 10.8 among the significant ones

@@ -108,9 +108,10 @@ CANCELLATION_REASONS = ["Moved to a competitor on price", "Consolidated supplier
 
 def renewal_logit(x: dict) -> float:
     """
-    The log-odds that an account does not renew, decided DECIDE_BEFORE days before its
-    contract ends, from what the warehouse recorded up to that day. Appendix G prints this
-    function; Chapter 13 and Chapter 24 depend on its dated terms.
+    The log-odds that an account does not renew, decided DECIDE_BEFORE
+    days before its contract ends, from what the warehouse recorded up
+    to that day. Appendix G prints this function; Chapters 13 and 24
+    depend on its dated terms.
     """
     d = x["decided_on"]
     after_pricing = d >= SB_PRICE_CHANGE
@@ -124,9 +125,11 @@ def renewal_logit(x: dict) -> float:
         z += 0.55
     else:
         z -= (0.07 if after_pricing else 0.03) * x["discount_pct"]
-    z += {"Small business": 0.75 if after_pricing else 0.25, "Mid-market": 0.0,
-          "Public sector": -0.5, "Enterprise": -0.9}[x["segment"]]
-    if x["pemberton_complaint"] and date(2024, 10, 1) <= d <= date(2025, 3, 31):
+    z += {"Small business": 0.75 if after_pricing else 0.25,
+          "Mid-market": 0.0, "Public sector": -0.5,
+          "Enterprise": -0.9}[x["segment"]]
+    in_window = date(2024, 10, 1) <= d <= date(2025, 3, 31)
+    if x["pemberton_complaint"] and in_window:
         z += 1.30
     if d >= VOSS_PASS_THROUGH:
         z += 2.40 * x["voss_share"]

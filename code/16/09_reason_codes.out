@@ -1,0 +1,28 @@
+Foresight v0.6: the list for the cohort marked 2024-10-02
+364 contracts reach their mark; 40 calls; break-even 12.6%
+Model fitted on the 6,065 outcomes known on 2024-10-02
+
+ 1  10474  Kelbrook Salon           Colm Reyes     82.0%
+      - Last order 243 days ago (typical: 13)
+      - Small business: 9.6% of these left, 6.4% of all
+      - A discount of 0% (typical: 5%)
+ 9  10222  Wickholm Foods           Colm Reyes     26.0%
+      - Last order 99 days ago (typical: 13)
+      - Small business: 9.6% of these left, 6.4% of all
+      - A discount of 0% (typical: 5%)
+40  10404  Talley Logistics         Hana Osei       9.3%  below
+      - Small business: 9.6% of these left, 6.4% of all
+      - No discount on record
+      - Orders fell from 3 to 1, quarter on quarter
+   ... and 37 more
+
+20 of the 40 calls are below the break-even; together they
+are expected to reach 2.2 leavers.
+
+Key accounts at their mark: 4, not ranked
+                                                   orders  tickets
+                                                   90d prior   90d
+    10175  Calder Partners        Priti Nair       121    82     0
+    10176  Kentmere Logistics     Luis Ferrand      67    60     0
+    10177  Underhill Industries   Luis Ferrand      77    50     0
+    10178  Westbury Holdings      Sara Quell       136   116     0

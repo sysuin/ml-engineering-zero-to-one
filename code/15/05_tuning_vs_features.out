@@ -1,0 +1,20 @@
+booster, cohorts ending Oct 2023 to Apr 2024
+                             log loss     fall    AUC leavers
+  31 leaves of 20             0.22122           0.754      64
+  Chapter 11's stumps         0.21517  0.00605  0.779      65
+  the search's best           0.21304  0.00214  0.789      66
+  stumps + order_trend        0.21291  0.00227  0.787      65
+  true probabilities          0.20925  0.00366
+lasso, cohorts ending Jul 2023 to Apr 2024
+                             log loss     fall    AUC leavers
+  no penalty                  0.23295           0.766      92
+  Chapter 9's penalty         0.21532  0.01763  0.764      90
+  finer search: 0.003         0.21519  0.00013  0.765      90
+  + order_trend               0.21004  0.00527  0.777      91
+  true probabilities          0.20478  0.00527
+
+The booster on Chapter 11's watched months (Chapter 12)
+  31 leaves of 20             0.18997
+  Chapter 11's stumps         0.18701
+  the search's best           0.18607
+  stumps + order_trend        0.18563

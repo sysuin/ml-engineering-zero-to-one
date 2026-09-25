@@ -1,0 +1,24 @@
+v0.1 Ch 3  the brief
+          the rule's 40 calls: 21.8% leavers (random 6.5%, perfect
+          45.6%)
+v0.2 Ch 5  the training table
+          11,200 rows, 12 expectations checked on every build
+v0.3 Ch 8  logistic, backtested
+          model - rule, validation +1.7 points (-1.7 to +5.0); 2025
+          +5.0 points (+1.0 to +7.5)
+v0.4 Ch 11 four models
+          lasso 60, booster 56, rule 53 of 240 calls; ceiling 64
+v0.5 Ch 13 features, leak checks
+          no group helped; 2025: 144 of 480 (ceiling 173)
+v0.6 Ch 16 calibrated, explained
+          2025: 144 vs rule 123; log loss 0.2721 -> 0.2706
+v0.7 Ch 18 forecast, alerts
+          WAPE 14.7% vs 19.1%; Pemberton flagged on 75 of 75 days
+v0.8 Ch 20 ticket triage
+          Urgent in the first 3 a day: 86.5% vs 39.1% (keywords)
+v0.9 Ch 23 pipeline, service
+          make train: 60 of 240 (rule 53); the job: 283 scored, 20
+          held out
+v1.0 Ch 27 monitored, measured
+          Voss seen 2 April (41 notices vs 21.9); served 117 vs rule
+          96 of 360; calls +12.1 pts (simulated)

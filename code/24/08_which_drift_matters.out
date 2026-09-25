@@ -1,0 +1,17 @@
+All 4,162 contracts listed in 2025 against v0.6's 7,124
+column                PSI  largest weight   effect  verdict
+supplier_voss        0.50           0.000   +0.000  report
+tenure_days          0.42           0.026   -0.002  report
+discount_pct         0.13           0.392   -0.077  
+legacy_terms         0.13           0.026   -0.008  
+spend_365            0.01           0.000   +0.000  
+segment              0.01           0.535   -0.038  
+days_since_order     0.01           0.747   -0.016  
+orders_90d           0.00           0.625   -0.021  
+orders_prev_90d      0.00           0.618   +0.021  
+tickets_90d          0.00           0.000   +0.000  
+region               0.00           0.026   -0.000  
+term_months          0.00           0.000   +0.000  
+
+Average log-odds, 2025 minus training: -0.141
+The columns' parts, summed: -0.141

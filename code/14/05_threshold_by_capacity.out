@@ -1,0 +1,14 @@
+cohort mark   contracts  above  40th score  leavers in top 40
+2024-05-02          358     34       11.8%                  9
+2024-06-02          348     40       12.6%                  8
+2024-07-02          318     19        8.8%                 12
+2024-08-02          349     20        9.3%                  8
+2024-09-01          346     25        9.7%                  9
+2024-10-02          364     17        9.7%                 14
+above: contracts above the 12.6% break-even
+
+list               calls  leavers    made $  model said $
+top 40               240       60   +21,210        +8,648
+above break-even     155       46   +18,871        +9,646
+top 40, not above     85       14    +2,339          -998
+above, not top 40      0        0        +0            +0

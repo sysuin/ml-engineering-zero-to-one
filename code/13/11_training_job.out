@@ -1,0 +1,28 @@
+With desk_now: leakage checks failed:
+  desk_now: screen
+  desk_now: audit
+  model: backtest AUC 0.920, above the ceiling by more than 0.025 
+
+As it ships:
+column            source           moved  label  period  verdict
+days_since_order  orders               0  0.756   0.475  pass
+orders_90d        orders               0  0.757   0.442  pass
+orders_prev_90d   orders               0  0.622   0.473  pass
+spend_365         orders               0  0.693   0.496  pass
+tickets_90d       tickets              0  0.530   0.610  pass
+tenure_days       accounts.since       -  0.504   0.786  review
+segment           account_history      0  0.635   0.447  pass
+region            accounts.region      -  0.510   0.515  pass
+term_months       contracts            0  0.504   0.501  pass
+legacy_terms      contracts            0  0.537   0.574  pass
+discount_pct      contracts            0  0.578   0.583  pass
+
+all columns together tell the periods apart: AUC 0.771
+model's backtest AUC 0.815 against a ceiling of 0.811: review
+
+for a person to review:
+  tenure_days: shift
+  model: backtest AUC 0.815, at or above the ceiling
+
+Fitted on 7,124 outcomes known on 2025-01-01; ready to
+score the 264 contracts marked 2024-12-31

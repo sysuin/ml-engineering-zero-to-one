@@ -1,0 +1,23 @@
+as written: 12 of 12 pass
+
+window_features: o = o[o.age >= 0]
+  tiny warehouse: 3 of 12 tests fail
+  real table: 788 row(s) changed, 2 checks fail
+  features_read_only_what_came_before_the_moment
+    assert r.days_since_order == 31 # not the order on the day
+  the_table_passes_its_own_checks
+    assert check(table, "2024-01-01", "2025-12-31", None, expected
+  write_saves_the_table_and_its_manifest
+    TableCheckError: an order on or after the moment was counted
+
+window_features: t = t[(age >= 0) & (age <= 90)]
+  tiny warehouse: 1 of 12 tests fail
+  real table: 30 row(s) changed, 0 checks fail
+  features_read_only_what_came_before_the_moment
+    assert r.tickets_90d == 1 # not the ticket on the day
+
+segment_as_of: allow_exact_matches=True
+  tiny warehouse: 1 of 12 tests fail
+  real table: 1 row(s) changed, 0 checks fail
+  segment_is_the_one_in_force_before_the_moment
+    assert row(table, 10).segment == "Small business"

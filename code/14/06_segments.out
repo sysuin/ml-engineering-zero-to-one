@@ -1,0 +1,13 @@
+segment        contracts  left   95% range  model calls recall   FPR
+Enterprise           132  0.8%  0.0%-2.4%    2.3%     0     0%  0.0%
+Mid-market           706  2.4%  1.4%-3.6%    4.3%    27    29%  3.2%
+Public sector        229  1.3%  0.0%-2.9%    2.6%     5    67%  1.3%
+Small business     1,016  9.9%  8.2%-11.9%   8.6%   208    52% 16.9%
+model: average chance given; FPR: share of renewers called
+
+segment         leavers   value break-even  calls leavers   made $
+Enterprise            5   4,164       8.6%      0       0       +0
+Mid-market           71   4,286       8.4%     42       6   +2,649
+Public sector        13   2,104      17.1%      1       0      -90
+Small business      238   2,441      14.7%     91      38  +15,000
+calls, leavers, made $: validation, at each segment's own cut
