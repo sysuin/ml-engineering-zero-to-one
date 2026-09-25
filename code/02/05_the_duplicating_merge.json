@@ -1,0 +1,37 @@
+{
+ "lines_before": 375313,
+ "revenue_before": 127348346.46,
+ "lines_after": 1427822,
+ "revenue_after": 485516896.09,
+ "lines_fixed": 375313,
+ "revenue_fixed": 127348346.46,
+ "example": [
+  {
+   "revenue": 847.95,
+   "contract_id": 6127,
+   "start_date": "2022-12-01"
+  },
+  {
+   "revenue": 847.95,
+   "contract_id": 9830,
+   "start_date": "2023-12-01"
+  },
+  {
+   "revenue": 847.95,
+   "contract_id": 13815,
+   "start_date": "2024-12-01"
+  },
+  {
+   "revenue": 847.95,
+   "contract_id": 18106,
+   "start_date": "2025-12-01"
+  }
+ ],
+ "contracts_per_account": {
+  "1": 1413,
+  "2": 885,
+  "3": 1064,
+  "4": 635,
+  "5": 2061
+ }
+}

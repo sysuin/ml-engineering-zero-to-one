@@ -1,0 +1,13 @@
+The table as built: 5,041 rows
+  problems: []
+
+Segment joined without dates: 9,029 rows
+  9,029 rows, expected 5,041
+  2,707 contracts appear more than once
+
+Rows whose moment passed before 2024-01-01: 3,851
+  3,851 rows, expected 3,398
+  outcomes not yet known on 2024-01-01
+
+write() refused: 2 problems
+  broken_table.parquet exists: False

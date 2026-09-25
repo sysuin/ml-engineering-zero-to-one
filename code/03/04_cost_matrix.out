@@ -1,0 +1,17 @@
+A year's gross profit, for renewals that were lost
+  long-tail leavers    327   total   $933,399
+                             mean      $2,854   median $1,986
+  key-account leavers    1   total $1,188,375
+
+One call decision, net dollars against making no call
+                 would leave    would stay
+  called                +624           -90
+  not called               0             0
+A false positive wastes 1.5 hours: $90
+A false negative forgoes $624, 6.9 times as much
+A call pays for itself above a 12.6% chance of leaving
+
+A month of 40 calls (60 hours)
+                   precision  per call  per month
+  random list           6.5%       -44     -1,742
+  days-since rule      21.8%       +66     +2,625

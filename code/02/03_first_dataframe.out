@@ -1,0 +1,21 @@
+shape: (6270, 5)
+
+                           name        segment       since
+account_id                                                
+1           Halloway Healthcare     Enterprise  2018-12-01
+2              Ardenwood Retail     Mid-market  2015-11-01
+3               Ardenwood Group     Enterprise  2014-11-01
+4            Ardenwood Services  Public sector  2014-03-01
+
+name                str
+region_id         int64
+segment             str
+since               str
+is_key_account    int64
+
+Series of str - first value '2018-12-01'
+after to_datetime: datetime64[us]
+
+name           Denholm Estates
+segment             Enterprise
+since      2019-12-01 00:00:00

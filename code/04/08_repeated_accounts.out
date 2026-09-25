@@ -1,0 +1,17 @@
+Training table: 5,041 rows, 3,811 accounts
+  accounts with 1 row    2,581   (2,581 rows)
+  accounts with 2 rows   1,230   (2,460 rows)
+Whole table, 2023 to 2025: accounts with 1, 2 and 3 rows
+  1,134, 923, 2,740
+
+Accounts with two rows: 1,230, a year apart
+  correlation of spend_365           0.89
+  correlation of orders_90d          0.86
+  correlation of tickets_90d         0.06
+  correlation of days_since_order    0.11
+  same segment both times                 98.4%
+  first row not renewed                    0.0%
+
+Random 80/20 split: test rows whose account is in training
+  one row per renewal           5,041 rows   39.3%
+  one row per account-month    70,340 rows   99.8%

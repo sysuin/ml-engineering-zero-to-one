@@ -1,0 +1,12 @@
+Training renewals, one label each: 5,041  (label rate 6.5%)
+
+1. Join the label on the account instead of the contract
+   rows after the join                    17,223
+   contracts on more than one row          4,926
+2. ...then keep each contract's worst outcome
+   renewals relabelled 'not renewed'         540
+     by a departure after June 2024          467
+   label rate                     6.5% -> 17.2%
+3. Retrain on 2024-01-01, keeping contracts whose moment has passed
+   rows kept                               3,851
+   outcome not yet recorded on 2024-01-01     453

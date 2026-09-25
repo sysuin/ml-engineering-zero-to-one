@@ -1,0 +1,17 @@
+sales lines       375,313   revenue 127,348,346.46
+after the merge 1,427,822   revenue 485,516,896.09
+revenue multiplied by 3.81, and no error
+
+ order_id         sku  revenue  contract_id start_date
+    44151 MRD-SAN-043   847.95         6127 2022-12-01
+    44151 MRD-SAN-043   847.95         9830 2023-12-01
+    44151 MRD-SAN-043   847.95        13815 2024-12-01
+    44151 MRD-SAN-043   847.95        18106 2025-12-01
+
+contracts per account: {1: 1413, 2: 885, 3: 1064, 4: 635, 5: 2061}
+contracts.account_id unique? False
+
+fixed merge       375,313   revenue 127,348,346.46
+validate= on the naive merge raises MergeError:
+  Merge keys are not unique in right dataset;
+  not a many-to-one merge

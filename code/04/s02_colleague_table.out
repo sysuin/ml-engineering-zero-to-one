@@ -1,0 +1,9 @@
+Rows: theirs 5,041, ours 5,041
+  tickets_90d  differs on 1,315 rows
+  segment      differs on   164 rows
+  not_renewed  differs on     0 rows
+
+Tickets: rows where theirs counts more, by label
+  leavers   60.1%
+  renewers  22.7%
+Mean tickets_90d, leavers: theirs 1.25, ours 0.25

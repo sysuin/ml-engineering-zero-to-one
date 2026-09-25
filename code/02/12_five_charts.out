@@ -1,0 +1,11 @@
+saved data/charts/five_charts.png
+
+line       monthly revenue 4.6M in Jan 2022, 10.5M in Dec 2025
+bar        largest region in 2025: Southwest, 34.6M
+histogram  order value: median 646, mean 877
+scatter    4,304 accounts, log revenue 2024 vs 2025: r = 0.58
+box        median order value in 2025 by segment:
+           Small business  639
+           Mid-market      611
+           Public sector   715
+           Enterprise      703

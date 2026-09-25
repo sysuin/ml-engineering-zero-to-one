@@ -1,0 +1,16 @@
+   region         sku    revenue
+  Midwest MRD-SAN-042 1035622.71
+Northeast MRD-SAN-040 1745495.14
+Southeast MRD-SAN-042 1300742.26
+Southwest MRD-SAN-042 1894486.45
+     West MRD-SAN-042 1089980.84
+
+DataFrame (4676, 2)
+count    4676.0
+mean       42.0
+std        73.0
+min         1.0
+25%         5.0
+50%        15.0
+75%        38.0
+max       366.0

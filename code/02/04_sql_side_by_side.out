@@ -1,0 +1,16 @@
+ order_id              account         sku  revenue
+    64963 Northcote Facilities MRD-SAF-012 13925.16
+    47372     Thirlby Holdings MRD-CLE-006  9324.00
+    55621      Denholm Estates MRD-SAF-012  8592.12
+  1318841       Foxwell Dental MRD-SAN-039  7902.00
+    49221      Denholm Estates MRD-SAF-018  7900.76
+
+   region  orders     revenue  avg_line
+Southwest   38676 34625912.84    343.01
+Northeast   34983 30366738.35    336.75
+Southeast   27530 24042184.68    338.09
+     West   22320 19632532.59    340.82
+  Midwest   21676 18680978.00    336.75
+
+top five lines: SQL and pandas agree, and .equals() says True
+region totals: SQL and pandas agree, and .equals() says True

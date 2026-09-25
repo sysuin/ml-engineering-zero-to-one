@@ -1,0 +1,5 @@
+start 2025-01-01, end (excluded) 2025-04-01, 90 days
+  between(start, last_day)              1370
+  between(last_day - 90d, last_day)     1386
+  half-open [start, end)                1381
+  dates in the calendar window          1381

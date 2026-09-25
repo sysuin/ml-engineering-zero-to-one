@@ -1,0 +1,11 @@
+# Foresight and what it needs. For now that is one container: the book's environment,
+# with the generated dataset kept on the host so it survives a rebuild. Chapter 22 adds
+# the API, and Chapter 24 the monitor; each arrives with the chapter that builds it.
+services:
+  foresight:
+    build: .
+    volumes:
+      # Generated data and trained models live on the host, not in the image: both are
+      # rebuilt from seeds, and neither belongs in a layer.
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts

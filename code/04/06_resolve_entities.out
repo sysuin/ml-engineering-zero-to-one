@@ -1,0 +1,25 @@
+accounts by source   rows   lowest id   highest id
+  Legacy CRM          212       90001        90212
+  Meridian CRM      6,058           1         6058
+Orders under a legacy id: 9,470, the last on 2024-02-29
+
+Candidate pairs
+  same postcode                           315
+  ...and the same start date              212
+  ...and exactly the same name              0
+  ...and the same name once tidied        212
+    upper case                              54
+    ' Inc' added                            45
+    a double space                          47
+    ' (old)' added                          66
+legacy_ids(): 212 legacy ids -> 212 current ids
+
+Training renewals of the split accounts: 215 (16 not renewed)
+  orders in the year before the moment     raw  resolved
+    none at all                            204         0
+    mean, moments before the migration     0.0      24.5
+    mean, the 24 moments after it          1.2      30.7
+
+Chapter 3's customers with no contract: 180
+  of them legacy ids                      180
+  ordering in Q2 2024 under the new id    156

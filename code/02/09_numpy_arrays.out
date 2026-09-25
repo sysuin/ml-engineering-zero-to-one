@@ -1,0 +1,10 @@
+X is a ndarray of float64 with shape (4676, 3)
+row for account 62:   [  13.   9057.48   23.  ]
+first column, 5 rows: [1338.  409.  415.  471.  284.]
+
+column means:    [   27.9 23948.8    42. ]
+scaled means:    [0. 0. 0.]
+scaled stds:     [1. 1. 1.]
+
+with a text column the grid becomes object -> ['Enterprise' 1338]
+and .mean() fails: TypeError

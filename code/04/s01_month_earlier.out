@@ -1,0 +1,20 @@
+Rows: 5,041 at 90 days, 5,041 at 120; same contracts: True
+Rows whose value changed, by column
+  account_id             0
+  end_date               0
+  days_since_order   4,835
+  orders_90d         3,752
+  orders_prev_90d    3,795
+  spend_365          4,376
+  tickets_90d          808
+  tenure_days        5,041
+  segment                4
+  region                 0
+  term_months            0
+  legacy_terms           0
+  discount_pct           0
+  not_renewed            0
+Days-since rule at  90 days: 158 leavers, precision 21.9%
+Days-since rule at 120 days: 129 leavers, precision 17.9%
+check() on the 120-day table with MOMENT_DAYS = 90:
+  moments not 90 days before the end

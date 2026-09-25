@@ -1,0 +1,9 @@
+about to price one line
+Traceback (most recent call last):
+  File "code/02/02_a_traceback.py", line 13, in <module>
+    print(line_revenue(line))
+          ^^^^^^^^^^^^^^^^^^
+  File "code/02/02_a_traceback.py", line 6, in line_revenue
+    price = line["unit_prce"]
+            ~~~~^^^^^^^^^^^^^
+KeyError: 'unit_prce'

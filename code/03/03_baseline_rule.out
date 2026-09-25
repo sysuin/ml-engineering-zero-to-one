@@ -1,0 +1,16 @@
+Renewals scored: 5,041 in 18 cohorts
+  no order on record before the mark: 218 (ranked last)
+
+Top 40 of each cohort: 720 calls
+                     leavers reached  precision
+  random list                   46.8       6.5%
+  days-since rule                157      21.8%
+  a perfect list                 328      45.6%
+The rule reaches 157 of the 328 leavers (47.9%)
+Accuracy, calling the top 40 'will leave': 85.4%
+
+The rule's precision at other capacities
+  top 10 a cohort  ( 2.5 calls a week)    33.9%
+  top 20 a cohort  (   5 calls a week)    30.0%
+  top 40 a cohort  (  10 calls a week)    21.8%
+  top 80 a cohort  (  20 calls a week)    14.3%

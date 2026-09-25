@@ -1,0 +1,10 @@
+order 44151 has 4 lines
+first row, as a dict:
+  line_no       1
+  sku           'MRD-SAN-043'
+  qty           15
+  unit_price    56.53
+  discount_pct  0
+qty column: [15, 3, 1, 5]
+order total after discounts: 1,172.62
+type of each value: int str bool float

@@ -1,0 +1,14 @@
+{
+ "calls_per_cohort": 40,
+ "cohorts": 18,
+ "base_rate": 0.0651,
+ "rule_precision": 0.2181,
+ "perfect_precision": 0.4556,
+ "precision_at": {
+  "10": 0.3389,
+  "20": 0.3,
+  "40": 0.2181,
+  "80": 0.1431
+ },
+ "leavers": 328
+}

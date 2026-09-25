@@ -1,0 +1,17 @@
+account_history for account 276, Hartley Salon
+ account_id valid_from   valid_to        segment
+        276 2022-02-01 2023-04-30 Small business
+        276 2023-05-01        NaT     Mid-market
+
+Its renewals, both ways
+ contract_id     moment   segment_then segment_today
+        3426 2022-11-02 Small business    Mid-market
+        6831 2023-11-02     Mid-market    Mid-market
+
+Renewals 5,041
+  no history row yet at the moment         12
+  today's segment is not the one then     152  (123 accounts)
+segment_then    segment_today
+Small business  Mid-market       152
+Not renewed, where the two differ     2.6%  (4 of 152)
+Not renewed, all renewals             6.5%

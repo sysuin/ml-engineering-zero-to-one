@@ -1,0 +1,53 @@
+# Everything the book runs on, grouped by the part that first needs it. Python 3.12.
+#
+# Lower bounds, not pins, as in Book 1. A pin in a book is a promise that expires; a lower
+# bound says what the code assumes and lets you take the fix that shipped last week. Pin in
+# your own project — in a lockfile, not here.
+#
+# One consequence is worth saying plainly, because this book prints numbers to the fourth
+# decimal place: a newer scikit-learn, LightGBM or PyTorch can move the last digit of a
+# result. Your run is still deterministic — run it twice and it agrees with itself — but it
+# may not agree with the page. Appendix C lists the exact versions the book's output came
+# from, and `code/_runner.py --check --twice` is how the build proves its own output repeats.
+
+# --- Part I: the analyst's tools, in Python
+pandas>=2.2
+numpy>=2.0
+duckdb>=1.1           # SQL the reader already knows, run over DataFrames and Parquet
+pyarrow>=17.0         # Parquet: the training table Chapter 4 writes
+matplotlib>=3.9
+pyyaml>=6.0
+python-dotenv>=1.0    # .env, read only by Chapter 20's language-model comparison
+
+# --- Part II: learning from data
+scikit-learn>=1.5     # the primary modelling library, used throughout
+scipy>=1.13
+lightgbm>=4.5         # gradient boosting, from Chapter 11 on
+
+# --- Part III: making models good
+optuna>=4.0           # Ch 15: Bayesian search, after grid and random by hand
+mlflow>=2.16          # Ch 15 only, after a hand-built experiment log
+shap>=0.46            # Ch 16: local explanations
+
+# --- Part IV: beyond the single table
+# CPU wheels. On Linux, install from the CPU index to avoid a multi-gigabyte CUDA download:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.4            # Ch 19–20 only: neural networks and text
+
+# --- Part V: production
+pydantic>=2.7
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27           # FastAPI's test client
+joblib>=1.4           # model artifacts, Ch 21
+
+# --- The toolchain the repository itself uses
+pytest>=8.0
+ruff>=0.6
+pypdf>=4.0            # the build's page count, and stripping the print interior
+pdfplumber>=0.11      # check_release.py: margins, type size and index pages, measured
+fonttools>=4.50       # _lint_glyphs.py: what the mono font can actually print
+pillow>=10.4          # figlib.py measures text with the real fonts; cover.py, render_web.py
+
+# --- Optional: Chapter 20's comparison with a hosted language model
+# openai>=2.0

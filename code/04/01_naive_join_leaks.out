@@ -1,0 +1,15 @@
+Contract 7332, built two ways (the summary is as of 2025-12-31)
+                            point in time        naive
+  last_order                   2023-12-05   2024-02-01
+  days_since                           27          699
+  orders_90d                            1            0
+
+The days-since rule, top 40 a cohort: 720 calls
+                         leavers reached  precision
+  point-in-time table                157      21.8%
+  naive table                        313      43.5%
+  a perfect list                     328      45.6%
+
+Share with no order in the '90 days' feature
+  point in time  leavers  34.5%   renewers   8.2%
+  naive          leavers 100.0%   renewers  14.7%

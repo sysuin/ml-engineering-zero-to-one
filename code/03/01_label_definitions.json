@@ -1,0 +1,20 @@
+{
+ "customers": 4236,
+ "flagged": {
+  "A": 94,
+  "B": 467,
+  "C": 1146
+ },
+ "regions": {
+  "A": 23,
+  "AB": 22,
+  "ABC": 36,
+  "AC": 13,
+  "B": 72,
+  "BC": 337,
+  "C": 760
+ },
+ "b_not_a": 409,
+ "b_quiet_renewed": 84,
+ "b_quiet_no_contract": 180
+}

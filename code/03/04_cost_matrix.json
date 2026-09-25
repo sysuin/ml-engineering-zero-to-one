@@ -1,0 +1,11 @@
+{
+ "tp": 623.5,
+ "fp": -90.0,
+ "fn": 0.0,
+ "tn": 0.0,
+ "break_even": 0.12613875262789068,
+ "value_at_stake": 2854,
+ "save_rate": 0.25,
+ "call_hours": 1.5,
+ "hour_cost": 60
+}

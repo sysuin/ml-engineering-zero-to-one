@@ -1,0 +1,35 @@
+name: code guarantee
+
+# Two promises, checked on every pull request: no captured output is stale, and every
+# listing prints exactly the same thing when it is run again. The second is BOOK-PLAN §10's
+# determinism rule, and it is the one a machine-learning book breaks most easily — a
+# thread count, an unseeded split, a library that sums in a different order.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  guarantee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install
+        # PyTorch from its CPU index first: the default wheel carries CUDA, gigabytes of it.
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: lint
+        run: ruff check code/ tests/
+      - name: generate the Meridian dataset
+        # Not committed — it regenerates from a fixed seed in seconds, with no network.
+        run: python3 code/meridian/generate.py && python3 code/meridian/verify.py
+      - name: every capture current, every listing deterministic
+        run: python3 code/_runner.py --check --twice
+      - name: tests
+        run: pytest tests/ -q

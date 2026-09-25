@@ -1,0 +1,356 @@
+{
+  "generated": "2026-09-25T05:34:07",
+  "listings": {
+    "02/01_python_basics.py": {
+      "bytes": 256,
+      "expect_fail": false,
+      "hash": "64d5689c1ec6de37",
+      "ok": true,
+      "out_hash": "c6a735258c5f07fd",
+      "returncode": 0,
+      "seconds": 0.1
+    },
+    "02/02_a_traceback.py": {
+      "bytes": 317,
+      "expect_fail": true,
+      "hash": "789d47c947f43a07",
+      "ok": true,
+      "out_hash": "7b826bb01311b97f",
+      "returncode": 1,
+      "seconds": 0.04
+    },
+    "02/03_first_dataframe.py": {
+      "bytes": 663,
+      "expect_fail": false,
+      "hash": "cd32f0ca092a3849",
+      "ok": true,
+      "out_hash": "ad14ada0f7260aca",
+      "returncode": 0,
+      "seconds": 1.37
+    },
+    "02/04_sql_side_by_side.py": {
+      "bytes": 677,
+      "expect_fail": false,
+      "hash": "f5f25902c98c2ef4",
+      "ok": true,
+      "out_hash": "0292b164dc124976",
+      "returncode": 0,
+      "seconds": 8.2
+    },
+    "02/05_the_duplicating_merge.py": {
+      "bytes": 694,
+      "expect_fail": false,
+      "hash": "2e65f0011c0b3142",
+      "ok": true,
+      "out_hash": "57124a199d365e29",
+      "returncode": 0,
+      "seconds": 3.34
+    },
+    "02/06_windows_in_pandas.py": {
+      "bytes": 465,
+      "expect_fail": false,
+      "hash": "02f8523b53f8e60b",
+      "ok": true,
+      "out_hash": "2fe9f2cd0c520026",
+      "returncode": 0,
+      "seconds": 5.98
+    },
+    "02/07_the_off_by_one_day.py": {
+      "bytes": 529,
+      "expect_fail": false,
+      "hash": "cdb06923a64e3ce8",
+      "ok": true,
+      "out_hash": "55027c29c34b65b9",
+      "returncode": 0,
+      "seconds": 1.69
+    },
+    "02/08_resample_and_zones.py": {
+      "bytes": 448,
+      "expect_fail": false,
+      "hash": "7c54622df608472c",
+      "ok": true,
+      "out_hash": "065603be8c4b8098",
+      "returncode": 0,
+      "seconds": 1.54
+    },
+    "02/09_numpy_arrays.py": {
+      "bytes": 345,
+      "expect_fail": false,
+      "hash": "96b0e05f73290834",
+      "ok": true,
+      "out_hash": "94e790da6227339e",
+      "returncode": 0,
+      "seconds": 1.89
+    },
+    "02/10_vectorise_it.py": {
+      "bytes": 320,
+      "expect_fail": false,
+      "hash": "7bd874c9c0633d09",
+      "ok": true,
+      "out_hash": "0af838bd5ac057ff",
+      "returncode": 0,
+      "seconds": 2.14
+    },
+    "02/11_duckdb_bridge.py": {
+      "bytes": 347,
+      "expect_fail": false,
+      "hash": "48b4e18b643a39e4",
+      "ok": true,
+      "out_hash": "3ffbe4e9789a54b6",
+      "returncode": 0,
+      "seconds": 4.19
+    },
+    "02/12_five_charts.py": {
+      "bytes": 431,
+      "expect_fail": false,
+      "hash": "d0809eb6e4f4f66d",
+      "ok": true,
+      "out_hash": "c3392c6d942ada17",
+      "returncode": 0,
+      "seconds": 7.03
+    },
+    "02/13_as_a_script.py": {
+      "bytes": 117,
+      "expect_fail": false,
+      "hash": "496b52249c366984",
+      "ok": true,
+      "out_hash": "dca74c6eb1acc7a7",
+      "returncode": 0,
+      "seconds": 2.23
+    },
+    "02/s01_five_translations.py": {
+      "bytes": 165,
+      "expect_fail": false,
+      "hash": "325ee7497715cf8c",
+      "ok": true,
+      "out_hash": "a121ad64404b107a",
+      "returncode": 0,
+      "seconds": 0.8
+    },
+    "02/s02_fix_the_merge.py": {
+      "bytes": 184,
+      "expect_fail": false,
+      "hash": "cb9cd869d37cee88",
+      "ok": true,
+      "out_hash": "ed10aa42a7663cdb",
+      "returncode": 0,
+      "seconds": 2.05
+    },
+    "02/s03_ninety_days.py": {
+      "bytes": 233,
+      "expect_fail": false,
+      "hash": "6e04b2ad3dda06bb",
+      "ok": true,
+      "out_hash": "afa0d326ad4ba6fb",
+      "returncode": 0,
+      "seconds": 0.57
+    },
+    "02/s04_vectorise_gaps.py": {
+      "bytes": 76,
+      "expect_fail": false,
+      "hash": "a5ca0709ceed1a75",
+      "ok": true,
+      "out_hash": "204bbdf9a8bfc8bf",
+      "returncode": 0,
+      "seconds": 1.25
+    },
+    "03/01_label_definitions.py": {
+      "bytes": 614,
+      "expect_fail": false,
+      "hash": "205d11a19cee3d64",
+      "ok": true,
+      "out_hash": "61809d6edf58aeb7",
+      "returncode": 0,
+      "seconds": 3.45
+    },
+    "03/02_renewal_cohorts.py": {
+      "bytes": 531,
+      "expect_fail": false,
+      "hash": "46fd6878fe3f41cc",
+      "ok": true,
+      "out_hash": "760ca2b6be3196c1",
+      "returncode": 0,
+      "seconds": 1.2
+    },
+    "03/03_baseline_rule.py": {
+      "bytes": 650,
+      "expect_fail": false,
+      "hash": "ac8c168eeac4ea22",
+      "ok": true,
+      "out_hash": "8c65b818f5f731c0",
+      "returncode": 0,
+      "seconds": 1.05
+    },
+    "03/04_cost_matrix.py": {
+      "bytes": 714,
+      "expect_fail": false,
+      "hash": "b64951726e2ba453",
+      "ok": true,
+      "out_hash": "831cce81fe83d2d5",
+      "returncode": 0,
+      "seconds": 0.16
+    },
+    "03/s01_label_that_flatters.py": {
+      "bytes": 223,
+      "expect_fail": false,
+      "hash": "c817b8efa414dff3",
+      "ok": true,
+      "out_hash": "7fec45ccf5f9b9ce",
+      "returncode": 0,
+      "seconds": 0.77
+    },
+    "03/s02_earlier_moment.py": {
+      "bytes": 191,
+      "expect_fail": false,
+      "hash": "db874e2112f8d609",
+      "ok": true,
+      "out_hash": "29cb22280820fd92",
+      "returncode": 0,
+      "seconds": 0.99
+    },
+    "03/s03_half_capacity.py": {
+      "bytes": 169,
+      "expect_fail": false,
+      "hash": "547d3f0fa8679567",
+      "ok": true,
+      "out_hash": "db066f776a0ee5cc",
+      "returncode": 0,
+      "seconds": 0.06
+    },
+    "04/01_naive_join_leaks.py": {
+      "bytes": 687,
+      "expect_fail": false,
+      "hash": "1237d8110ba9a9d3",
+      "ok": true,
+      "out_hash": "b32655db7e02cd37",
+      "returncode": 0,
+      "seconds": 3.16
+    },
+    "04/02_asof_join_sql.py": {
+      "bytes": 236,
+      "expect_fail": false,
+      "hash": "7550554b65ebf2a9",
+      "ok": true,
+      "out_hash": "7c97141af43dba1c",
+      "returncode": 0,
+      "seconds": 1.19
+    },
+    "04/03_merge_asof.py": {
+      "bytes": 141,
+      "expect_fail": false,
+      "hash": "784f2f92c92a371e",
+      "ok": true,
+      "out_hash": "05ba5d8326d7f195",
+      "returncode": 0,
+      "seconds": 2.46
+    },
+    "04/04_scd_history.py": {
+      "bytes": 667,
+      "expect_fail": false,
+      "hash": "571785cedec543ed",
+      "ok": true,
+      "out_hash": "15c9aa45607c6bed",
+      "returncode": 0,
+      "seconds": 0.75
+    },
+    "04/05_rebuild_snapshot.py": {
+      "bytes": 598,
+      "expect_fail": false,
+      "hash": "e4f600456a552711",
+      "ok": true,
+      "out_hash": "3f0852e2e0b01b4e",
+      "returncode": 0,
+      "seconds": 0.79
+    },
+    "04/06_resolve_entities.py": {
+      "bytes": 1074,
+      "expect_fail": false,
+      "hash": "953b3d91f315b289",
+      "ok": true,
+      "out_hash": "006eccb5444d97b7",
+      "returncode": 0,
+      "seconds": 1.95
+    },
+    "04/07_label_join.py": {
+      "bytes": 575,
+      "expect_fail": false,
+      "hash": "75d7ae531076bd9c",
+      "ok": true,
+      "out_hash": "6f6e87a89b6a9bc3",
+      "returncode": 0,
+      "seconds": 0.66
+    },
+    "04/08_repeated_accounts.py": {
+      "bytes": 683,
+      "expect_fail": false,
+      "hash": "fa6fe0b4a2bde233",
+      "ok": true,
+      "out_hash": "711d0f4e90ebcf98",
+      "returncode": 0,
+      "seconds": 6.72
+    },
+    "04/09_table_checks.py": {
+      "bytes": 342,
+      "expect_fail": false,
+      "hash": "dc5d773c433eb910",
+      "ok": true,
+      "out_hash": "221a6afc8e9719c4",
+      "returncode": 0,
+      "seconds": 2.58
+    },
+    "04/10_build_table.py": {
+      "bytes": 599,
+      "expect_fail": false,
+      "hash": "3821066c22c96438",
+      "ok": true,
+      "out_hash": "f096e1642eda0eba",
+      "returncode": 0,
+      "seconds": 6.56
+    },
+    "04/s01_month_earlier.py": {
+      "bytes": 678,
+      "expect_fail": false,
+      "hash": "e8c2c8adf236af17",
+      "ok": true,
+      "out_hash": "cded9b0568a9a872",
+      "returncode": 0,
+      "seconds": 4.14
+    },
+    "04/s02_colleague_table.py": {
+      "bytes": 278,
+      "expect_fail": false,
+      "hash": "4372c8044a914e1c",
+      "ok": true,
+      "out_hash": "9306fd31bbd68110",
+      "returncode": 0,
+      "seconds": 2.33
+    },
+    "04/s03_deletion_test.py": {
+      "bytes": 135,
+      "expect_fail": false,
+      "hash": "5703a4617baffc42",
+      "ok": true,
+      "out_hash": "5ff0e3ed40af5fe1",
+      "returncode": 0,
+      "seconds": 5.1
+    },
+    "04/s04_postcode_alone.py": {
+      "bytes": 151,
+      "expect_fail": false,
+      "hash": "e84b5a1517b0a59b",
+      "ok": true,
+      "out_hash": "e58b2edf88e2b57c",
+      "returncode": 0,
+      "seconds": 0.56
+    },
+    "04/s05_tolerance.py": {
+      "bytes": 110,
+      "expect_fail": false,
+      "hash": "9a5b649c3948a18d",
+      "ok": true,
+      "out_hash": "91d72d309aef7ee8",
+      "returncode": 0,
+      "seconds": 1.38
+    }
+  }
+}

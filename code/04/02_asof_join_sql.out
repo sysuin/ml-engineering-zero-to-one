@@ -1,0 +1,7 @@
+Renewals: 5,041
+  with an order before the moment    4,823
+  both queries give the same date     5,041
+
+The window query's row for Chapter 3's contract
+ contract_id  order_id last_order channel
+        7332   1175655 2023-12-05 Partner

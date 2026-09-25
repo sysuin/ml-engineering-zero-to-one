@@ -1,0 +1,5 @@
+HAVING         3 rows, identical
+CASE WHEN      2 rows, identical
+JOIN           5 rows, identical
+anti-join      1 rows, identical
+IN (subquery)  4 rows, identical

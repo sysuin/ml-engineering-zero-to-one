@@ -1,0 +1,34 @@
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated
+# The Meridian dataset is regenerable in seconds from a fixed seed (make data), so it
+# does not belong in version control. Nor do trained models: they are rebuilt from the
+# same seeds, and a binary in git is a binary nobody can review.
+/data/
+/artifacts/
+# MLflow's local tracking store and artifacts, from Chapter 15.
+mlruns/
+mlartifacts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+
+# The runner's per-call usage log: append-only output, a megabyte a run, and rewritten
+# every time. `_report.json` next to it IS committed — it is the staleness cache, and a
+# fresh clone needs it to know the captured output is current without re-running.
+code/_usage.jsonl

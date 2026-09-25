@@ -1,0 +1,18 @@
+Wrote renewals_table.parquet: 11,200 rows, 16 columns
+  contracts ending 2023-01-01 to 2025-12-31
+  rows by the year the contract ends
+    2023                 3,398
+    2024                 3,726
+    2025                 4,076
+  missing values
+    days_since_order        17
+    segment                 12
+    discount_pct         2,019
+  content hash aecfe42891d25b8c...
+Built again from the warehouse: same content hash True
+
+As known on 2024-01-01: 3,398 rows, contracts ending
+  2023-01-31 to 2023-12-31
+
+Days-since rule, top 40 a cohort, 5,041 rows
+  158 leavers in 720 calls: precision 21.9%

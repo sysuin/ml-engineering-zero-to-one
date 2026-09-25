@@ -1,0 +1,13 @@
+opened_at as read:   str '2022-01-01 09:19:00'
+after to_datetime:   datetime64[us] 2022-01-01 09:19:00
+
+  SQL BETWEEN '06-01' AND '06-30'    453 June tickets
+  pandas between(06-01, 06-30)       453 June tickets
+  half-open: >= 06-01 and < 07-01    472 June tickets
+  to_period('M') == 2024-06          472 June tickets
+  opened on 30 June itself: 19, the first at 07:02
+
+window from 2024-05-03 to 2024-08-01
+  both ends included: 91 days, 59 orders
+  half-open:          90 days, 58 orders
+  orders placed on 1 August itself: 1

@@ -1,0 +1,13 @@
+Accounts in the current table: 6,058
+  segment matches the rebuilt snapshot  6,056
+ account_id    segment        rebuilt  closed_on
+       1157 Mid-market Small business 2023-01-31
+       3122 Mid-market Small business 2024-05-31
+
+Open accounts by segment on three days, rebuilt from the log
+                2023-01-01  2024-07-01  2025-12-31
+segment                                           
+Small business        1899        2050        2100
+Mid-market            1164        1459        1692
+Public sector          397         469         548
+Enterprise             227         268         311
