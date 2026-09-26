@@ -45,8 +45,8 @@ from foresight.features.sources import Context, Sources
 
 # ------------------------------------------------ thresholds
 CEILING_AUC = 0.811
-"""The best AUC any model can reach on 2023-2025's renewals, measured
-once from the generator's true probabilities (DECISIONS.md). With real
+"""The best AUC a model can expect on 2023-2025's renewals, measured
+once from the generator's true probabilities (Chapter 9). With real
 data nobody knows it; use the best model you trust, plus a margin."""
 REVIEW_SHARE = 0.9
 """A column that goes 90% of the way from a coin (0.5) to the ceiling

@@ -1,0 +1,20 @@
+July to December 2024, threshold 0.7: 1,420 of 4,087 sent on
+100.0% of replies fit the schema
+
+both labels right on the sent tickets
+               sent   model     LLM    LLM - model
+  Pemberton   1,196   75.4%   69.8%   -5.6 (-8.0 to -3.2)
+  ordinary      224   70.1%   61.2%   -8.9 (-15.6 to -1.8)
+
+one label at a time, Pemberton tickets sent
+  category  model 94.0%, LLM 95.5%
+  priority  model 79.7%, LLM 73.7%
+  LLM priority above the desk's 244, below 70
+
+both labels right on every ticket, the model alone and routed
+                        tickets   model  hybrid
+  all Pemberton tickets   1,424   75.8%   71.1%
+  October to December     2,769   77.4%   74.6%
+  July to December        4,087   77.4%   75.3%
+
+spent $0.4547 of the $1.00 ceiling

@@ -10,8 +10,8 @@ Accuracy  (TP + TN) / all   87.6%
 Precision TP / (TP + FP)    21.7%
 Recall    TP / (TP + FN)    42.6%
 
-September's cohort: the highest score among the calls, the lowest
-among the rest
+The cohort marked on 1 September: the highest score among the calls,
+the lowest among the rest
       contract  segment         days since order       p
   TP      9863  Small business               132  33.63%
   FP     10000  Small business               352  68.43%

@@ -23,7 +23,8 @@ for region in key.columns:
           f"{halves['Jul-Dec'][region]:>10,.0f}")
 
 # The year after the exit. Every origin in it is after Halloway's
-# notice, so a forecaster could have rebuilt the history without it.
+# ticket of 15 April saying it was leaving, so a forecaster could have
+# rebuilt the history without it.
 year = pd.period_range("2024-07", "2025-06", freq="M")
 tail = monthly_units(CATEGORY_REGION, strand="tail")
 results = {}

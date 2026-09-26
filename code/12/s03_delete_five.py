@@ -2,7 +2,7 @@
 # features it leans on least. What did the five cost?
 from foresight.evaluate import SPLITS, backtest
 from foresight.features.build import load
-from foresight.features.registry import names
+from foresight.features.registry import REGISTRY, names
 from foresight.models.featured import (SHOWN, TRAINING, gain, lasso,
                                        shown, tuning_score)
 
@@ -15,6 +15,13 @@ fewer = [f for f in names() if f not in weakest]
 print(f"Library features the lasso uses: {len(used)} of {len(w)}")
 print(f"Weakest five: {', '.join(weakest[:3])},\n  "
       f"{', '.join(weakest[3:])}")
+
+# The five's groups: which of their features does the lasso still use?
+rest = list(used.index[5:])
+print(f"\nIn the five's groups, still used among the other {len(rest)}")
+for g in dict.fromkeys(REGISTRY[f].group for f in weakest):
+    still = [f for f in rest if REGISTRY[f].group == g]
+    print(f"  {g:<11}{', '.join(still) or 'none'}")
 
 print(f"\n{'Tuning cohorts':<24}{'columns':>8}{'log loss':>10}"
       f"{'AUC':>7}")

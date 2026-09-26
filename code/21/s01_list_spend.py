@@ -1,6 +1,8 @@
 # Exercise 1: a skew of your own. The serving rows are made by the
-# shared definition, except that spend is net of each line's discount,
-# as finance counts revenue. The skew test, then both models' lists.
+# shared definition, except that spend is at list price, before each
+# line's discount, as the price list counts it. unit_price is already
+# net of the discount, so list price is unit_price / (1 - discount).
+# The skew test, then both models' lists.
 import sqlite3
 
 import numpy as np
@@ -21,8 +23,8 @@ served = at_marks(sorted(cohorts.moment.unique()))
 with sqlite3.connect(ML_WAREHOUSE) as con:
     lines = pd.read_sql_query("""
         SELECT o.account_id, o.order_date AS day,
-               SUM(l.qty * l.unit_price
-                   * (100 - l.discount_pct) / 100.0) AS net
+               SUM(l.qty * l.unit_price * 100.0
+                   / (100 - l.discount_pct)) AS list
         FROM orders o JOIN order_lines l USING (order_id)
         GROUP BY o.order_id""", con)
     ids = legacy_ids(con)
@@ -31,8 +33,9 @@ lines["day"] = pd.to_datetime(lines.day)
 keys = served[["contract_id", "account_id", "moment"]]
 o = keys.merge(lines, on="account_id")
 age = (o.moment - o.day).dt.days
-net = o[(age >= 1) & (age <= 365)].groupby("contract_id").net.sum()
-served["spend_365"] = (served.contract_id.map(net).fillna(0.0)
+at_list = (o[(age >= 1) & (age <= 365)].groupby("contract_id")
+           .list.sum())
+served["spend_365"] = (served.contract_id.map(at_list).fillna(0.0)
                        .round(2))
 
 found = skew(cohorts, served)
@@ -43,9 +46,9 @@ for c, r in found[found.differ > 0].iterrows():
 
 
 both = cohorts.merge(served[["contract_id", "spend_365"]],
-                     on="contract_id", suffixes=("", "_net"))
-lower = 1 - both.spend_365_net.sum() / both.spend_365.sum()
-print(f"  net spend is {lower:.1%} below list spend over these rows")
+                     on="contract_id", suffixes=("", "_list"))
+higher = both.spend_365_list.sum() / both.spend_365.sum() - 1
+print(f"  list spend is {higher:.1%} above net spend over these rows")
 
 
 def calls(p, ids, k=40):

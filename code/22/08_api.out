@@ -1,11 +1,10 @@
-status    ok
-version   1.0
-today     2025-12-31
-renewal   renewal v1
-calibrationas fitted
-triage    triage v1
-problems  []
-last_run  run 1, 2025-12-31, finished
+status      ok
+today       2025-12-31
+renewal     renewal v1
+calibration as fitted
+triage      triage v1
+problems    []
+last_run    run 1, 2025-12-31, finished
 
 POST /renewal 14942 -> 200
 {

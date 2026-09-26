@@ -34,7 +34,7 @@ for d in grid:
     print(f"{d:>6}{pd_lasso[d]:>9.1%}{pd_boost[d]:>9.1%}")
 print(f"\nThe rows learned from{'rows':>12}{'left':>7}")
 for band, r in seen.iterrows():
-    print(f"  gap {int(band.left):>3} to {int(band.right):<3} days"
+    print(f"  gap {int(band.left) + 1:>3} to {int(band.right):<3} days"
           f"{int(r['size']):>12,}{r['mean']:>7.1%}")
 recent = (rows.orders_90d > 0).mean()
 print(f"\nValidation contracts with an order in the last 90 days:"

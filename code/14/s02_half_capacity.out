@@ -4,6 +4,7 @@ v0.4's lasso, as fitted
   top 40                 240       60   +21,210      +8,648
   above break-even       155       46   +18,871      +9,646
   above break-even, by cohort: [34, 40, 19, 20, 25, 17]
+  above break-even, not in the top 20: 39 calls, model said +342
   20th score, by cohort: 15.7%, 15.9%, 12.5%, 12.7%, 14.5%, 12.2%
 v0.4's lasso, Platt
   list                 calls  leavers    made $  model said
@@ -11,4 +12,5 @@ v0.4's lasso, Platt
   top 40                 240       60   +21,210      +9,760
   above break-even       149       44   +17,984     +10,971
   above break-even, by cohort: [32, 36, 18, 21, 22, 20]
+  above break-even, not in the top 20: 31 calls, model said +294
   20th score, by cohort: 15.7%, 16.2%, 11.8%, 12.9%, 13.3%, 13.0%

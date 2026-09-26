@@ -4,7 +4,8 @@ import textwrap
 import pandas as pd
 
 from foresight.data.build_table import TABLE
-from foresight.evaluate import backtest, hits_at_k
+from foresight.evaluate import (HISTORY_FROM, auc, backtest, hits_at_k,
+                                known_by)
 from foresight.models.logistic import TRAIN
 from foresight.models.regularised import (TUNE, RegularisedRisk,
                                           maker, tune)
@@ -27,3 +28,21 @@ s = backtest(table, *TUNE, maker("l2", 0.0))
 rule = sum(hits_at_k(c.not_renewed, c.rule, c.contract_id)
            for _, c in s.groupby("moment"))
 print(f"the rule on the same cohorts: top 40 {rule}")
+
+# Pooled AUC also compares contracts from different cohorts. Averaged
+# cohort by cohort, it compares each contract only with its own month.
+def by_cohort(s, score):
+    return s.groupby("moment").apply(
+        lambda c: auc(c.not_renewed, c[score])).mean()
+
+
+history = table[table.end_date >= HISTORY_FROM]
+print("\ncohort by cohort: mean AUC, and the columns each cohort's"
+      "\nmodel keeps (fewest to most)")
+for st in strengths:
+    s = backtest(table, *TUNE, maker("l1", st))
+    kept = [int((RegularisedRisk("l1", st).fit(known_by(history, m))
+                 .weights() != 0).sum()) for m in s.moment.unique()]
+    print(f"{st:>9g}{by_cohort(s, 'model'):>8.4f}"
+          f"{min(kept):>6} to {max(kept)}")
+print(f"{'rule':>9}{by_cohort(s, 'rule'):>8.4f}")

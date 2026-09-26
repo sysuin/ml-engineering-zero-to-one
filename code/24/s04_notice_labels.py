@@ -17,7 +17,7 @@ for label, shift in (("at the end", 0), ("at the notice", 60)):
     s = shadow(early, CONTENDERS)
     log, served = forward(s, names[0], names[1:])
     changes = served[served != served.shift()].iloc[1:]
-    done = production(s, served)
+    done = production(early, served, CONTENDERS)
     done = done[done.moment <= "2025-10-02"]
     hits = sum(hits_at_k(g.not_renewed, g.model, g.contract_id)
                for _, g in done.groupby("moment"))

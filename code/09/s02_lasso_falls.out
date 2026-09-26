@@ -16,3 +16,14 @@ tuning cohorts; columns kept by a fit on the training split
      0.05  0.6709      73     1
             days_since_order
 the rule on the same cohorts: top 40 92
+
+cohort by cohort: mean AUC, and the columns each cohort's
+model keeps (fewest to most)
+    0.002  0.7645     9 to 14
+    0.005  0.7685     7 to 11
+     0.01  0.7682     4 to 7
+    0.015  0.7683     2 to 5
+     0.02  0.7641     1 to 4
+     0.03  0.7555     1 to 1
+     0.05  0.6988     0 to 1
+     rule  0.7527

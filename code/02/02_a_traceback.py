@@ -4,10 +4,10 @@
 
 def line_revenue(line):
     price = line["unit_prce"]
-    return line["qty"] * price * (1 - line["discount_pct"] / 100)
+    return line["qty"] * price
 
 
 line = {"line_no": 1, "sku": "MRD-SAN-043", "qty": 15,
-        "unit_price": 56.53, "discount_pct": 0}
+        "unit_price": 56.53}
 print("about to price one line")
 print(line_revenue(line))

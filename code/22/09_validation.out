@@ -1,6 +1,6 @@
 POST /renewal {"contract_id": "14942"} -> 422
     contract_id: Input should be a valid integer
-POST /renewal {"contract_id": 14942.5} -> 422
+POST /renewal {"contract_id": 14942.0} -> 422
     contract_id: Input should be a valid integer
 POST /renewal {"contract": 14942} -> 422
     contract_id: Field required

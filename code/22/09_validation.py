@@ -18,7 +18,7 @@ service.classify = lambda *a: asked.append(a) or classify(*a)
 client = TestClient(create_app(service))
 
 bad = [("/renewal", {"contract_id": "14942"}),
-       ("/renewal", {"contract_id": 14942.5}),
+       ("/renewal", {"contract_id": 14942.0}),
        ("/renewal", {"contract": 14942}),
        ("/renewal", {"contract_id": -1}),
        ("/renewal", "contract_id=14942"),

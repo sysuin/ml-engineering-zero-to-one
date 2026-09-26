@@ -31,7 +31,8 @@ not_renewed = ids("""
     WHERE end_date BETWEEN '2024-01-01' AND '2024-06-30'
       AND outcome = 'not_renewed'""") & customers
 
-# B: no order in the last 90 days of the half-year.
+# B: no order in the second quarter, the last three months of the
+# half-year (91 days, 1 April to 30 June inclusive).
 no_orders = customers - ids("""
     SELECT account_id FROM orders
     WHERE order_date BETWEEN '2024-04-01' AND '2024-06-30'""")
@@ -52,7 +53,7 @@ halved = ids("""
 print(f"Customers on 1 January 2024: {len(customers):,}\n")
 print("Churned in the first half of 2024, by definition")
 defs = {"A": ("contract not renewed", not_renewed),
-        "B": ("no order for 90 days", no_orders),
+        "B": ("no order in Q2", no_orders),
         "C": ("revenue halved, Q2 on Q1", halved)}
 for key, (name, flagged) in defs.items():
     print(f"  {key}  {name:<28}{len(flagged):>7,}")

@@ -14,7 +14,7 @@ from foresight.evaluate import (SPLITS, auc, backtest, evaluate,
                                 report)
 from foresight.models.logistic import log_loss
 from foresight.models.regularised import compare
-from foresight.slices import key_accounts, label, page
+from foresight.slices import key_accounts, label, page, table
 from foresight.train import make_model
 
 rows = pd.read_parquet(TABLE)
@@ -48,7 +48,8 @@ lines += [f"  AUC, v0.6 minus v0.5, paired: {d:+.3f}"
 print("\n".join(lines))
 
 train = rows[rows.end_date.between("2023-01-01", "2024-06-30")]
-sliced = page(label(s, train, keys), called,
+labelled = label(s, train, keys)
+sliced = page(labelled, called,
               slices=["segment", "size", "population"])
 print("\n" + sliced)
 with open(PAGE, "a") as f:
@@ -76,6 +77,13 @@ test = {"version": "0.6", "first": SPLITS["test"][0],
         "slope": f"{calibration_slope(s.model, y)[0]:.2f}",
         "raw_slope": f"{calibration_slope(raw.model, y)[0]:.2f}",
         "diff": f"{dp:+.1f} points ({lop:+.1f} to {hip:+.1f})"}
+mid = table(labelled, "segment", called).loc["Mid-market"]
+gap = [f"{v * 100:+.1f}" for v in (mid.gap, mid.gap_lo, mid.gap_hi)]
+test |= {"mid_missed": f"{mid.miss:.0%}",
+         "mid_missed_ci": f"{mid.miss_lo:.0%} to {mid.miss_hi:.0%}",
+         "mid_gap": gap[0], "mid_gap_ci": f"{gap[1]} to {gap[2]}",
+         "mid_gap_verdict": "recurred" if mid.gap_lo > 0 else
+         "did not recur"}
 write(numbers, test)
 with open("code/16/15_test_report.json", "w") as f:
     json.dump(test, f)

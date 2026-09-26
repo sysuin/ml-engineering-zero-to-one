@@ -8,6 +8,7 @@
  3,000   0.1933   0.1879     0.0002   0.5212
  2 leaves: lowest watched loss at round 1,360, 0.1868
 31 leaves: lowest watched loss at round 55, 0.1907
+Leavers: 6.9% of the fitted rows, 5.8% of the watched
 
 stopped by                rounds    AUC  log loss  leavers
 watch Apr-Jun, refit         960  0.806    0.1822       56

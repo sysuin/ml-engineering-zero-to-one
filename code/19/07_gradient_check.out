@@ -10,4 +10,5 @@ Largest relative gap, all 145 parameters
   nudging the loss from p        1.0e+00
 Rows given p within a millionth of 0 or 1: 1
   contract 6125, Enterprise, 633 orders in 90 days: 44.7 sd out
+  its p is 0.9999999999999878, so 1 - p = 1.2e-14
 Without that row, nudging the loss from p: 4.1e-07

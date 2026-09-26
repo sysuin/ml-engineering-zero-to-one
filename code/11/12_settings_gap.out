@@ -1,0 +1,15 @@
+Fitting on 3,040 contracts, watching 720 (Feb-Apr 2024)
+
+leaves      min 20      min 50     min 100     min 200
+     2     0.18674     0.18615     0.18542     0.18557
+     4     0.18735     0.18731     0.18658     0.18689
+     8     0.18586     0.18528     0.18566     0.18576
+    16     0.18557     0.18592     0.18686     0.18596
+    31     0.19012     0.18941     0.18733     0.18596
+Lowest: 8 leaves, min 50; fewest leaves within 0.0003: 2, min 100
+
+validation, 240 calls  leavers    AUC   AUC against 2/50
+lasso                       60  0.815
+booster 2/50                56  0.812
+booster 8/50                59  0.799   -0.013 (-0.025 to -0.001)
+booster 2/100               56  0.811   -0.000 (-0.002 to +0.001)

@@ -29,8 +29,12 @@ help:  ## show this list
 	@grep -E '^[a-z-]+:.*?## ' $(MAKEFILE_LIST) \
 	  | awk 'BEGIN{FS=":.*?## "}{printf "  \033[1m%-10s\033[0m %s\n", $$1, $$2}'
 
+# An existing .venv is kept, whatever Python made it: to start again with another
+# Python, delete .venv and run, for example, make setup PY=python3.12.
 setup:  ## create the virtualenv and install everything
-	python3 -m venv .venv
+	@if [ -x .venv/bin/python ]; then \
+	  echo "Keeping the existing .venv ($$(.venv/bin/python --version))."; \
+	else echo "$(PY) -m venv .venv"; $(PY) -m venv .venv; fi
 	.venv/bin/pip install --upgrade pip
 	@# On Linux the default PyTorch wheel carries gigabytes of GPU libraries this book
 	@# never uses; take the CPU build first. macOS and Windows wheels are CPU-only anyway.

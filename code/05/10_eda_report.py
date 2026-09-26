@@ -41,10 +41,10 @@ findings = [
      f" {np.log10(t.spend_365[t.spend_365 > 0]).skew():.2f}); the"
      f" {len(ka)} key-account rows hold"
      f" {ka.spend_365.sum() / t.spend_365.sum():.0%} of it. Not capped",
-     "no negatives"),
+     "none: this split only"),
     (f"Small business leaves most ({seg.max():.1%}), enterprise least"
-     f" ({seg.min():.1%}); regions differ less than their margins"
-     f" ({reg.min():.1%} to {reg.max():.1%})", "allowed values"),
+     f" ({seg.min():.1%}); regions differ no more than chance allows"
+     f" ({reg.min():.1%} to {reg.max():.1%})", "none: this split only"),
     (f"discount_pct is missing on {gap.sum():,} rows, exactly the"
      f" legacy contracts, which left at {y[gap].mean():.1%} against"
      f" {y[~gap].mean():.1%}. Never fill it", "missing iff legacy"),

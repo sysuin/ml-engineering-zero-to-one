@@ -13,6 +13,11 @@ shadow() runs contenders beside production. Each scores every cohort
 at its mark under its own policy; nothing it says reaches the account
 team, and its scores wait, like production's, for the outcomes.
 
+A policy is for the shadow record only. The model that serves keeps
+the weights it was fitted with on the morning it began serving, and
+they change only when the gate replaces it: production() scores the
+lists that way, whatever the serving contender does in shadow.
+
 gate() is Chapter 11's rule applied to that shadow record: on the
 cohorts listed since go-live whose outcomes are on record by the day,
 a challenger replaces the champion only if it is not behind at
@@ -155,9 +160,34 @@ def forward(s: pd.DataFrame, champion: str, challengers) -> tuple:
     return pd.DataFrame(log), pd.Series(served, name="served")
 
 
-def production(s: pd.DataFrame, served: pd.Series) -> pd.DataFrame:
+def began(served: pd.Series, mark, start=GO_LIVE) -> pd.Timestamp:
+    """The morning the model serving at `mark` was fitted: `start` for
+    the first champion, the mark of its promotion for any later one."""
+    before = served[served.index <= pd.Timestamp(mark)]
+    name = before.iloc[-1]
+    other = before[before != name]
+    if other.empty:
+        return pd.Timestamp(start)
+    return before[before.index > other.index[-1]].index[0]
+
+
+def production(rows: pd.DataFrame, served: pd.Series, contenders,
+               start=GO_LIVE) -> pd.DataFrame:
     """The lists the account team received: each cohort scored by the
-    model serving on its mark."""
-    rows = [record(s, name)[lambda r, m=mark: r.moment == m]
-            for mark, name in served.items()]
-    return pd.concat(rows, ignore_index=True)
+    model serving on its mark, as it was fitted on the morning it began
+    serving, in the layout record() gives."""
+    history = rows[rows.end_date >= HISTORY_FROM]
+    make = {c.name: c.make_model for c in contenders}
+    fitted, out = {}, []
+    for mark, name in served.items():
+        day = began(served, mark, start)
+        if (name, day) not in fitted:
+            fitted[name, day] = make[name]().fit(known(history, day))
+        cohort = rows[rows.moment == mark]
+        chance = fitted[name, day].predict_proba(cohort)
+        out.append(cohort[["moment", "contract_id", "end_date",
+                           "not_renewed"]].assign(
+            name=name, fitted_on=day, model=chance,
+            rule=np.asarray(days_since_rule(cohort), float),
+            base=chance))
+    return pd.concat(out, ignore_index=True)

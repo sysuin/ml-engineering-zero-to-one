@@ -27,6 +27,7 @@ for rate in (0.25, 0.0):
     test = after.assign(left=run(after, called, world, SEED))
     r = rates(test).rate
     true = saved(after, called, test.left) / called.sum()
+    true_all = saved(after, True, everyone.left) / len(after)
     print(f"\nAssumed save rate {rate:.2f}; points fewer leaving")
     print(f"  before and after, all 40 called {before.left.mean():6.1%}"
           f" - {everyone.left.mean():5.1%} ="
@@ -34,9 +35,11 @@ for rate in (0.25, 0.0):
     print(f"  holdout, 20 of 40 called        {r['held out']:6.1%}"
           f" - {r['called']:5.1%} ="
           f" {100 * (r['held out'] - r['called']):+5.1f}")
-    print(f"  what the calls did (simulator){100 * true:+22.1f}")
+    print("  what the calls did (simulator)")
+    print(f"    to all 40 on each list{100 * true_all:+24.1f}")
+    print(f"    to the 20 called{100 * true:+30.1f}")
     out[str(rate)] = {"after": everyone.left.mean(),
                       "held": r["held out"], "called": r["called"],
-                      "true": true}
+                      "true": true, "true_all": true_all}
 with open("code/25/02_before_after.json", "w") as f:
     json.dump(out, f)

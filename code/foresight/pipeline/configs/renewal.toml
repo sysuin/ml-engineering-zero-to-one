@@ -17,7 +17,7 @@ as_of = "2025-01-01"       # fit on the outcomes known this morning
 [evaluation]
 cohorts = 6                # the latest cohorts the backtest scores
 
-# Measured once, from the generator's true chances (DECISIONS.md),
+# Measured once, from the generator's true chances (Chapter 9),
 # and only for these cohorts; any other window says "not measured".
 [evaluation.ceiling]
 first = "2024-07-01"

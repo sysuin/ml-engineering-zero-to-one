@@ -43,7 +43,7 @@ print(f"\n{'centre':>6}{'orders':>9}{'days since':>12}{'accounts':>10}")
 labels = assign(X, centres)
 for j in np.argsort(centres[:, 0]):
     back = np.exp(centres[j] * raw.std(axis=0) + raw.mean(axis=0))
-    print(f"{j:>6}{back[0]:>9.1f}{back[1]:>12.1f}"
+    print(f"{j + 1:>6}{back[0]:>9.1f}{back[1]:>12.1f}"
           f"{(labels == j).sum():>10,}")
 
 show = rng().choice(len(X), size=700, replace=False)

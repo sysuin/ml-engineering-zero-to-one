@@ -58,7 +58,7 @@ for name, rows in (("chosen with both periods' labels", both),
                    ("chosen with the training labels", tr)):
     r = rows[noise.columns].corrwith(rows.not_renewed).abs()
     pick = list(r.nlargest(20).index)
-    sign = np.sign(both[pick].corrwith(both.not_renewed))
+    sign = np.sign(rows[pick].corrwith(rows.not_renewed))
     alone = auc(va.not_renewed, va[pick] @ sign)
     model = FeaturedLasso(pick).fit(tr)
     print(f"  {'noise ' + name:<44}{result(model, va)}"

@@ -8,8 +8,8 @@ of new rows in each bin, and add up, bin by bin,
     (new share - reference share) * ln(new share / reference share)
 
 Both halves of each term have the same sign, so every bin adds
-something, and a bin whose share doubled adds about as much as one
-whose share halved. The bins are fixed on the reference rows, the rows
+something, and a bin that went from 10% of the rows to 20% adds
+exactly as much as one that went from 20% to 10%. The bins are fixed on the reference rows, the rows
 the model learned from, and never recomputed from the new rows: a bin
 edge that moves with the data measures the edge, not the data.
 

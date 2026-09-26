@@ -11,35 +11,34 @@ import pandas as pd
 from foresight.config import ML_WAREHOUSE
 
 con = sqlite3.connect(ML_WAREHOUSE)
-lines = pd.read_sql("SELECT l.qty, l.unit_price, l.discount_pct"
+lines = pd.read_sql("SELECT l.qty, l.unit_price"
                     " FROM order_lines l JOIN orders o"
                     " USING (order_id)"
                     " WHERE o.order_date >= '2025-01-01'", con)
 con.close()
-columns = ("qty", "unit_price", "discount_pct")
-qty, price, disc = (lines[c].tolist() for c in columns)  # lists
-q, p, d = (lines[c].to_numpy() for c in columns)         # arrays
+columns = ("qty", "unit_price")    # the price is net of any discount
+qty, price = (lines[c].tolist() for c in columns)   # lists
+q, p = (lines[c].to_numpy() for c in columns)       # arrays
 
 
 def python_loop():
     total = 0.0
     for i in range(len(qty)):
-        total += qty[i] * price[i] * (1 - disc[i] / 100)
+        total += qty[i] * price[i]
     return total
 
 
 def pandas_apply():             # looks like pandas, runs like a loop
-    return lines.apply(lambda r: r["qty"] * r["unit_price"]
-                       * (1 - r["discount_pct"] / 100), axis=1).sum()
+    return lines.apply(lambda r: r["qty"] * r["unit_price"],
+                       axis=1).sum()
 
 
 def pandas_columns():
-    keep = 1 - lines["discount_pct"] / 100
-    return (lines["qty"] * lines["unit_price"] * keep).sum()
+    return (lines["qty"] * lines["unit_price"]).sum()
 
 
 def numpy_arrays():
-    return float((q * p * (1 - d / 100)).sum())
+    return float((q * p).sum())
 
 
 def best_of(fn, repeat):

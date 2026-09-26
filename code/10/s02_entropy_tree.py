@@ -74,8 +74,9 @@ def asks(node):
 for how, impurity in (("gini", gini), ("entropy", entropy)):
     tree = grow(X, y, impurity)
     ours = questions(tree)
-    sk = DecisionTreeClassifier(criterion=how, max_depth=4,
-                                random_state=SEED).fit(X, y).tree_
+    fitted = DecisionTreeClassifier(criterion=how, max_depth=4,
+                                    random_state=SEED).fit(X, y)
+    sk = fitted.tree_
     theirs = list(zip(sk.feature, sk.threshold))
     differ = [i for i, ((a, b), (c, d)) in enumerate(zip(ours, theirs))
               if a != c or not np.isclose(b, d, rtol=1e-5)]
@@ -84,3 +85,16 @@ for how, impurity in (("gini", gini), ("entropy", entropy)):
     print(f"  first question   {asks(tree)}")
     print(f"  then, if yes     {asks(tree['left'])}")
     print(f"  then, if no      {asks(tree['right'])}")
+    for i in differ:                # the rows at a node that differs
+        at = fitted.decision_path(X)[:, i].toarray().ravel() == 1
+        Xi, yi = X[at], y[at]
+        print(f"  node {i}: {at.sum():,} contracts, {yi.sum()} leavers")
+        for who, (col, cut) in (("mine", ours[i]),
+                                ("sklearn", theirs[i])):
+            left = Xi[:, col] <= cut
+            fall = impurity(yi.sum(), len(yi)) - (
+                impurity(yi[left].sum(), left.sum()) * left.sum()
+                + impurity(yi[~left].sum(), (~left).sum())
+                * (~left).sum()) / len(yi)
+            print(f"  {who:<8}{names[col]} <= {cut:g}: sends"
+                  f" {(~left).sum()} right, Gini down {fall:.7f}")

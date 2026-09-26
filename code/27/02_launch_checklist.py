@@ -86,8 +86,9 @@ CHECKS = {
     "Once it is live": [
         ("alert thresholds are constants, not tuned later",
          psi.ACT == 0.25 and alerts.EFFECT and watch.ALPHA),
-        ("a holdout is drawn after every list",
-         (held.arm == "held out").sum() == 20),
+        ("the job draws and records every list's holdout",
+         "holdout.record(" in inspect.getsource(batch._make)
+         and (held.arm == "held out").sum() == 20),
         ("a failed run alerts a person by the morning",
          "store" in watched or "scores.db" in watched),
         ("the CI gate blocks a worse model (make test)", HAND),

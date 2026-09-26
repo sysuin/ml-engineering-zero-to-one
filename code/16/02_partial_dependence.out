@@ -15,12 +15,12 @@ Average chance with every validation contract's gap set to
    365    74.8%    23.9%
 
 The rows learned from        rows   left
-  gap   0 to 14  days       3,194   2.5%
-  gap  14 to 30  days       1,262   5.0%
-  gap  30 to 60  days         905   8.6%
-  gap  60 to 90  days         342  12.9%
-  gap  90 to 180 days         277  35.0%
-  gap 180 to 420 days          71  35.2%
+  gap   1 to 14  days       3,194   2.5%
+  gap  15 to 30  days       1,262   5.0%
+  gap  31 to 60  days         905   8.6%
+  gap  61 to 90  days         342  12.9%
+  gap  91 to 180 days         277  35.0%
+  gap 181 to 420 days          71  35.2%
 
 Validation contracts with an order in the last 90 days: 94.4%
 Largest gap among the 6,065 rows learned from: 411 days

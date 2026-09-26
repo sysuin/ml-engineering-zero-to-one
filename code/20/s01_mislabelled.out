@@ -11,9 +11,9 @@
   N Delivery S Billing  we are tax exempt, please remove sales tax f
 
 loose words, missed by the pattern: 51
-  glove split, chemical on a hand (a safety ticket): 49
+  glove split, chemical on a hand (a safety ticket): 50
+    of which spelt 'gloev': 1
   other: driver drpped the delivery, MRD-CLE-009 pslit open
-  other: hi team gloev mrd-cle-007 split and chemical got on a cl
 
 adding 'driver d... the delivery' catches 1 more
-'split' alone would also catch 49 safety tickets
+'split' alone would also catch 50 safety tickets

@@ -16,7 +16,7 @@ from foresight.slices import key_accounts, label, table
 from foresight.score import model
 from foresight.train import STRENGTH, make_model
 
-# Measured once from the generator's true chances (DECISIONS.md).
+# Measured once from the generator's true chances (Chapters 9, 13).
 CEILING = {"hits": 64, "precision": "26.7%", "auc": "0.819"}
 
 rows = pd.read_parquet(TABLE)

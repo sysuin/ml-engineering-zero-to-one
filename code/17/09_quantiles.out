@@ -5,7 +5,12 @@ Share of actuals inside the 80% interval, product x region
   2024: below q10 34.4%, above q90 4.6%
   2025: below q10 6.3%, above q90 15.8%
 
-Widened from earlier misses
+The same months, not widened
+          h=1     h=2     h=3   width
+  2024   64.3%   55.2%   53.7%   37.6%
+  2025   77.9%   78.4%   77.4%   43.2%
+
+Widened from the record
           h=1     h=2     h=3   width
   2024   78.8%   73.3%   72.9%   53.0%
   2025   87.4%   88.6%   90.0%   56.6%

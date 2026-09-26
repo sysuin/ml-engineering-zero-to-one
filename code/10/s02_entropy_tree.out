@@ -2,6 +2,9 @@ gini: nodes 31 and 31, different 1 [6]
   first question   days_since_order <= 92.5
   then, if yes     days_since_order <= 49.5
   then, if no      discount_pct <= 4
+  node 6: 3,506 contracts, 101 leavers
+  mine    orders_prev_90d <= 643: sends 1 right, Gini down 0.0005382
+  sklearn tickets_90d <= 8.5: sends 1 right, Gini down 0.0005382
 entropy: nodes 29 and 29, different 0 []
   first question   days_since_order <= 49.5
   then, if yes     orders_90d <= 9.5

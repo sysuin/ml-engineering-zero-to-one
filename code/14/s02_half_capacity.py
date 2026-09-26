@@ -3,7 +3,7 @@
 import pandas as pd
 
 from foresight.data.build_table import TABLE
-from foresight.decide import (by_capacity, by_cost, calibrated,
+from foresight.decide import (by_both, by_capacity, by_cost, calibrated,
                               expected_value, net_value)
 from foresight.evaluate import SPLITS, backtest
 from foresight.models.regularised import maker
@@ -25,6 +25,9 @@ for name, make in (("as fitted", maker("l1", 0.002)),
     over = [int(by_cost(c.model).sum())
             for _, c in s.groupby("moment")]
     cut = [c.model.nlargest(20).min() for _, c in s.groupby("moment")]
+    unmade = by_cost(p) & ~by_both(s, 20)
     print(f"  above break-even, by cohort: {over}")
+    print(f"  above break-even, not in the top 20: {unmade.sum()}"
+          f" calls, model said {expected_value(p, unmade):+,.0f}")
     print("  20th score, by cohort: "
           + ", ".join(f"{v:.1%}" for v in cut))

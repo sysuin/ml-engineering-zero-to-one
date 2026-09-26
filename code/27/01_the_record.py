@@ -73,8 +73,10 @@ record = [
      f" ({notices['noticed']:.0f} notices vs"
      f" {notices['expected']:.1f}); served"
      f" {year['hits']['as served']}"
-     f" vs rule {year['hits']['rule']} of {year['calls']}; calls"
-     f" +{100 * impact['diff']:.1f} pts (simulated)"),
+     f" vs rule {year['hits']['rule']} of {year['calls']}; calls,"
+     f" simulated at one in four: +{100 * impact['expected'][0]:.1f}"
+     f" pts on average, +{100 * impact['diff']:.1f} in the one year"
+     " run"),
 ]
 for version, chapter, what, measured in record:
     print(f"v{version:<4}Ch {chapter:<3}{what}")

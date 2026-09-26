@@ -15,10 +15,12 @@ for _, r in off.head(10).iterrows():
 
 loose = re.compile(r"crush|soak|transit|driver|torn|spill|split", re.I)
 missed = t[t.body.str.contains(loose) & ~t.body.map(in_transit)]
-glove = missed.body.str.contains("glove", case=False)
+glove = missed.body.str.contains("hand", case=False)
 print(f"\nloose words, missed by the pattern: {len(missed)}")
 print(f"  glove split, chemical on a hand (a safety "
       f"ticket): {glove.sum()}")
+spelt = missed[glove].body.str.contains("gloev", case=False).sum()
+print(f"    of which spelt 'gloev': {spelt}")
 for body in missed[~glove].body.head(3):
     print(f"  other: {body[:56]}")
 
@@ -26,4 +28,5 @@ wider = re.compile(TRANSIT.pattern + r"|driver d\w+ the delivery",
                    re.I)
 moved = t.body.str.contains(wider) & ~t.body.map(in_transit)
 print(f"\nadding 'driver d... the delivery' catches {moved.sum()} more")
-print(f"'split' alone would also catch {glove.sum()} safety tickets")
+safety = glove & missed.body.str.contains("split", case=False)
+print(f"'split' alone would also catch {safety.sum()} safety tickets")

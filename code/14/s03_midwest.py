@@ -1,7 +1,6 @@
 # Exercise 3: the Midwest's revenue at risk, contract by contract.
 import sqlite3
 
-import numpy as np
 import pandas as pd
 
 from foresight.config import ML_WAREHOUSE
@@ -18,7 +17,8 @@ key = pd.read_sql_query("SELECT account_id, is_key_account"
                         " FROM accounts",
                         sqlite3.connect(ML_WAREHOUSE))
 s = s.merge(key)
-mw = s[(s.region == "Midwest") & (s.is_key_account == 0)]
+tail = s[s.is_key_account == 0]
+mw = tail[tail.region == "Midwest"]
 risk = mw.model * mw.value
 print(f"Midwest, long tail: {len(mw)} contracts,"
       f" {mw.not_renewed.sum()} left")
@@ -26,7 +26,9 @@ print(f"  at risk ${risk.sum():,.0f}; walked"
       f" ${(mw.not_renewed * mw.value).sum():,.0f}")
 share = risk.sort_values(ascending=False).cumsum() / risk.sum()
 print(f"  the largest 20 contracts carry {share.iloc[19]:.0%} of it")
-draws = simulate(mw.model, mw.value, np.zeros(len(mw)))[0]
+# The same draws as the chapter's listing: simulate the whole long tail
+# by region, and take the Midwest's column.
+draws = simulate(tail.model, tail.value, tail.region)["Midwest"]
 lo, hi = interval(draws)
 print(f"  95% range ${lo:,.0f} to ${hi:,.0f}")
 lost = mw.value[mw.not_renewed == 1].sort_values(ascending=False)

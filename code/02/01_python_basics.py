@@ -27,15 +27,14 @@ print("qty column:", qty)
 
 
 def line_revenue(line):
-    """Revenue for one order line, after its discount."""
-    discount = line["discount_pct"] / 100
-    return line["qty"] * line["unit_price"] * (1 - discount)
+    """Revenue for one order line; the price is net of discount."""
+    return line["qty"] * line["unit_price"]
 
 
 total = 0.0
 for line in lines:                  # a formula dragged down the rows
     total = total + line_revenue(line)
-print(f"order total after discounts: {total:,.2f}")
+print(f"order total: {total:,.2f}")
 print("type of each value:", type(ORDER_ID).__name__,
       type(REGION).__name__, type(KEY_ACCOUNT).__name__,
       type(total).__name__)

@@ -31,8 +31,8 @@ def coverage(r: pd.DataFrame, lo: str = "q10",
 def widen(r: pd.DataFrame, target: float = 0.8,
           least: int = 200) -> pd.DataFrame:
     """Adds lo and hi: q10 and q90 moved apart (or together) by a
-    multiple of the forecast, chosen from earlier misses. Rows with
-    fewer than `least` earlier misses to learn from get NaN."""
+    multiple of the forecast, chosen from earlier forecasts. Rows with
+    fewer than `least` earlier forecasts on record get NaN."""
     r = r.copy()
     # How far outside its interval each actual fell, as a fraction of
     # the forecast; negative when it landed inside.

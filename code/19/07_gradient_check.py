@@ -76,6 +76,7 @@ print(f"Rows given p within a millionth of 0 or 1: {sure.sum()}")
 row = train[sure].iloc[0]
 print(f"  contract {row.contract_id}, {row.segment}, {row.orders_90d}"
       f" orders in 90 days: {Z[sure][0, 1]:.1f} sd out")
+print(f"  its p is {p[sure][0]:.16f}, so 1 - p = {1 - p[sure][0]:.1e}")
 Z, y = Z[~sure], y[~sure]
 print("Without that row, nudging the loss from p: "
       f"{worst(backprop(theta), nudge(loss_from_p)):.1e}")

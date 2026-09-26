@@ -52,6 +52,7 @@ print(pd_regions.round(2).to_string(index=False))
 print()
 for name, a, b in [("top five lines", sql_top, pd_top),
                    ("region totals", sql_regions, pd_regions)]:
-    pd.testing.assert_frame_equal(a, b)      # raises if they differ
+    # raises if they differ by more than one part in a billion
+    pd.testing.assert_frame_equal(a, b, rtol=1e-9)
     print(f"{name}: SQL and pandas agree, and .equals() says "
           f"{a.equals(b)}")

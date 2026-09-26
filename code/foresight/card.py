@@ -75,7 +75,7 @@ Rolling-origin backtest over contracts ending {first} to {last}:
 cohort is scored by a model fitted on the outcomes known at its mark.
 Intervals are 95%, from {reps} resamples of contracts within cohorts.
 
-| | v0.6 | Days-since rule | Best possible (ceiling) |
+| | v0.6 | Days-since rule | Ceiling (true chances) |
 |---|---|---|---|
 | Leavers in the top {calls}s | {hits} | {rule_hits} | {ceiling_hits} |
 | Precision at {calls} | {precision} | {rule_precision} | {ceiling_precision} |
@@ -94,8 +94,8 @@ no model can know; it was measured once (Chapters 9 and 13).
 
 The lasso's own chances are timid (slope {raw_slope}): too low at the
 top of the list. Platt's map moves the slope to {slope}. Within
-segments the chances are not calibrated: Mid-market contracts are
-given {mid_gap} points more than the share that left.
+segments the chances may not be calibrated: on these cohorts,
+Mid-market contracts got {mid_gap} points more than the share that left.
 
 ## Explanations
 
@@ -145,6 +145,11 @@ leavers, {calls_total} calls; read once, after v{version} was fixed.
 | Calibration slope | {slope} (uncalibrated {raw_slope}) | | 1 |
 
 v{version} minus the rule, precision at {calls}, paired: {diff}.
+
+Slices on the test year: Mid-market's leavers were missed
+{mid_missed} of the time ({mid_missed_ci}), as on validation. Its
+chances were {mid_gap} points against the share that left
+({mid_gap_ci}): validation's over-estimate {mid_gap_verdict}.
 """
 
 

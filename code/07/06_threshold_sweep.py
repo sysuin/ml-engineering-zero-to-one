@@ -29,7 +29,7 @@ for t in (0.5, 0.3, 0.2, costs.break_even(), 0.1, 0.05):
 # Capacity sets its own threshold: the 40th score of each cohort.
 top = top_of_each_cohort(valid, p)
 floor = top.groupby("moment").score.min()
-print("\nThe 40th score in each cohort, the threshold capacity sets")
+print("\nThe 40th score in each cohort, by month of the mark")
 print("  " + "  ".join(f"{m:%b} {s:.1%}" for m, s in floor.items()))
 
 with open("code/07/06_threshold_sweep.json", "w") as f:

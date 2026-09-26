@@ -35,11 +35,14 @@ print(f"  served - rule: {hits['as served'] - hits['rule']} more"
 
 print("\nRetention calls, SIMULATED at the brief's"
       f" {impact['assumed_save']:.0%} save rate")
-print(f"  leaving cut by {100 * r['diff']:.1f} points"
-      f" ({100 * r['lo']:.1f} to {100 * r['hi']:.1f})")
+cut, per = r["expected"]               # the average year of the test
+print(f"  a year of the test cuts leaving by {100 * cut:.1f} points"
+      f" on average;\n  a year of {a_year} calls is worth"
+      f" {k(per * a_year)}")
 v, lo, hi = r["per_call"]
-print(f"  a year of {a_year} calls: {k(v * a_year)}"
-      f" ({k(lo * a_year)} to {k(hi * a_year)})")
+print(f"  the one simulated year: {100 * r['diff']:.1f} points"
+      f" ({100 * r['lo']:.1f} to {100 * r['hi']:.1f}),"
+      f"\n  {k(v * a_year)}, a lucky draw that overstates")
 print(f"  the test needs {impact['design']['cohorts']} cohorts;"
       f" a year finds the effect\n  "
       f"{impact['design']['power_one_year']:.0%} of the time")

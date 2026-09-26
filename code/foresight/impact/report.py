@@ -8,7 +8,11 @@ each against the thing it replaced and with a range. It says which
 numbers are measured and which rest on an assumption, and a page
 filled from a simulation says so in its first line.
 
-    render(findings) -> str      the page, as text no wider than 68
+    render(findings) -> str      the page, as text no wider than 68;
+                                 a retention result may carry
+                                 `expected` [points, $ a call]: what
+                                 a year of the test gives on average
+                                 at the assumed save rate
     write(findings, path)        the page, as a Markdown file
 """
 from __future__ import annotations
@@ -59,7 +63,16 @@ def render(f: dict) -> str:
         f" {dollars(hi)})",
         f"  A year of {CALLS_A_YEAR} calls      "
         f"{_k(v * CALLS_A_YEAR)} ({_k(lo * CALLS_A_YEAR)} to"
-        f" {_k(hi * CALLS_A_YEAR)})",
+        f" {_k(hi * CALLS_A_YEAR)})"]
+    if "expected" in r:                 # the figure to budget with
+        cut, per = r["expected"]
+        lines += [
+            f"  Expected at {f['assumed_save']:.0%}          "
+            f"{100 * cut:.1f} points; {CALLS_A_YEAR} calls"
+            f" {_k(per * CALLS_A_YEAR)} a year",
+            "  (a year of this test on average; this year's draw is"
+            " higher)"]
+    lines += [
         f"  Caution: {r['cohorts']} of the {d['cohorts']} cohorts"
         f" planned. At a {f['assumed_save']:.0%} save rate",
         f"  a year this size finds the effect"
@@ -84,9 +97,9 @@ def render(f: dict) -> str:
     lines += ["Not claimed here",
               "  Accounts kept by the forecast or by triage; the"
               " retention",
-              "  effect on accounts outside the top 40; any effect"
-              " of calls",
-              "  on accounts that were staying anyway.", "",
+              "  effect on accounts outside the top 40; the accounts"
+              " the calls",
+              "  kept, apart from any they drove away.", "",
               "Asked of finance"] + [f"  {a}" for a in f["ask"]]
     return "\n".join(lines)
 

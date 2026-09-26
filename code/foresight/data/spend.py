@@ -10,7 +10,7 @@ current id exactly as the builder files them:
     spend_next_90d   spent from the mark until the contract ends
                      (the target, known only once the contract ends)
 
-The splits are DECISIONS.md's, by end date. The test year is not read.
+The splits are the book's, by end date. The test year is not read.
 """
 from __future__ import annotations
 

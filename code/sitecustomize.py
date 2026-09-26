@@ -55,7 +55,30 @@ if os.getenv("BOOK_RUN") == "1":
             for record in _records:
                 f.write(json.dumps({"listing": listing, **record}) + "\n")
 
-    _install()
+    # Patch when a listing first imports openai, not at startup: importing
+    # it here would load it (and anyio) into every process the build runs.
+    import importlib.abc
+    import sys
+
+    class _WhenImported(importlib.abc.MetaPathFinder):
+        def find_spec(self, name, path, target=None):
+            if name != "openai.resources.chat.completions":
+                return None
+            sys.meta_path.remove(self)
+            import importlib.util
+            spec = importlib.util.find_spec(name)
+            if spec is None or spec.loader is None:
+                return spec
+            run = spec.loader.exec_module
+
+            def exec_module(module):
+                run(module)
+                _install()
+
+            spec.loader.exec_module = exec_module
+            return spec
+
+    sys.meta_path.insert(0, _WhenImported())
     atexit.register(_flush)
 
 

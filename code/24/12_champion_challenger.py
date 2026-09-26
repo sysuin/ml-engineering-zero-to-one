@@ -1,7 +1,8 @@
 # Champion and challengers through 2025. v0.6 serves, frozen; three
 # challengers refit monthly in shadow; each morning the gate reads the
-# shadow record's outcomes so far. The truth file is read only at the
-# end, for the ceiling.
+# shadow record's outcomes so far. A promoted challenger serves as it
+# was fitted that morning. The truth file is read only at the end, for
+# the ceiling.
 # timeout: 400
 import json
 
@@ -45,7 +46,7 @@ print(f"  exposure    AUC pooled {pooled[0]:+.3f}"
 
 truth = pd.read_csv(TRUTH / "renewals.csv",
                     usecols=["contract_id", "p_leave"])
-done = known(production(s, served), "2026-01-01")
+done = known(production(rows, served, CONTENDERS), "2026-01-01")
 lists = {"as served": done} | {n: known(record(s, n), "2026-01-01")
                                for n in names}
 lists["rule"] = done.assign(model=done.rule)

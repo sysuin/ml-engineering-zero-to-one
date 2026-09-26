@@ -38,6 +38,8 @@ for leaves, c in curves.items():
     best = min(range(3000), key=c["watched"].__getitem__)
     print(f"{leaves:>2} leaves: lowest watched loss at round"
           f" {best + 1:,}, {c['watched'][best]:.4f}")
+print(f"Leavers: {fit.not_renewed.mean():.1%} of the fitted rows,"
+      f" {watch.not_renewed.mean():.1%} of the watched")
 
 # Where to stop: three ways, all scored on the validation cohorts.
 booster = RenewalBooster().fit(train)       # watches April-June 2024

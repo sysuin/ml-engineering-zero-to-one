@@ -38,6 +38,10 @@ for name, group in (("long-tail leavers", tail),
     if group is tail:
         print(f"  {'':24}   mean  {usd(mean):>10}"
               f"   median {usd(median)}")
+nothing = [p for p in tail if p == 0]
+rest = [p for p in tail if p > 0]
+print(f"  long-tail leavers with no profit on record {len(nothing):>4}")
+print(f"  {'':24}   mean of the rest {usd(sum(rest) / len(rest))}")
 
 # The estimates: a call saves one would-be leaver in four, and takes an
 # hour and a half of an account manager's time at $60 an hour.

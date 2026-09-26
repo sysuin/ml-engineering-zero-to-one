@@ -84,7 +84,7 @@ def gather(first=GO_LIVE, last=RECORD_ENDS,
     s = policy.shadow(rows, contenders, first)
     names = [c.name for c in contenders]
     log, served = policy.forward(s, names[0], names[1:])
-    got = policy.production(s, served)
+    got = policy.production(rows, served, contenders, first)
     lists = rows.merge(got[["contract_id", "model", "name", "rule"]],
                        on="contract_id").rename(
         columns={"model": "chance"})
@@ -93,7 +93,7 @@ def gather(first=GO_LIVE, last=RECORD_ENDS,
 
     def baseline(mark):
         c = next(c for c in contenders if c.name == served[mark])
-        day = policy.fit_day(c, mark, first)
+        day = policy.began(served, mark, first)
         if (c.name, day) not in fitted:
             ref = known(rows[rows.end_date >= HISTORY_FROM], day)
             fitted[c.name, day] = (c.make_model().fit(ref), ref)
@@ -108,15 +108,16 @@ def gather(first=GO_LIVE, last=RECORD_ENDS,
 
 
 def serving(y: Year, day) -> tuple:
-    """The model serving on `day`, refitted as it was fitted then, and
-    the rows it learned from."""
+    """The model serving on `day`, fitted again as it was on the
+    morning it began serving, that morning, and the rows it learned
+    from."""
     marks = y.served.index[y.served.index <= pd.Timestamp(day)]
-    name = y.served[marks[-1]] if len(marks) else y.served.iloc[0]
+    mark = marks[-1] if len(marks) else y.served.index[0]
+    name = y.served[mark]
     c = next(c for c in CONTENDERS if c.name == name)
-    mark = marks[-1] if len(marks) else GO_LIVE
-    rows = known(y.rows[y.rows.end_date >= HISTORY_FROM],
-                 policy.fit_day(c, mark))
-    return name, c, c.make_model().fit(rows), rows
+    since = policy.began(y.served, mark)
+    rows = known(y.rows[y.rows.end_date >= HISTORY_FROM], since)
+    return name, since, c.make_model().fit(rows), rows
 
 
 def _pct(x: float) -> str:
@@ -127,14 +128,14 @@ def page(y: Year, day) -> str:
     """The page for the week ending `day`, as fixed-width text no
     wider than 68."""
     day = pd.Timestamp(day)
-    name, c, model, ref = serving(y, day)
+    name, since, model, ref = serving(y, day)
     lists = y.lists[y.lists.moment <= day]
     latest = lists.moment.max()
     now = [a for a in y.alerts if a.day <= day]
     week = [a for a in now if a.day > day - WEEK]
     out = [f"Foresight monitoring: the week to {day:%a %d %b %Y}",
-           f"Serving {name} ({c.policy}): {len(ref):,} outcomes,"
-           f" fitted {policy.fit_day(c, latest):%Y-%m-%d}",
+           f"Serving {name}: {len(ref):,} outcomes, fitted"
+           f" {since:%Y-%m-%d}",
            "In shadow: " + ", ".join(k.name for k in CONTENDERS
                                      if k.name != name), ""]
 

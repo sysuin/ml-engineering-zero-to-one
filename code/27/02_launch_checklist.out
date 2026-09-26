@@ -17,7 +17,7 @@ The night it runs alone
 
 Once it is live
   yes      alert thresholds are constants, not tuned later
-  yes      a holdout is drawn after every list
+  yes      the job draws and records every list's holdout
   no       a failed run alerts a person by the morning
   by hand  the CI gate blocks a worse model (make test)
   by hand  someone who did not build it ran make demo

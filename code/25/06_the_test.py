@@ -61,6 +61,8 @@ print(f"\n2,000 simulated years at 0.25: {sig.mean():.0%} significant;"
       f" {100 * est[sig].mean():.1f} among the significant ones")
 numbers = {k: v for k, v in main.items() if k != "rates"}
 numbers |= {"held": main["rates"].rate[HELD], "n": int(called.sum()),
+            "average": est.mean(),
+            "average_significant": est[sig].mean(),
             "sweep": {str(k): {x: v[x] for x in
                                ("diff", "lo", "hi", "p_value")}
                       for k, v in rows.items()}}

@@ -45,7 +45,7 @@ ax[2].set_title("Histogram: how is it spread?")
 ax[3].scatter(pair["y2024"], pair["y2025"], s=3)
 ax[3].set(xscale="log", yscale="log",
           title="Scatter: do two things move together?")
-ax[4].boxplot(by_segment, showfliers=False)
+ax[4].boxplot(by_segment, whis=(10, 90), showfliers=False)
 ax[4].set_xticks(range(1, 5), [s.split()[0] for s in segments])
 ax[4].set_title("Box: how do groups compare?")
 fig.tight_layout()

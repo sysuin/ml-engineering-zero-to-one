@@ -32,7 +32,9 @@ table("Share of actuals inside the 80% interval, product x region",
 for year, g in r.groupby("year"):
     print(f"  {year}: below q10 {(g.actual < g.q10).mean():.1%}, "
           f"above q90 {(g.actual > g.q90).mean():.1%}")
-table("\nWidened from earlier misses", "lo", "hi", r.dropna())
+known = r.dropna()          # 200 earlier forecasts on record, or more
+table("\nThe same months, not widened", "q10", "q90", known)
+table("\nWidened from the record", "lo", "hi", known)
 
 series = ("Packaging", "MRD-PAC-020", "Southwest")
 origin = pd.Period("2025-09", freq="M")

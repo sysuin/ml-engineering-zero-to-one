@@ -25,9 +25,10 @@ p = TriageModel().fit(train.body, train.priority,
                       train.category).predict(valid.body)
 hit, cloth = right(p, valid), pemberton(valid).to_numpy()
 print("validation: share sent on, and both labels right among the")
-print("tickets kept and the tickets sent")
-print(f"{'threshold':>11}{'ordinary':>10}{'Pemberton':>11}{'kept':>8}"
-      f"{'sent':>8}")
+print("tickets kept and the tickets sent, ordinary and Pemberton apart")
+print(f"{'':11}{'share sent':>18}{'ordinary':>14}{'Pemberton':>16}")
+print(f"{'threshold':>11}{'ordinary':>10}{'Pemberton':>11}"
+      f"{'kept':>8}{'sent':>7}{'kept':>8}{'sent':>7}")
 chosen = {}
 for th in [0.5, 0.6, 0.7, 0.8, 0.9]:
     send = unsure(p, th).to_numpy()
@@ -35,8 +36,10 @@ for th in [0.5, 0.6, 0.7, 0.8, 0.9]:
         chosen = {"ordinary": send[~cloth].mean(),
                   "pemberton": send[cloth].mean()}
     print(f"{th:11.1f}{send[~cloth].mean():10.1%}"
-          f"{send[cloth].mean():11.1%}{hit[~send].mean():8.1%}"
-          f"{hit[send].mean():8.1%}")
+          f"{send[cloth].mean():11.1%}{hit[~send & ~cloth].mean():8.1%}"
+          f"{hit[send & ~cloth].mean():7.1%}"
+          f"{hit[~send & cloth].mean():8.1%}"
+          f"{hit[send & cloth].mean():7.1%}")
 
 # 2. The chosen threshold on the comparison set, trained on all before.
 TH = THRESHOLD                  # 0.7, recorded in router.py
@@ -75,6 +78,10 @@ if llm.exists():
     said = qs.priority.map(rank).to_numpy()
     desk = s.priority.map(rank).to_numpy()
     print(f"    LLM priority above the desk's {(said < desk).sum()}, "
+          f"below {(said > desk).sum()}")
+    said = q.priority.map(rank).to_numpy()      # every ticket, not only
+    desk = sample.priority.map(rank).to_numpy()     # the sent ones
+    print(f"    on all {len(sample):,}: above {(said < desk).sum()}, "
           f"below {(said > desk).sum()}")
 
 # 3. What each costs a month. Every figure here is an assumption.

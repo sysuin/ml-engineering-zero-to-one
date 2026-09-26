@@ -14,9 +14,10 @@ service = Service(SANDBOX, on="2025-12-31")
 client = TestClient(create_app(service))
 health = client.get("/health").json()
 last = health.pop("last_run")
+health.pop("version")               # the package's, not a model's
 for k, v in health.items():
-    print(f"{k:<10}{v}")
-print(f"{'last_run':<10}run {last['run']}, {last['mark']},"
+    print(f"{k:<12}{v}")
+print(f"{'last_run':<12}run {last['run']}, {last['mark']},"
       f" {last['status']}")
 
 r = client.post("/renewal", json={"contract_id": 14942})

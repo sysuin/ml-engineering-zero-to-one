@@ -25,8 +25,8 @@ q = np.percentile(single, [0, 50, 100])
 print(f"20 random splits, AUC on the held-out 20%: lowest {q[0]:.3f},"
       f"\n  median {q[1]:.3f}, highest {q[2]:.3f}")
 
-# Now score the same contracts both ways: every cohort from July 2023.
-# The first six months of outcomes are history for the time split.
+# Now score the same contracts both ways: every cohort marked from July
+# 2023. The first eight, ending January to August 2023, are history.
 later = (pool.moment >= "2023-07-01").to_numpy()
 
 

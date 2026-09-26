@@ -1,9 +1,9 @@
 375,313 order lines in 2025
 
-  python_loop        121,575,668.69        30.6 ms
-  pandas_apply       121,575,668.69      1325.4 ms
-  pandas_columns     121,575,668.69         1.5 ms
-  numpy_arrays       121,575,668.69         1.2 ms
+  python_loop        127,348,346.46        16.3 ms
+  pandas_apply       127,348,346.46      1046.0 ms
+  pandas_columns     127,348,346.46         0.6 ms
+  numpy_arrays       127,348,346.46         0.5 ms
 
-the loop took 26 times as long as NumPy, this run
+the loop took 35 times as long as NumPy, this run
 loop and NumPy equal to 1e-12? True

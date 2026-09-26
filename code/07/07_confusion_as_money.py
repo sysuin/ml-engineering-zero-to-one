@@ -36,8 +36,8 @@ print(f"  calling nobody             {(~left).mean():.1%}")
 print(f"Precision TP / (TP + FP)    {n['tp'] / called.sum():.1%}")
 print(f"Recall    TP / (TP + FN)    {n['tp'] / left.sum():.1%}")
 
-print("\nSeptember's cohort: the highest score among the calls,"
-      " the lowest\namong the rest")
+print("\nThe cohort marked on 1 September: the highest score among"
+      " the calls,\nthe lowest among the rest")
 print(f"  {'':4}{'contract':>8}  {'segment':<16}"
       f"{'days since order':>16}{'p':>8}")
 sep = valid[valid.moment == "2024-09-01"]

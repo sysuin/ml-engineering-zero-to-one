@@ -21,7 +21,10 @@ print(f"learning rows: {len(rows):,} from 2023 on, "
 results = {"naive": backtest(old, naive),
            "seasonal naive": backtest(old, seasonal_naive),
            "seasonal smoothing": backtest(old, seasonal_smoothing)}
+halves = {"2022": tail.loc[:"2022-12"], "2023": tail.loc["2023-01":]}
 for name, extra in (("model, 2023 on", ()),
+                    ("model + tail's 2022 only", (halves["2022"],)),
+                    ("model + tail from 2023", (halves["2023"],)),
                     ("model + long tail", (tail,))):
     r = backtest_model(units, extra)
     results[name] = r[r.series.isin(old.columns)]
