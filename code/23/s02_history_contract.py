@@ -22,7 +22,7 @@ HISTORY = Contract(
     ),
     key=("account_id", "valid_from"),
     rules=(
-        Rule("a period ends on or after the day it starts",
+        Rule("a period ends on or after it starts",
              "SELECT COUNT(*) FROM {rows} WHERE valid_to < valid_from"),
         Rule("each account has exactly one open period",
              "SELECT COUNT(*) FROM (SELECT account_id FROM {rows}"
@@ -32,7 +32,9 @@ HISTORY = Contract(
              "SELECT COUNT(*) FROM {rows}"
              " WHERE valid_from > '2025-12-31'"),
     ),
-    words=("a change is a new row; an old row is closed, never edited",),
+    words=(
+        "a change is a new row; an old row is closed, never edited",
+    ),
 )
 
 print(contracts.describe(HISTORY) + "\n")

@@ -17,7 +17,8 @@ print(f"Box: quartiles {q1:.0f}, {median:.0f}, {q3:.0f}; whisker"
 print("ECDF and the rate of leaving, by count")
 for k in range(4):
     rows = train[s == k]
-    print(f"  {k} ticket{'s' if k != 1 else ' '}: {(s <= k).mean():6.1%} at or below,"
+    plural = "s" if k != 1 else " "
+    print(f"  {k} ticket{plural}: {(s <= k).mean():6.1%} at or below,"
           f" {len(rows):>5,} rows, {rows.not_renewed.mean():5.1%} left")
 more = train[s >= 4]
 print(f"  4 or more: {len(more)} rows, {more.not_renewed.sum()} left")

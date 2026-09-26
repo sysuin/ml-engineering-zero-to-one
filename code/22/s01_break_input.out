@@ -1,7 +1,8 @@
 decimal discounts: ArtifactError:
   discount_pct: float64, expected Int64
 a new segment: ValueError:
-  Found unknown categories ['Wholesale'] in column 0 during transform
+  Found unknown categories ['Wholesale'] in column 0 during
+  transform
 
 run 1: failed at step rows
 run 2: failed at step score

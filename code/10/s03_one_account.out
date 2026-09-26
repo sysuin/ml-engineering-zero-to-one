@@ -3,4 +3,5 @@ Contract 8535, account 1130, marked 02 May 2024
   discount_pct is 3: <= 4, so left
   segment=Public sector is 0: <= 0.5, so left
   leaf: 130 training contracts, 45.4% left
-Validation contracts in the same leaf: 48, of whom 23 left; this one left
+Validation contracts in the same leaf: 48,
+  of whom 23 left; this one left

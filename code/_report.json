@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T14:26:20",
+  "generated": "2026-09-26T12:13:45",
   "listings": {
     "02/01_python_basics.py": {
       "bytes": 256,
@@ -192,26 +192,38 @@
     },
     "03/s01_label_that_flatters.py": {
       "bytes": 223,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c"
+      },
       "expect_fail": false,
-      "hash": "c817b8efa414dff3",
+      "hash": "4f96f8c39c2c849e",
       "ok": true,
       "out_hash": "7fec45ccf5f9b9ce",
       "returncode": 0,
-      "seconds": 0.77
+      "seconds": 2.53
     },
     "03/s02_earlier_moment.py": {
       "bytes": 191,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c"
+      },
       "expect_fail": false,
-      "hash": "db874e2112f8d609",
+      "hash": "0d403a27c9f16396",
       "ok": true,
       "out_hash": "29cb22280820fd92",
       "returncode": 0,
-      "seconds": 0.99
+      "seconds": 0.87
     },
     "03/s03_half_capacity.py": {
       "bytes": 169,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/costs.py": "0287ac681e0229ec"
+      },
       "expect_fail": false,
-      "hash": "547d3f0fa8679567",
+      "hash": "b90f05682669fea1",
       "ok": true,
       "out_hash": "db066f776a0ee5cc",
       "returncode": 0,
@@ -444,12 +456,18 @@
     },
     "05/s01_tickets_three_ways.py": {
       "bytes": 443,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf"
+      },
       "expect_fail": false,
-      "hash": "3de9d4ee5c83469b",
+      "hash": "e4185a3a2018ac41",
       "ok": true,
       "out_hash": "93404f007fec4866",
       "returncode": 0,
-      "seconds": 0.91
+      "seconds": 0.67
     },
     "05/s02_first_order_date.py": {
       "bytes": 437,
@@ -1190,13 +1208,22 @@
       "seconds": 2.89
     },
     "10/s03_one_account.py": {
-      "bytes": 290,
+      "bytes": 292,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6"
+      },
       "expect_fail": false,
-      "hash": "46a96208c10ef688",
+      "hash": "b33f3efee931f927",
       "ok": true,
-      "out_hash": "2ed5e4d2cbf3cc79",
+      "out_hash": "9a08049504944870",
       "returncode": 0,
-      "seconds": 2.66
+      "seconds": 2.47
     },
     "10/s04_without_gap.py": {
       "bytes": 371,
@@ -1316,13 +1343,22 @@
       "seconds": 14.56
     },
     "11/s01_match_lightgbm.py": {
-      "bytes": 281,
+      "bytes": 283,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6"
+      },
       "expect_fail": false,
-      "hash": "736234002773ca42",
+      "hash": "b4f5d76a0a8cf4e6",
       "ok": true,
-      "out_hash": "cf0dbe9a916b92cf",
+      "out_hash": "71bd19d550145619",
       "returncode": 0,
-      "seconds": 2.38
+      "seconds": 2.14
     },
     "11/s02_orders_constraint.py": {
       "bytes": 496,
@@ -1334,13 +1370,24 @@
       "seconds": 1.54
     },
     "11/s04_without_regions.py": {
-      "bytes": 213,
+      "bytes": 204,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/boosting.py": "4827641ccc13e654",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6"
+      },
       "expect_fail": false,
-      "hash": "e3ea3c54d8c46066",
+      "hash": "36e1d46edf6b0951",
       "ok": true,
-      "out_hash": "c6586219d49a896f",
+      "out_hash": "b1897458268e16c1",
       "returncode": 0,
-      "seconds": 2.8
+      "seconds": 3.66
     },
     "12/01_hunch.py": {
       "bytes": 996,
@@ -1623,12 +1670,32 @@
     },
     "13/s01_three_leaks.py": {
       "bytes": 433,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/checks/__init__.py": "b57ea79bfb7d0826",
+        "code/foresight/checks/leakage.py": "c3999da4452734c1",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/features/__init__.py": "27bf8d8131d9855c",
+        "code/foresight/features/definitions.py": "4256cdd382cb5e2f",
+        "code/foresight/features/encoding.py": "c7b1792a37b53364",
+        "code/foresight/features/registry.py": "7d8717ac61fc70e2",
+        "code/foresight/features/sources.py": "4c244058e0dbc06d",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/boosting.py": "4827641ccc13e654",
+        "code/foresight/models/featured.py": "7e2dfe42a94f9e40",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6",
+        "code/foresight/models/regularised.py": "d94138794a160e99"
+      },
       "expect_fail": false,
-      "hash": "e7bf65ce5809711b",
+      "hash": "f2ec579526509315",
       "ok": true,
       "out_hash": "707acecc7d4c6155",
       "returncode": 0,
-      "seconds": 17.26
+      "seconds": 9.31
     },
     "13/s04_whole_months.py": {
       "bytes": 266,
@@ -2064,12 +2131,28 @@
     },
     "16/s03_key_rule.py": {
       "bytes": 221,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/features/__init__.py": "27bf8d8131d9855c",
+        "code/foresight/features/build.py": "f3c3f35fa56c9239",
+        "code/foresight/features/definitions.py": "4256cdd382cb5e2f",
+        "code/foresight/features/registry.py": "7d8717ac61fc70e2",
+        "code/foresight/features/sources.py": "4c244058e0dbc06d",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6",
+        "code/foresight/slices.py": "a0123e7d6c46613b"
+      },
       "expect_fail": false,
-      "hash": "d5521b1c8dc5febc",
+      "hash": "2b103dc88260351e",
       "ok": true,
       "out_hash": "d0371859c288b9bc",
       "returncode": 0,
-      "seconds": 2.44
+      "seconds": 2.05
     },
     "16/s04_noise.py": {
       "bytes": 540,
@@ -2478,12 +2561,23 @@
     },
     "19/s02_log_columns.py": {
       "bytes": 235,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6",
+        "code/foresight/models/mlp.py": "7da8bd8afddcfc5a"
+      },
       "expect_fail": false,
-      "hash": "b4a64beffb32b1d0",
+      "hash": "6808fcb3a79e0203",
       "ok": true,
       "out_hash": "ba6bd6254322d616",
       "returncode": 0,
-      "seconds": 59.29
+      "seconds": 61.04
     },
     "19/s04_since_launch.py": {
       "bytes": 297,
@@ -3017,13 +3111,52 @@
       "seconds": 49.58
     },
     "22/s01_break_input.py": {
-      "bytes": 245,
+      "bytes": 247,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/checks/__init__.py": "b57ea79bfb7d0826",
+        "code/foresight/checks/leakage.py": "c3999da4452734c1",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/costs.py": "0287ac681e0229ec",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/data/expectations.py": "eb8ddc2634adfc27",
+        "code/foresight/decide.py": "15c24a72dec163cd",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/explain.py": "56841129a68eacae",
+        "code/foresight/features/__init__.py": "27bf8d8131d9855c",
+        "code/foresight/features/definitions.py": "4256cdd382cb5e2f",
+        "code/foresight/features/encoding.py": "c7b1792a37b53364",
+        "code/foresight/features/registry.py": "7d8717ac61fc70e2",
+        "code/foresight/features/sources.py": "4c244058e0dbc06d",
+        "code/foresight/impact/__init__.py": "a4a4243451ad1997",
+        "code/foresight/impact/holdout.py": "17e59644af82b994",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/boosting.py": "4827641ccc13e654",
+        "code/foresight/models/featured.py": "7e2dfe42a94f9e40",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6",
+        "code/foresight/models/regularised.py": "d94138794a160e99",
+        "code/foresight/pipeline/__init__.py": "4c65d6b8b4bb3592",
+        "code/foresight/pipeline/artifact.py": "b5fad07006fc6e99",
+        "code/foresight/pipeline/features.py": "ffdf923446737188",
+        "code/foresight/pipeline/model.py": "71d0d84dd221f0ee",
+        "code/foresight/pipeline/registry.py": "ff19e30d20f93c65",
+        "code/foresight/score.py": "ca030933eee403a2",
+        "code/foresight/serve/__init__.py": "e9397eb01af8b724",
+        "code/foresight/serve/batch.py": "e1b933e7e08d4caf",
+        "code/foresight/serve/online.py": "5d30636feec9cf3d",
+        "code/foresight/serve/renewal.py": "f17177f53a07a5ab",
+        "code/foresight/serve/store.py": "00ecc431e286d3f6",
+        "code/foresight/tracking.py": "737e7e9176888680",
+        "code/foresight/train.py": "a15b50516e62e3d1"
+      },
       "expect_fail": false,
-      "hash": "a8ced327556e9df4",
+      "hash": "2804d689c3a91e94",
       "ok": true,
-      "out_hash": "b4813003df6860ff",
+      "out_hash": "6374ba7cc84b9b99",
       "returncode": 0,
-      "seconds": 14.11
+      "seconds": 16.02
     },
     "22/s02_faster_fetch.py": {
       "bytes": 137,
@@ -3565,14 +3698,14 @@
         "code/foresight/slices.py": "a0123e7d6c46613b"
       },
       "expect_fail": false,
-      "hash": "520152948913fb81",
+      "hash": "c98092c9c8bdc291",
       "ok": true,
       "out_hash": "b96c31adc8f0c922",
       "returncode": 0,
-      "seconds": 2.84
+      "seconds": 2.6
     },
     "23/s02_history_contract.py": {
-      "bytes": 781,
+      "bytes": 765,
       "deps": {
         "code/foresight/__init__.py": "e2b59a140cbc7997",
         "code/foresight/config.py": "82f79cd5bddc661c",
@@ -3586,11 +3719,11 @@
         "code/foresight/data/expectations.py": "eb8ddc2634adfc27"
       },
       "expect_fail": false,
-      "hash": "2c0a8380c8c34111",
+      "hash": "590bb70bb9736d8a",
       "ok": true,
-      "out_hash": "ca72b6c8b140dc31",
+      "out_hash": "12b66b6a5e4b34ca",
       "returncode": 0,
-      "seconds": 0.55
+      "seconds": 0.73
     },
     "23/s04_calibration_gate.py": {
       "bytes": 286,
@@ -4173,7 +4306,7 @@
       "seconds": 9.03
     },
     "27/s03_late_list.py": {
-      "bytes": 196,
+      "bytes": 191,
       "deps": {
         "code/foresight/__init__.py": "e2b59a140cbc7997",
         "code/foresight/checks/__init__.py": "b57ea79bfb7d0826",
@@ -4221,11 +4354,11 @@
         "code/foresight/train.py": "a15b50516e62e3d1"
       },
       "expect_fail": false,
-      "hash": "659fdebb0ac78547",
+      "hash": "4ccf5150e7a29796",
       "ok": true,
-      "out_hash": "272bb4aa233e44cb",
+      "out_hash": "35b54430c4aa9104",
       "returncode": 0,
-      "seconds": 13.52
+      "seconds": 15.27
     },
     "27/s04_monitor_resource.py": {
       "bytes": 360,
@@ -4287,31 +4420,48 @@
       "seconds": 3.08
     },
     "30/01_versions.py": {
-      "bytes": 1137,
+      "bytes": 1182,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c"
+      },
       "expect_fail": false,
       "hash": "625fa0a4b57bf05a",
       "ok": true,
-      "out_hash": "1e5880c062f63e8f",
+      "out_hash": "80e00af8853d9def",
       "returncode": 0,
-      "seconds": 0.34
+      "seconds": 0.14
     },
     "30/02_runtimes.py": {
-      "bytes": 839,
+      "bytes": 1254,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c"
+      },
       "expect_fail": false,
       "hash": "50a097da636646a2",
       "ok": true,
-      "out_hash": "e67f44895618a874",
+      "out_hash": "380ef3116a445731",
       "returncode": 0,
-      "seconds": 0.05
+      "seconds": 0.04
     },
     "30/03_core_hours.py": {
       "bytes": 489,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6"
+      },
       "expect_fail": false,
       "hash": "359ce8fdab759742",
       "ok": true,
-      "out_hash": "226dcacd777ea62d",
+      "out_hash": "b3e7b1b9ec3a4d08",
       "returncode": 0,
-      "seconds": 5.56
+      "seconds": 2.8
     },
     "33/01_centre_and_spread.py": {
       "bytes": 666,

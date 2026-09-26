@@ -30,4 +30,5 @@ print(f"  leaf: {rows} training contracts,"
 same = p == p[top]
 went = "left" if valid.not_renewed.iloc[top] else "renewed"
 print(f"Validation contracts in the same leaf: {same.sum()},"
-      f" of whom {valid.not_renewed[same].sum()} left; this one {went}")
+      f"\n  of whom {valid.not_renewed[same].sum()} left;"
+      f" this one {went}")

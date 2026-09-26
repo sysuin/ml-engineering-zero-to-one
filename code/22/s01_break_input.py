@@ -2,10 +2,19 @@
 # what the job does about each. Both runs fail, and say where.
 import shutil
 import tempfile
+import textwrap
 from pathlib import Path
 
 from foresight.pipeline import features
 from foresight.serve import SANDBOX, batch, online, store
+
+
+def say(what, e):
+    """The error's type, then its message wrapped to the page."""
+    print(f"{what}: {type(e).__name__}:")
+    print(textwrap.fill(str(e), 66, initial_indent="  ",
+                        subsequent_indent="  "))
+
 
 root = Path(tempfile.mkdtemp())
 shutil.copytree(SANDBOX / "artifacts", root / "artifacts")
@@ -17,7 +26,7 @@ features.at_mark = lambda *a: at_mark(*a).astype({"discount_pct":
 try:
     batch.month("2025-12-31", root=root)
 except Exception as e:
-    print(f"decimal discounts: {type(e).__name__}:\n  {e}")
+    say("decimal discounts", e)
 
 
 # 2. The CRM starts calling some small businesses Wholesale.
@@ -34,7 +43,7 @@ online.rows = lambda *a: wholesale(rows(*a))
 try:
     batch.month("2025-12-31", root=root)
 except Exception as e:
-    print(f"a new segment: {type(e).__name__}:\n  {e}")
+    say("a new segment", e)
 features.at_mark, online.rows = at_mark, rows
 
 print()

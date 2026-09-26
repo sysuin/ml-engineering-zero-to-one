@@ -92,7 +92,7 @@ print(f"Root split: mine column {trees[0]['col']} at "
 same = [questions(a) == questions(b, False)
         for a, b in zip(trees, theirs_trees)]
 print(f"Trees asking the same columns in the same places: "
-      f"{sum(same)} of {ROUNDS}; first to differ: round "
+      f"{sum(same)} of {ROUNDS};\n  first to differ: round "
       f"{same.index(False) + 1 if False in same else '-'}")
 for split in ("training", "validation"):
     gap = np.abs(mine[split] - theirs[split])

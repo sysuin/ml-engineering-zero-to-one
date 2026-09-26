@@ -10,7 +10,7 @@ from foresight.models.logistic import TRAIN, at_capacity, load
 
 fit, watch = watch_split(load(*TRAIN))
 params = RenewalBooster().params(3000)
-print(f"{'':<18}{'rounds':>7}{'watched loss':>14}{'AUC':>7}"
+print(f"{'':<15}{'rounds':>7}{'watched loss':>14}{'AUC':>7}"
       f"{'leavers':>9}{'region stumps':>15}")
 for name, drop in (("with region", []), ("without region", ["region"])):
     X, W = columns(fit).drop(columns=drop), columns(watch).drop(
@@ -24,7 +24,7 @@ for name, drop in (("with region", []), ("without region", ["region"])):
     used = dict(zip(m.feature_name_,
                     m.booster_.feature_importance(iteration=b)))
     loss = m.evals_result_["valid_0"]["binary_logloss"][b - 1]
-    print(f"{name:<18}{b:>7,}{loss:>14.5f}"
+    print(f"{name:<15}{b:>7,}{loss:>14.5f}"
           f"{auc(watch.not_renewed, p):>7.3f}"
           f"{at_capacity(watch, p)['leavers']:>9}"
           f"{used.get('region', 0):>15}")

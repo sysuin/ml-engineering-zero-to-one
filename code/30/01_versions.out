@@ -22,6 +22,7 @@ fastapi                0.115         0.141.1
 uvicorn                 0.30          0.53.0
 httpx                   0.27          0.28.1
 joblib                   1.4           1.6.0
+mcp                      2.0           2.2.0
 
 The repository's own toolchain:
   pytest 9.1.1   ruff 0.16.9   pypdf 6.19.0

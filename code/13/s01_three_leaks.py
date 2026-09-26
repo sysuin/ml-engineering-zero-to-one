@@ -13,7 +13,7 @@ from foresight.models.featured import FeaturedLasso
 
 
 def planted() -> pd.DataFrame:
-    """Chapter 4's table with three more columns: col_a, col_b, col_c."""
+    """Chapter 4's table plus three columns: col_a, col_b, col_c."""
     con = sqlite3.connect(ML_WAREHOUSE)
     t = pd.read_parquet(TABLE)
     _, tickets = events(con, legacy_ids(con))

@@ -20,4 +20,5 @@ for i in rows.index[flag]:
           f"{r.complaints_90d:>9.0f}{before[i]:>14.1f}"
           f"{r.not_renewed:>6}")
 most = rows.complaints_90d.sort_values(ascending=False).head(4)
-print("Most complaints in 90 days:", ", ".join(f"{v:.0f}" for v in most))
+print("Most complaints in 90 days:",
+      ", ".join(f"{v:.0f}" for v in most))

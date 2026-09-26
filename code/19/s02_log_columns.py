@@ -16,7 +16,7 @@ HEAVY = ["days_since_order", "orders_90d", "orders_prev_90d",
 
 
 def logged(rows):
-    """Chapter 7's columns, the four heavy-tailed counts as log(1 + x)."""
+    """Chapter 7's columns, the four heavy-tailed ones as log(1 + x)."""
     X = features(rows)
     X[HEAVY] = np.log1p(X[HEAVY])
     return X

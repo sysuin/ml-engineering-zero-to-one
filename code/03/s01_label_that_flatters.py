@@ -1,4 +1,5 @@
-# Exercise 3: a label defined inside the observation window flatters any score.
+# Exercise 3: a label defined inside the observation window flatters
+# any score.
 import sqlite3
 
 import pandas as pd
@@ -20,14 +21,18 @@ renewals = pd.read_sql_query("""
       AND c.outcome IS NOT NULL
     GROUP BY c.contract_id""", con)
 
-# The flattering label: "churned" = no order in the 90 days before the moment.
+# The flattering label: "churned" means no order in the 90 days
+# before the moment.
 renewals["quiet_90"] = renewals.days_since_order >= 90
 
-ranked = renewals.sort_values(["moment", "days_since_order", "contract_id"],
-                              ascending=[True, False, True], na_position="last")
-print(f"Renewals with the flattering label: {renewals.quiet_90.mean():.1%}")
+ranked = renewals.sort_values(
+    ["moment", "days_since_order", "contract_id"],
+    ascending=[True, False, True], na_position="last")
+share = renewals.quiet_90.mean()
+print(f"Renewals with the flattering label: {share:.1%}")
 print(f"{'Precision of the days-since rule':<44}top 10   top 40")
 for label, name in (("quiet_90", "no order in the 90 days before"),
                     ("left_", "contract not renewed")):
-    p10, p40 = (ranked.groupby("moment").head(k)[label].mean() for k in (10, 40))
+    p10, p40 = (ranked.groupby("moment").head(k)[label].mean()
+                for k in (10, 40))
     print(f"  against '{name + chr(39):<32}{p10:>8.1%}{p40:>9.1%}")

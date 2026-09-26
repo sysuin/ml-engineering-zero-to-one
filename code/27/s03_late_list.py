@@ -36,7 +36,7 @@ except ValueError as e:
 
 def check(when, day):
     a = late_list(root, day)
-    said = (f"ALERT, list {a.subject} {a.note}" if a
+    said = (f"ALERT, {a.subject} {a.note}" if a
             else "quiet, the list is made")
     print(f"{when:<22}{said}")
 

@@ -1,4 +1,5 @@
 Root split: mine column 0 at 92, LightGBM's column 0 at 92.5
-Trees asking the same columns in the same places: 6 of 10; first to differ: round 2
+Trees asking the same columns in the same places: 6 of 10;
+  first to differ: round 2
 training    largest gap 8.5e-03, rows differing by over 1e-9: 4,022
 validation  largest gap 1.6e-01, rows differing by over 1e-9: 1,641
