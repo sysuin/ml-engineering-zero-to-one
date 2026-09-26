@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T12:13:45",
+  "generated": "2026-09-26T13:39:44",
   "listings": {
     "02/01_python_basics.py": {
       "bytes": 256,
@@ -2678,14 +2678,46 @@
       "returncode": 0,
       "seconds": 43.43
     },
+    "20/11_llm_classifier.py": {
+      "bytes": 549,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/anomaly/__init__.py": "046c69f674f242cb",
+        "code/foresight/anomaly/counts.py": "2e691368a4a4813b",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/triage/__init__.py": "338cf3b71e4ff570",
+        "code/foresight/triage/evaluate.py": "ada1d5136245efca",
+        "code/foresight/triage/features.py": "54ded63186412b8f",
+        "code/foresight/triage/llm.py": "45dadae5d47294dd",
+        "code/foresight/triage/probes.py": "7a956fa8b558db19"
+      },
+      "expect_fail": false,
+      "hash": "28b5dcadd1612606",
+      "ok": true,
+      "out_hash": "501c375a9e805cb5",
+      "returncode": 0,
+      "seconds": 797.26
+    },
     "20/12_four_axes.py": {
-      "bytes": 936,
+      "bytes": 1102,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/anomaly/__init__.py": "046c69f674f242cb",
+        "code/foresight/anomaly/counts.py": "2e691368a4a4813b",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/triage/__init__.py": "338cf3b71e4ff570",
+        "code/foresight/triage/evaluate.py": "ada1d5136245efca",
+        "code/foresight/triage/features.py": "54ded63186412b8f",
+        "code/foresight/triage/model.py": "965af3f501095e79",
+        "code/foresight/triage/neural.py": "f006ed6bb63bda11",
+        "code/foresight/triage/probes.py": "7a956fa8b558db19"
+      },
       "expect_fail": false,
       "hash": "431b0c2321eb1574",
       "ok": true,
-      "out_hash": "7eaa8adf3f1d7388",
+      "out_hash": "89f30b39317b4bc7",
       "returncode": 0,
-      "seconds": 56.78
+      "seconds": 48.02
     },
     "20/12_latency.py": {
       "bytes": 153,
@@ -2715,13 +2747,24 @@
       "seconds": 24.4
     },
     "20/14_hybrid_router.py": {
-      "bytes": 1334,
+      "bytes": 1518,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/anomaly/__init__.py": "046c69f674f242cb",
+        "code/foresight/anomaly/counts.py": "2e691368a4a4813b",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/triage/__init__.py": "338cf3b71e4ff570",
+        "code/foresight/triage/evaluate.py": "ada1d5136245efca",
+        "code/foresight/triage/features.py": "54ded63186412b8f",
+        "code/foresight/triage/model.py": "965af3f501095e79",
+        "code/foresight/triage/router.py": "d7ae363626533e83"
+      },
       "expect_fail": false,
-      "hash": "19c2b8d80d43b51b",
+      "hash": "4a16ef72f0b8e0f5",
       "ok": true,
-      "out_hash": "3eccb53c93e4086c",
+      "out_hash": "12bd2ca94c239213",
       "returncode": 0,
-      "seconds": 4.67
+      "seconds": 5.35
     },
     "20/15_foresight_v08.py": {
       "bytes": 746,

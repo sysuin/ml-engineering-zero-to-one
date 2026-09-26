@@ -1,8 +1,6 @@
 # A language model with a prompt, on the comparison set and the probes.
-# skip
-# awaits-key: runs once OPENAI_API_KEY is set (TODO-AUTHOR)
 # nondeterministic: live model calls and wall-clock latency
-# timeout: 1800
+# timeout: 3600
 import json
 
 from foresight.config import SPEND_CEILING_USD

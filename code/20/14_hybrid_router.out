@@ -17,6 +17,10 @@ right (assumed shares, not measured)
    70% of the sent -> 77.8%   (model alone 77.5%)
    80% of the sent -> 78.5%   (model alone 77.5%)
    90% of the sent -> 79.2%   (model alone 77.5%)
+  measured: 76.1%; the LLM got 32 of the 70 sent right (45.7%)
+    category right: model 65, LLM 65
+    priority right: model 49, LLM 35
+    LLM priority above the desk's 21, below 14
 
 2025 brought 492 tickets a month. Assumed: the trained model
 costs $400 a month to keep, and the LLM the first column per

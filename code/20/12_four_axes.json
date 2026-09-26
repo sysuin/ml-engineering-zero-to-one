@@ -42,5 +42,27 @@
   "new wording": 2,
   "known language": 1,
   "new language": 0
+ },
+ "LLM": {
+  "priority": [
+   0.748,
+   0.721,
+   0.775
+  ],
+  "category": [
+   0.962,
+   0.95,
+   0.973
+  ],
+  "both": [
+   0.72,
+   0.691,
+   0.747
+  ],
+  "urgent_recall": 0.5735294117647058,
+  "urgent_precision": 0.6724137931034483,
+  "new wording": 8,
+  "known language": 7,
+  "new language": 7
  }
 }

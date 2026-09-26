@@ -61,7 +61,21 @@ if llm.exists():
     q = pd.DataFrame(json.loads(llm.read_text())["eval"])
     both = hit.copy()
     both[send] = right(q, sample)[send]
-    print(f"  measured: {both.mean():.1%}")
+    print(f"  measured: {both.mean():.1%}; the LLM got "
+          f"{right(q, sample)[send].sum()} of the {send.sum()} sent "
+          f"right ({right(q, sample)[send].mean():.1%})")
+    # Where the LLM loses on the sent tickets: the labels one at a time.
+    s, ps, qs = sample[send], p[send], q[send]
+    for label in ["category", "priority"]:
+        m = (ps[label].to_numpy() == s[label].to_numpy()).sum()
+        l_ = (qs[label].to_numpy() == s[label].to_numpy()).sum()
+        print(f"    {label:8} right: model {m}, LLM {l_}")
+    rank = {k: i for i, k in enumerate(["Urgent", "High", "Normal",
+                                        "Low"])}
+    said = qs.priority.map(rank).to_numpy()
+    desk = s.priority.map(rank).to_numpy()
+    print(f"    LLM priority above the desk's {(said < desk).sum()}, "
+          f"below {(said > desk).sum()}")
 
 # 3. What each costs a month. Every figure here is an assumption.
 per_month = len(test) / 12
