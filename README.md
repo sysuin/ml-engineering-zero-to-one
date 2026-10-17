@@ -34,6 +34,7 @@ code/NN/            the listings for chapter NN, each with its captured .out
 code/foresight/     Foresight, as far as the book has built it
 code/meridian/      the dataset generator
 tests/              the test suite
+docs/               Chapter 3's brief, and the reports the listings write
 ```
 
 `make help` lists the everyday commands.
@@ -42,11 +43,15 @@ tests/              the test suite
 
 ```bash
 python3 code/_runner.py 08                  # re-run chapter 8's listings, capture their output
-python3 code/_runner.py --check --twice     # every capture current, every listing repeatable
+python3 code/_runner.py --check --twice --portable
+                                            # every listing runs, and runs the same twice
 ```
 
-With the library versions in Appendix C, your numbers match the book's exactly. With newer
-ones the last digit can move — your run still agrees with itself, which is what matters.
+The captures came from an Apple laptop with the library versions in Appendix C. On another
+machine or with newer libraries, a last digit can move, and where a listing breaks a tie
+between equal values a count can move by a few. `--portable` lists those listings without
+failing on them; your run still agrees with itself, which is what matters. CI runs it
+nightly on Linux, where about a tenth of the listings differ from the captures in this way.
 
 ## Licence
 

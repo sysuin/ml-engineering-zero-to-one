@@ -16,7 +16,8 @@ models = by_cohort(table, *val, lambda: FeaturedBooster(["noise"]))
 split = sum(pd.Series(m.model_.booster_.feature_importance("split"),
                       index=m.model_.booster_.feature_name())
             for m in models.values())
-share = (split / split.sum()).sort_values(ascending=False)
+share = (split / split.sum()).sort_values(ascending=False,
+                                        kind="stable")
 print("Share of the six boosters' splits")
 for rank, (c, v) in enumerate(share.items(), 1):
     print(f"  {rank:>2}  {c:<20}{v:>6.1%}")

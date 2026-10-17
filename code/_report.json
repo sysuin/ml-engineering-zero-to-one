@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T02:40:08",
+  "generated": "2026-10-17T18:34:02",
   "listings": {
     "02/01_python_basics.py": {
       "bytes": 240,
@@ -2155,12 +2155,35 @@
     },
     "13/10_adversarial_validation.py": {
       "bytes": 744,
+      "deps": {
+        "code/foresight/__init__.py": "e2b59a140cbc7997",
+        "code/foresight/checks/__init__.py": "b57ea79bfb7d0826",
+        "code/foresight/checks/leakage.py": "d132313bf0eedaab",
+        "code/foresight/config.py": "82f79cd5bddc661c",
+        "code/foresight/data/__init__.py": "3401b3eff76fda42",
+        "code/foresight/data/build_table.py": "0012658db7fec7cf",
+        "code/foresight/data/expectations.py": "eb8ddc2634adfc27",
+        "code/foresight/evaluate.py": "cf4daa88e425f0f1",
+        "code/foresight/features/__init__.py": "27bf8d8131d9855c",
+        "code/foresight/features/build.py": "f3c3f35fa56c9239",
+        "code/foresight/features/definitions.py": "4256cdd382cb5e2f",
+        "code/foresight/features/encoding.py": "c7b1792a37b53364",
+        "code/foresight/features/registry.py": "7d8717ac61fc70e2",
+        "code/foresight/features/sources.py": "4c244058e0dbc06d",
+        "code/foresight/models/__init__.py": "e3b0c44298fc1c14",
+        "code/foresight/models/boosting.py": "4827641ccc13e654",
+        "code/foresight/models/featured.py": "7e2dfe42a94f9e40",
+        "code/foresight/models/linear.py": "9f776de20bef29ec",
+        "code/foresight/models/logistic.py": "f3452d33b69d90b6",
+        "code/foresight/models/regularised.py": "d94138794a160e99",
+        "code/foresight/train.py": "a15b50516e62e3d1"
+      },
       "expect_fail": false,
-      "hash": "3b23364299d12177",
+      "hash": "39e2731838891fbc",
       "ok": true,
       "out_hash": "7847a1110363682f",
       "returncode": 0,
-      "seconds": 19.21
+      "seconds": 43.45
     },
     "13/11_training_job.py": {
       "bytes": 1220,
@@ -3115,11 +3138,11 @@
         "code/foresight/models/regularised.py": "d94138794a160e99"
       },
       "expect_fail": false,
-      "hash": "b88b2bd1926cedcf",
+      "hash": "e40cd20e0b422725",
       "ok": true,
       "out_hash": "d62e87f55a7e8f20",
       "returncode": 0,
-      "seconds": 13.55
+      "seconds": 39.58
     },
     "17/01_decompose.py": {
       "bytes": 681,

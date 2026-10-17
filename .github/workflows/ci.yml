@@ -103,5 +103,8 @@ jobs:
         run: python3 -m foresight.contracts --on 2025-12-31
       - name: every test, slow ones too
         run: pytest tests/ -q
-      - name: every capture current, every listing deterministic
-        run: python3 code/_runner.py --check --twice
+      - name: every listing runs, and runs the same twice
+        # The book's captures came from one Apple laptop. On this machine a last
+        # digit may differ for the reasons in Appendix C; those are listed, and
+        # only a listing that fails or disagrees with itself fails the job.
+        run: python3 code/_runner.py --check --twice --portable

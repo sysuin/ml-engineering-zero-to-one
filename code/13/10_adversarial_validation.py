@@ -25,7 +25,7 @@ for name, cols in (("v0.5's columns", COLUMNS),
     out[name] = {"together": together,
                  "each": each["shift auc"].round(4).to_dict()}
     flagged = each[each["shift"] != "pass"].sort_values(
-        "shift auc", ascending=False)
+        "shift auc", ascending=False, kind="stable")
     print(f"{name}: {len(cols)} columns, together AUC {together:.3f}")
     for c, r in flagged.iterrows():
         print(f"  {c:<20}{r['shift auc']:>7.3f}  {r['shift']}")
